@@ -16,23 +16,9 @@
         <ul>
           <li>
             <a href="/index">Home</a>
-            <ul>
-              <li>
-                <a href="/index">Home Version 1</a>
-              </li>
-              <li>
-                <a href="/index2">Home Version 2</a>
-              </li>
-              <li>
-                <a href="/index3">Home Version 3</a>
-              </li>
-              <li>
-                <a href="/index4">Home Version 4</a>
-              </li>
-            </ul>
           </li>
           <li>
-            <a class="active" href="/shop">Shop</a>
+            <a class="active" href="/shop">Categories</a>
             <ul>
               <li>
                 <a href="/shop">Shop List</a>
@@ -72,7 +58,7 @@
             </ul>
           </li>
           <li>
-            <a href="/about">About</a>
+            <a href="/about">Information</a>
           </li>
           <li>
             <a href="/blog">Blog</a>
@@ -109,7 +95,7 @@
             <a href="/contact">Contact</a>
           </li>
           <li>
-            <a href="/faq">Feature</a>
+            <a href="/faq">Discounts</a>
             <ul>
               <li>
                 <a href="/404">404 Page</a>
@@ -138,23 +124,9 @@
                 <ul class="menu hidden-xs">
                   <li>
                     <a href="/index">Home</a>
-                    <ul>
-                      <li>
-                        <a href="/index">Home Version 1</a>
-                      </li>
-                      <li>
-                        <a href="/index2">Home Version 2</a>
-                      </li>
-                      <li>
-                        <a href="/index3">Home Version 3</a>
-                      </li>
-                      <li>
-                        <a href="/index4">Home Version 4</a>
-                      </li>
-                    </ul>
                   </li>
                   <li>
-                    <a class="active" href="/shop">Shop</a>
+                    <a class="active" href="/shop">Categories</a>
                     <ul>
                       <li>
                         <a href="/shop">Shop List</a>
@@ -194,7 +166,7 @@
                     </ul>
                   </li>
                   <li>
-                    <a href="/about">About</a>
+                    <a href="/about">Information</a>
                   </li>
                   <li>
                     <a href="/blog">Blog</a>
@@ -231,7 +203,7 @@
                     <a href="/contact">Contact</a>
                   </li>
                   <li>
-                    <a href="/faq">Feature</a>
+                    <a href="/faq">Discounts</a>
                     <ul>
                       <li>
                         <a href="/404">404 Page</a>
