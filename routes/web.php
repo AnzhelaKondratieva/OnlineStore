@@ -18,32 +18,8 @@ Route::get('/home', function () {
 return view('home');
 });
 
-Route::get('/index2', function () {
-return view('index-02');
-});
-
-Route::get('/index3', function () {
-return view('index-03');
-});
-
-Route::get('/index4', function () {
-return view('index-04');
-});
-
-Route::get('/shop', function () {
-return view('shop');
-});
-
-Route::get('/shop2', function () {
-return view('shop-02');
-});
-
-Route::get('/shop3', function () {
-return view('shop-03');
-});
-
-Route::get('/shop4', function () {
-return view('shop-04');
+Route::get('/blog', function () {
+return view('blog');
 });
 
 Route::get('/404', function () {
@@ -54,74 +30,50 @@ Route::get('/about', function () {
 return view('about');
 });
 
-Route::get('/blog', function () {
-return view('blog');
-}); 
-
-Route::get('/blog2', function () {
-return view('blog-02');
-});
-
-Route::get('/blog3', function () {
-return view('blog-03');
-});
-
-Route::get('/blog4', function () {
-return view('blog-04');
+Route::get('/category', function () {
+return view('category');
 });
 
 Route::get('/faq', function () {
 return view('faq');
 });
 
-Route::get('/blog-detail2', function () {
-return view('blog-detail-02');
+Route::get('/blog-details', function () {
+return view('blog-details');
 });
 
-Route::get('/blog-detail3', function () {
-return view('blog-detail-03');
+Route::get('/checkout', function () {
+return view('checkout');
 });
 
-Route::get('/blog-detail', function () {
-return view('blog-detail');
+Route::get('/sign-in', function () {
+return view('sign-in');
 });
 
-Route::get('/check-out', function () {
-return view('check-out');
+Route::get('/shopping-cart', function () {
+return view('shopping-cart');
 });
 
-Route::get('/elements', function () {
-return view('elements');
+Route::get('/my-wishlist', function () {
+return view('my-wishlist');
 });
 
-Route::get('/links', function () {
-return view('links');
+Route::get('/contact', function () {
+return view('contact');
 });
 
-Route::get('/login', function () {
-return view('login');
+Route::get('/detail', function () {
+return view('detail');
 });
 
-Route::get('/shop-cart', function () {
-return view('shop-cart');
+Route::get('/product-comparison', function () {
+return view('product-comparison');
 });
 
-Route::get('/shop-detail', function () {
-return view('shop-detail');
+Route::get('/terms-conditions', function () {
+return view('terms-conditions');
 });
 
-Route::get('/shop-detail2', function () {
-return view('shop-detail-02');
-});
-
-Route::get('/shop-detail3', function () {
-return view('shop-detail-03');
-});
-
-Route::get('/wish-list', function () {
-return view('wish-list');
-});
-
-Route::get('/register', function () {
-return view('register');
+Route::get('/track-orders', function () {
+return view('track-orders');
 });
