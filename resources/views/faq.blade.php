@@ -1,566 +1,886 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Home</title>
-    <meta charset="utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-  </head>
-  <body class="animsition">
-    <div class="faq" id="page">
-      <nav id="menu">
-        <ul>
-          <li>
-            <a href="/index">Home</a>
-            <ul>
-              <li>
-                <a href="/index">Home Version 1</a>
-              </li>
-              <li>
-                <a href="/index2">Home Version 2</a>
-              </li>
-              <li>
-                <a href="/index3">Home Version 3</a>
-              </li>
-              <li>
-                <a href="/index4">Home Version 4</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="/shop">Shop</a>
-            <ul>
-              <li>
-                <a href="/shop">Shop List</a>
-              </li>
-              <li>
-                <a href="/shop2">Shop List Version 2</a>
-              </li>
-              <li>
-                <a href="/shop3">Shop List Version 3</a>
-              </li>
-              <li>
-                <a href="/shop4">Shop List Version 4</a>
-              </li>
-              <li>
-                <a href="/shop-detail">Shop Detail</a>
-                <ul>
-                  <li>
-                    <a href="/shop-detail">Shop Detail</a>
-                  </li>
-                  <li>
-                    <a href="/shop-detail2">Shop Detail Version 2</a>
-                  </li>
-                  <li>
-                    <a href="/shop-detail3">Shop Detail Version 3</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="/wish-list">Wishlist</a>
-              </li>
-              <li>
-                <a href="/shop-cart">Shop Cart</a>
-              </li>
-              <li>
-                <a href="/check-out">Checkout</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a class="active" href="/blog">Blog</a>
-            <ul>
-              <li>
-                <a href="/blog">Blog List Version 1</a>
-              </li>
-              <li>
-                <a href="/blog2">Blog List Version 2</a>
-              </li>
-              <li>
-                <a href="/blog3">Blog List Version 3</a>
-              </li>
-              <li>
-                <a href="/blog4">Blog List Version 4</a>
-              </li>
-              <li>
-                <a href="/blog-detail">Blog Detail</a>
-                <ul>
-                  <li>
-                    <a href="/blog-detail">Blog Detail</a>
-                  </li>
-                  <li>
-                    <a href="/blog-detail2">Blog Detail Version 2</a>
-                  </li>
-                  <li>
-                    <a href="/blog-detail3">Blog Detail Version 3</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-          <li>
-            <a href="/faq">Feature</a>
-            <ul>
-              <li>
-                <a href="/404">404 Page</a>
-              </li>
-              <li>
-                <a href="/faq">Faq</a>
-              </li>
-              <li>
-                <a href="/login">Login</a>
-              </li>
-              <li>
-                <a href="/register">Register</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <header class="header-style-1 static">
-        <div class="container">
-          <div class="row">
-            <div class="header-1-inner">
-              <a class="brand-logo animsition-link" href="/index">
-                <img class="img-responsive" src="images/logo.png" alt="" />
-              </a>
-              <nav>
-                <ul class="menu hidden-xs">
-                  <li>
-                    <a href="/index">Home</a>
-                    <ul>
-                      <li>
-                        <a href="/index">Home Version 1</a>
-                      </li>
-                      <li>
-                        <a href="/index2">Home Version 2</a>
-                      </li>
-                      <li>
-                        <a href="/index3">Home Version 3</a>
-                      </li>
-                      <li>
-                        <a href="/index4">Home Version 4</a>
-                      </li>
+<html lang="en">
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+	    <meta name="robots" content="all">
+
+	    <title>Flipmart premium HTML5 & CSS3 Template</title>
+
+	    <!-- Bootstrap Core CSS -->
+	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	    
+	    <!-- Customizable CSS -->
+	    <link rel="stylesheet" href="assets/css/main.css">
+	    <link rel="stylesheet" href="assets/css/blue.css">
+	    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+		<link rel="stylesheet" href="assets/css/owl.transitions.css">
+		<link rel="stylesheet" href="assets/css/animate.min.css">
+		<link rel="stylesheet" href="assets/css/rateit.css">
+		<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+
+		
+
+		
+		<!-- Icons/Glyphs -->
+		<link rel="stylesheet" href="assets/css/font-awesome.css">
+
+        <!-- Fonts --> 
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+	</head>
+    <body class="cnt-home">
+		<!-- ============================================== HEADER ============================================== -->
+<header class="header-style-1">
+
+	<!-- ============================================== TOP MENU ============================================== -->
+<div class="top-bar animate-dropdown">
+	<div class="container">
+		<div class="header-top-inner">
+			<div class="cnt-account">
+				<ul class="list-unstyled">
+					<li><a href="#"><i class="icon fa fa-user"></i>My Account</a></li>
+					<li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
+					<li><a href="#"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
+					<li><a href="#"><i class="icon fa fa-check"></i>Checkout</a></li>
+					<li><a href="#"><i class="icon fa fa-lock"></i>Login</a></li>
+				</ul>
+			</div><!-- /.cnt-account -->
+
+			<div class="cnt-block">
+				<ul class="list-unstyled list-inline">
+					<li class="dropdown dropdown-small">
+						<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">USD </span><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">USD</a></li>
+							<li><a href="#">INR</a></li>
+							<li><a href="#">GBP</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown dropdown-small">
+						<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">English </span><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">English</a></li>
+							<li><a href="#">French</a></li>
+							<li><a href="#">German</a></li>
+						</ul>
+					</li>
+				</ul><!-- /.list-unstyled -->
+			</div><!-- /.cnt-cart -->
+			<div class="clearfix"></div>
+		</div><!-- /.header-top-inner -->
+	</div><!-- /.container -->
+</div><!-- /.header-top -->
+<!-- ============================================== TOP MENU : END ============================================== -->
+	<div class="main-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+					<!-- ============================================================= LOGO ============================================================= -->
+<div class="logo">
+	<a href="home.html">
+		
+		<img src="assets/images/logo.png" alt="">
+
+	</a>
+</div><!-- /.logo -->
+<!-- ============================================================= LOGO : END ============================================================= -->				</div><!-- /.logo-holder -->
+
+				<div class="col-xs-12 col-sm-12 col-md-7 top-search-holder">
+					<!-- /.contact-row -->
+<!-- ============================================================= SEARCH AREA ============================================================= -->
+<div class="search-area">
+    <form>
+        <div class="control-group">
+
+            <ul class="categories-filter animate-dropdown">
+                <li class="dropdown">
+
+                    <a class="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories <b class="caret"></b></a>
+
+                    <ul class="dropdown-menu" role="menu" >
+                        <li class="menu-header">Computer</li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Clothing</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Electronics</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Shoes</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Watches</a></li>
+
                     </ul>
-                  </li>
-                  <li>
-                    <a href="/shop">Shop</a>
-                    <ul>
-                      <li>
-                        <a href="/shop">Shop List</a>
-                      </li>
-                      <li>
-                        <a href="/shop2">Shop List Version 2</a>
-                      </li>
-                      <li>
-                        <a href="/shop3">Shop List Version 3</a>
-                      </li>
-                      <li>
-                        <a href="/shop4">Shop List Version 4</a>
-                      </li>
-                      <li>
-                        <a href="/shop-detail">Shop Detail</a>
-                        <ul>
-                          <li>
-                            <a href="/shop-detail">Shop Detail</a>
-                          </li>
-                          <li>
-                            <a href="/shop-detail2">Shop Detail Version 2</a>
-                          </li>
-                          <li>
-                            <a href="/shop-detail3">Shop Detail Version 3</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="/wish-list">Wishlist</a>
-                      </li>
-                      <li>
-                        <a href="/shop-cart">Shop Cart</a>
-                      </li>
-                      <li>
-                        <a href="/check-out">Checkout</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="/about">About</a>
-                  </li>
-                  <li>
-                    <a class="active" href="/blog">Blog</a>
-                    <ul>
-                      <li>
-                        <a href="/blog">Blog List Version 1</a>
-                      </li>
-                      <li>
-                        <a href="/blog2">Blog List Version 2</a>
-                      </li>
-                      <li>
-                        <a href="/blog3">Blog List Version 3</a>
-                      </li>
-                      <li>
-                        <a href="/blog4">Blog List Version 4</a>
-                      </li>
-                      <li>
-                        <a href="/blog-detail">Blog Detail</a>
-                        <ul>
-                          <li>
-                            <a href="/blog-detail">Blog Detail</a>
-                          </li>
-                          <li>
-                            <a href="/blog-detail2">Blog Detail Version 2</a>
-                          </li>
-                          <li>
-                            <a href="/blog-detail3">Blog Detail Version 3</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="/contact">Contact</a>
-                  </li>
-                  <li>
-                    <a href="/faq">Feature</a>
-                    <ul>
-                      <li>
-                        <a href="/404">404 Page</a>
-                      </li>
-                      <li>
-                        <a href="/faq">Faq</a>
-                      </li>
-                      <li>
-                        <a href="/login">Login</a>
-                      </li>
-                      <li>
-                        <a href="/register">Register</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <aside class="right">
-                <div class="widget widget-control-header">
-                  <div class="select-custom-wrapper">
-                    <select class="no-border">
-                      <option>USD</option>
-                      <option>VND</option>
-                      <option>EUR</option>
-                      <option>JPY</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="widget widget-control-header widget-search-header">
-                  <a class="control btn-open-search-form js-open-search-form-header" href="#">
-                    <span class="lnr lnr-magnifier"></span>
-                  </a>
-                  <div class="form-outer">
-                    <button class="btn-close-form-search-header js-close-search-form-header">
-                      <span class="lnr lnr-cross"></span>
-                    </button>
-                    <form>
-                      <input placeholder="Search" />
-                      <button class="search">
-                        <span class="lnr lnr-magnifier"></span>
-                      </button>
-                    </form>
-                  </div>
-                </div>
-                <div class="widget widget-control-header widget-shop-cart js-widget-shop-cart">
-                  <a class="control" href="/shop-cart">
-                    <p class="counter">0</p>
-                    <span class="lnr lnr-cart"></span>
-                  </a>
-                </div>
-                <div class="widget widget-control-header hidden-lg hidden-md hidden-sm">
-                  <a class="navbar-toggle js-offcanvas-has-events" type="button" href="#menu">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </a>
-                </div>
-              </aside>
-            </div>
-          </div>
+                </li>
+            </ul>
+
+            <input class="search-field" placeholder="Search here..." />
+
+            <a class="search-button" href="#" ></a>    
+
         </div>
-      </header>
-      <section class="sub-header shop-layout-1">
-        <img class="rellax bg-overlay" src="images/sub-header/010.jpg" alt="">
-        <div class="overlay-call-to-action"></div>
-        <h3 class="heading-style-3">Blog Detail</h3>
-      </section>
-      <section class="boxed-sm">
-        <div class="container">
-          <div class="faq-wrapper">
+    </form>
+</div><!-- /.search-area -->
+<!-- ============================================================= SEARCH AREA : END ============================================================= -->				</div><!-- /.top-search-holder -->
+
+				<div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
+					<!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
+
+	<div class="dropdown dropdown-cart">
+		<a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+			<div class="items-cart-inner">
+            <div class="basket">
+					<i class="glyphicon glyphicon-shopping-cart"></i>
+				</div>
+				<div class="basket-item-count"><span class="count">2</span></div>
+				<div class="total-price-basket">
+					<span class="lbl">cart -</span>
+					<span class="total-price">
+						<span class="sign">$</span><span class="value">600.00</span>
+					</span>
+				</div>
+				
+			
+		    </div>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<div class="cart-item product-summary">
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="image">
+								<a href="detail.html"><img src="assets/images/cart.jpg" alt=""></a>
+							</div>
+						</div>
+						<div class="col-xs-7">
+							
+							<h3 class="name"><a href="index.php?page-detail">Simple Product</a></h3>
+							<div class="price">$600.00</div>
+						</div>
+						<div class="col-xs-1 action">
+							<a href="#"><i class="fa fa-trash"></i></a>
+						</div>
+					</div>
+				</div><!-- /.cart-item -->
+				<div class="clearfix"></div>
+			<hr>
+		
+			<div class="clearfix cart-total">
+				<div class="pull-right">
+					
+						<span class="text">Sub Total :</span><span class='price'>$600.00</span>
+						
+				</div>
+				<div class="clearfix"></div>
+					
+				<a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>	
+			</div><!-- /.cart-total-->
+					
+				
+		</li>
+		</ul><!-- /.dropdown-menu-->
+	</div><!-- /.dropdown-cart -->
+
+<!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->				</div><!-- /.top-cart-row -->
+			</div><!-- /.row -->
+
+		</div><!-- /.container -->
+
+	</div><!-- /.main-header -->
+
+	<!-- ============================================== NAVBAR ============================================== -->
+<div class="header-nav animate-dropdown">
+    <div class="container">
+        <div class="yamm navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="nav-bg-class">
+                <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
+	<div class="nav-outer">
+		<ul class="nav navbar-nav">
+			<li class="active dropdown yamm-fw">
+				<a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+				
+			</li>
+			<li class="dropdown yamm mega-menu">
+				<a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Clothing</a>
+                <ul class="dropdown-menu container">
+					<li>
+               						<div class="yamm-content ">
             <div class="row">
-              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                  <div class="panel-heading" id="headingOne" role="tab">
-                    <h4 class="panel-title">
-                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <i class="more-less fa fa-angle-down"></i>What Shipping Methods Are Available?</a>
-                    </h4>
-                  </div>
-                  <div class="panel-collapse collapse" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">Sed sed nulla sit amet erat rhoncus placerat. Etiam ante diam, auctor eu libero at, faucibus laoreet dolor. Pellentesque non velit orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                      Suspendisse euismod velit ultrices arcu facilisis vehicula. In consequat imperdiet augue nec sagittis. Integer feugiat tempus odio, at tincidunt tellus bibendum in. </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" id="headingTwo" role="tab">
-                    <h4 class="panel-title">
-                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <i class="more-less fa fa-angle-down"></i>Do You Ship Internationally?</a>
-                    </h4>
-                  </div>
-                  <div class="panel-collapse collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" id="headingThree" role="tab">
-                    <h4 class="panel-title">
-                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <i class="more-less fa fa-angle-down"></i>How can I change my shipping address?</a>
-                    </h4>
-                  </div>
-                  <div class="panel-collapse collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingThree">
-                    <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" id="headingFour" role="tab">
-                    <h4 class="panel-title">
-                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        <i class="more-less fa fa-angle-down"></i>How can I change my shipping address?</a>
-                    </h4>
-                  </div>
-                  <div class="panel-collapse collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingFour">
-                    <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" id="headingFive" role="tab">
-                    <h4 class="panel-title">
-                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        <i class="more-less fa fa-angle-down"></i>Can you ship your products anywhere?</a>
-                    </h4>
-                  </div>
-                  <div class="panel-collapse collapse" id="collapseFive" role="tabpanel" aria-labelledby="headingFive">
-                    <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" id="headingSix" role="tab">
-                    <h4 class="panel-title">
-                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        <i class="more-less fa fa-angle-down"></i>How many types of food are there in your shop?</a>
-                    </h4>
-                  </div>
-                  <div class="panel-collapse collapse" id="collapseSix" role="tabpanel" aria-labelledby="headingSix">
-                    <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" id="headingSeven" role="tab">
-                    <h4 class="panel-title">
-                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                        <i class="more-less fa fa-angle-down"></i>How do I place an Order?</a>
-                    </h4>
-                  </div>
-                  <div class="panel-collapse collapse" id="collapseSeven" role="tabpanel" aria-labelledby="headingSeven">
-                    <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" id="headingEight" role="tab">
-                    <h4 class="panel-title">
-                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                        <i class="more-less fa fa-angle-down"></i>Do I need an account to place an order?</a>
-                    </h4>
-                  </div>
-                  <div class="panel-collapse collapse" id="collapseEight" role="tabpanel" aria-labelledby="headingEight">
-                    <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
-                  </div>
-                </div>
-              </div>
-              <!-- panel-group-->
+                
+                   <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                        <h2 class="title">Men</h2>
+                        <ul class="links">
+                            <li><a href="#">Dresses</a></li>
+                            <li><a href="#">Shoes </a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">Sunglasses</a></li>
+                            <li><a href="#">Sport Wear</a></li>
+                             <li><a href="#">Blazers</a></li>
+                              <li><a href="#">Shirts</a></li>
+                          
+                        </ul>
+                    </div><!-- /.col -->
+
+                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                        <h2 class="title">Women</h2>
+                        <ul class="links">
+                            <li><a href="#">Handbags</a></li>
+                            <li><a href="#">Jwellery</a></li>
+                            <li><a href="#">Swimwear </a></li>                   
+                            <li><a href="#">Tops</a></li>
+                            <li><a href="#">Flats</a></li>
+                             <li><a href="#">Shoes</a></li>
+                              <li><a href="#">Winter Wear</a></li>
+                       
+                        </ul>
+                    </div><!-- /.col -->
+
+                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                        <h2 class="title">Boys</h2>
+                        <ul class="links">
+                            <li><a href="#">Toys & Games</a></li>
+                            <li><a href="#">Jeans</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Shoes</a></li>
+                             <li><a href="#">School Bags</a></li>
+                              <li><a href="#">Lunch Box</a></li> 
+                               <li><a href="#">Footwear</a></li>
+                                                                   
+                        </ul>
+                    </div><!-- /.col -->
+
+                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                        <h2 class="title">Girls</h2>
+                        <ul class="links">
+                            <li><a href="#">Sandals </a></li> 
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Dresses</a></li>
+                            <li><a href="#">Jwellery</a></li>
+                            <li><a href="#">Bags</a></li>
+                             <li><a href="#">Night Dress</a></li>
+                              <li><a href="#">Swim Wear</a></li>
+                          
+                                   
+                        </ul>
+                    </div><!-- /.col -->
+
+                    
+       <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image">
+                                    <img class="img-responsive" src="assets/images/banners/top-menu-banner.jpg" alt="">
+                              
+                            
+      
+   
+       
+ 
+</div><!-- /.yamm-content -->					
+</div>
+</div>
+
+</li>
+				</ul>
+				
+			</li>
+
+			<li class="dropdown mega-menu">
+				<a href="category.html"  data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Electronics
+				   <span class="menu-label hot-menu hidden-xs">hot</span>
+				</a>
+                <ul class="dropdown-menu container">
+					<li>
+						<div class="yamm-content">
+    <div class="row">
+           <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                <h2 class="title">Laptops</h2>
+                <ul class="links">
+                   <li><a href="#">Gaming</a></li>
+                   <li><a href="#">Laptop Skins</a></li>
+                    <li><a href="#">Apple</a></li>
+                    <li><a href="#">Dell</a></li>
+                    <li><a href="#">Lenovo</a></li>
+                    <li><a href="#">Microsoft</a></li>
+                    <li><a href="#">Asus</a></li>
+                     <li><a href="#">Adapters</a></li>
+                     <li><a href="#">Batteries</a></li>
+                     <li><a href="#">Cooling Pads</a></li>
+                </ul>
+            </div><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                <h2 class="title">Desktops</h2>
+                <ul class="links">
+                    <li><a href="#">Routers & Modems</a></li>
+                    <li><a href="#">CPUs, Processors</a></li>
+                    <li><a href="#">PC Gaming Store</a></li>
+                    <li><a href="#">Graphics Cards</a></li>
+                    <li><a href="#">Components</a></li>
+                    <li><a href="#">Webcam</a></li>
+                    <li><a href="#">Memory (RAM)</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                    <li><a href="#">Keyboards</a></li>
+                    <li><a href="#">Headphones</a></li>
+                </ul>
+            </div><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                <h2 class="title">Cameras</h2>
+                <ul class="links">
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Binoculars</a></li>
+                    <li><a href="#">Telescopes</a></li>
+                    <li><a href="#">Camcorders</a></li>
+                    <li><a href="#">Digital</a></li>
+                     <li><a href="#">Film Cameras</a></li>
+                     <li><a href="#">Flashes</a></li>
+                     <li><a href="#">Lenses</a></li>
+                     <li><a href="#">Surveillance</a></li>
+                      <li><a href="#">Tripods</a></li>
+                     
+                </ul>
+            </div><!-- /.col -->
+            <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                <h2 class="title">Mobile Phones</h2>
+                <ul class="links">
+                    <li><a href="#">Apple</a></li>
+                    <li><a href="#">Samsung</a></li>
+                    <li><a href="#">Lenovo</a></li>
+                    <li><a href="#">Motorola</a></li>
+                    <li><a href="#">LeEco</a></li>
+                    <li><a href="#">Asus</a></li>
+                    <li><a href="#">Acer</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Headphones</a></li>
+                     <li><a href="#">Memory Cards</a></li>
+                </ul>
             </div>
-          </div>
-        </div>
-      </section>
+            
+             <div class="col-xs-12 col-sm-12 col-md-4 col-menu custom-banner">
+             <a href="#"><img alt="" src="assets/images/banners/banner-side.png"></a>
+             </div>
+    </div><!-- /.row -->
+</div><!-- /.yamm-content -->					</li>
+				</ul>
+			</li>
+			<li class="dropdown hidden-sm">
+				
+				<a href="category.html">Health & Beauty
+				    <span class="menu-label new-menu hidden-xs">new</span>
+				</a>
+			</li>
+
+			<li class="dropdown hidden-sm">
+				<a href="category.html">Watches</a>
+			</li>
+
+			<li class="dropdown">
+				<a href="contact.html">Jewellery</a>
+			</li>
+            
+            <li class="dropdown">
+				<a href="contact.html">Shoes</a>
+			</li>
+            <li class="dropdown">
+				<a href="contact.html">Kids & Girls</a>
+			</li>
+			
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Pages</a>
+				<ul class="dropdown-menu pages">
+					<li>
+						<div class="yamm-content">
+							<div class="row">
+								
+									<div class="col-xs-12 col-menu">
+	                                  <ul class="links">
+		                                  	<li><a href="home.html">Home</a></li>
+											<li><a href="category.html">Category</a></li>
+											<li><a href="detail.html">Detail</a></li>
+											<li><a href="shopping-cart.html">Shopping Cart Summary</a></li>
+                                            <li><a href="checkout.html">Checkout</a></li>
+											<li><a href="blog.html">Blog</a></li>
+											<li><a href="blog-details.html">Blog Detail</a></li>
+											<li><a href="contact.html">Contact</a></li>
+                                            <li><a href="sign-in.html">Sign In</a></li>
+											<li><a href="my-wishlist.html">Wishlist</a></li>
+											<li><a href="terms-conditions.html">Terms and Condition</a></li>
+											<li><a href="track-orders.html">Track Orders</a></li>
+											<li><a href="product-comparison.html">Product-Comparison</a></li>
+		                                  	<li><a href="faq.html">FAQ</a></li>
+											<li><a href="404.html">404</a></li>
+											
+	                                  </ul>
+									</div>
+									
+									
+								
+							</div>
+						</div>
+					</li>
+                    
+                   
+					
+				</ul>
+			</li>
+             <li class="dropdown  navbar-right special-menu">
+				<a href="#">Todays offer</a>
+			</li>
+					
+			
+		</ul><!-- /.navbar-nav -->
+		<div class="clearfix"></div>				
+	</div><!-- /.nav-outer -->
+</div><!-- /.navbar-collapse -->
+
+
+            </div><!-- /.nav-bg-class -->
+        </div><!-- /.navbar-default -->
+    </div><!-- /.container-class -->
+
+</div><!-- /.header-nav -->
+<!-- ============================================== NAVBAR : END ============================================== -->
+
+</header>
+
+<!-- ============================================== HEADER : END ============================================== -->
+<div class="breadcrumb">
+	<div class="container">
+		<div class="breadcrumb-inner">
+			<ul class="list-inline list-unstyled">
+				<li><a href="home.html">Home</a></li>
+				<li class='active'>FAQ</li>
+			</ul>
+		</div><!-- /.breadcrumb-inner -->
+	</div><!-- /.container -->
+</div><!-- /.breadcrumb -->
+
+<div class="body-content">
+	<div class="container">
+		<div class="checkout-box faq-page">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="heading-title">Frequently Asked Questions</h2>
+					<span class="title-tag">Last Updated on November 02, 2014</span>
+					<div class="panel-group checkout-steps" id="accordion">
+						<!-- checkout-step-01  -->
+<div class="panel panel-default checkout-step-01">
+
+	<!-- panel-heading -->
+		<div class="panel-heading">
+    	<h4 class="unicase-checkout-title">
+	        <a data-toggle="collapse" class="" data-parent="#accordion" href="#collapseOne">
+	          <span>1</span>Do you Ship Internationally ?
+	        </a>
+	     </h4>
     </div>
-    <footer class="footer-style-1">
-      <div class="container">
-        <div class="row">
-          <div class="footer-style-1-inner">
-            <div class="widget-footer widget-text col-first col-small">
-              <a href="#">
-                <img class="logo-footer" src="images/logo.png" alt="Logo Orchid" />
-              </a>
-              <div class="widget-link">
-                <ul>
-                  <li>
-                    <span class="lnr lnr-map-marker icon"></span>
-                    <span>379 5th Ave New York, NYC 10018</span>
-                  </li>
-                  <li>
-                    <span class="lnr lnr-phone-handset icon"></span>
-                    <a href="tel:0123456789">(+1) 96 716 6879</a>
-                  </li>
-                  <li>
-                    <span class="lnr lnr-envelope icon"></span>
-                    <a href="mailto: contact@site.com">contact@site.com </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="widget-footer widget-link col-second col-medium">
-              <div class="list-link">
-                <h4 class="h4 heading">SHOP</h4>
-                <ul>
-                  <li>
-                    <a href="#">Food</a>
-                  </li>
-                  <li>
-                    <a href="#">Farm</a>
-                  </li>
-                  <li>
-                    <a href="#">Health</a>
-                  </li>
-                  <li>
-                    <a href="#">Orchid</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="list-link">
-                <h4 class="h4 heading">SUPPORT</h4>
-                <ul>
-                  <li>
-                    <a href="#">Contact Us</a>
-                  </li>
-                  <li>
-                    <a href="#">FAQ</a>
-                  </li>
-                  <li>
-                    <a href="#">Privacy Policy</a>
-                  </li>
-                  <li>
-                    <a href="#">Blog</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="list-link">
-                <h4 class="h4 heading">MY ACCOUNT</h4>
-                <ul>
-                  <li>
-                    <a href="#">Sign In</a>
-                  </li>
-                  <li>
-                    <a href="#">My Cart</a>
-                  </li>
-                  <li>
-                    <a href="#">My Wishlist</a>
-                  </li>
-                  <li>
-                    <a href="#">Check Out</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="widget-footer widget-newsletter-footer col-last col-small">
-              <h4 class="h4 heading">NEWSLETTER</h4>
-              <p>Subscribe now to get daily updates</p>
-              <form class="Orchid-form form-inline btn-add-on circle border">
-                <div class="form-group">
-                  <input class="form-control pill transparent" placeholder="Your Email..." type="email" />
-                  <button class="btn btn-brand circle" type="submit">
-                    <i class="fa fa-envelope-o"></i>
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="copy-right style-1">
+    <!-- panel-heading -->
+
+	<div id="collapseOne" class="panel-collapse collapse in">
+
+		<!-- panel-body  -->
+	    <div class="panel-body">
+	    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis diam erat. Duis velit lectus, posuere a blandit sit amet, tempor at lorem. Donec ultricies, lorem sed ultrices interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis diam erat. Duis velit lectus, posuere a blandit sit amet, tempor at lorem. Donec ultricies, lorem sed ultrices interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis diam erat. Duis velit lectus, posuere a blandit sit amet, tempor at lorem. Donec ultricies, lorem sed ultrices interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis diam erat. Duis velit lectus, posuere a blandit sit amet, tempor at lorem.			
+		</div>
+		<!-- panel-body  -->
+
+	</div><!-- row -->
+</div>
+<!-- checkout-step-01  -->
+					    <!-- checkout-step-02  -->
+					  	<div class="panel panel-default checkout-step-02">
+						    <div class="panel-heading">
+						      <h4 class="unicase-checkout-title">
+						        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseTwo">
+						          <span>2</span>Who should I to contact if I have any queries?	
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseTwo" class="panel-collapse collapse">
+						      <div class="panel-body">
+						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						      </div>
+						    </div>
+					  	</div>
+					  	<!-- checkout-step-02  -->
+
+						<!-- checkout-step-03  -->
+					  	<div class="panel panel-default checkout-step-03">
+						    <div class="panel-heading">
+						      <h4 class="unicase-checkout-title">
+						        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseThree">
+						       		<span>3</span>How do I track my order ?
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseThree" class="panel-collapse collapse">
+						      <div class="panel-body">
+						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						      </div>
+						    </div>
+					  	</div>
+					  	<!-- checkout-step-03  -->
+
+						<!-- checkout-step-04  -->
+					    <div class="panel panel-default checkout-step-04">
+						    <div class="panel-heading">
+						      <h4 class="unicase-checkout-title">
+						        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseFour">
+						        	<span>4</span>How can I cancel or change my order ?
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseFour" class="panel-collapse collapse">
+							    <div class="panel-body">
+							        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							    </div>
+					    	</div>
+						</div>
+						<!-- checkout-step-04  -->
+
+						<!-- checkout-step-05  -->
+					  	<div class="panel panel-default checkout-step-05">
+						    <div class="panel-heading">
+						      <h4 class="unicase-checkout-title">
+						        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseFive">
+						        	<span>5</span>How can I return a product
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseFive" class="panel-collapse collapse">
+						      <div class="panel-body">
+						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						      </div>
+						    </div>
+					    </div>
+					    <!-- checkout-step-05  -->
+
+						<!-- checkout-step-06  -->
+					  	<div class="panel panel-default checkout-step-06">
+						    <div class="panel-heading">
+						      <h4 class="unicase-checkout-title">
+						        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseSix">
+						        	<span>6</span>How long will it take to get my package ?
+						        </a>
+						      </h4>
+						    </div>
+					    	<div id="collapseSix" class="panel-collapse collapse">
+					      		<div class="panel-body">
+					        		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					      		</div>
+					    	</div>
+					  	</div>
+					  	<!-- checkout-step-06  -->
+
+					  	<!-- checkout-step-07  -->
+					  	<div class="panel panel-default checkout-step-07">
+						    <div class="panel-heading">
+						      <h4 class="unicase-checkout-title">
+						        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseSeven">
+						        	<span>7</span>What Shipping methods are available ?
+						        </a>
+						      </h4>
+						    </div>
+					    	<div id="collapseSeven" class="panel-collapse collapse">
+					      		<div class="panel-body">
+					        		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					      		</div>
+					    	</div>
+					  	</div>
+					  	<!-- checkout-step-07  -->
+
+					  	<!-- checkout-step-08  -->
+					  	<div class="panel panel-default checkout-step-08">
+						    <div class="panel-heading">
+						      <h4 class="unicase-checkout-title">
+						        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseEight">
+						        	<span>8</span>Do you provide any warranty ?
+						        </a>
+						      </h4>
+						    </div>
+					    	<div id="collapseEight" class="panel-collapse collapse">
+					      		<div class="panel-body">
+					        		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					      		</div>
+					    	</div>
+					  	</div>
+					  	<!-- checkout-step-08  -->
+
+					  	<!-- checkout-step-09  -->
+					  	<div class="panel panel-default checkout-step-09">
+						    <div class="panel-heading">
+						      <h4 class="unicase-checkout-title">
+						        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseNine">
+						        	<span>9</span>Do you have replacement guarantee ?
+						        </a>
+						      </h4>
+						    </div>
+					    	<div id="collapseNine" class="panel-collapse collapse">
+					      		<div class="panel-body">
+					        		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					      		</div>
+					    	</div>
+					  	</div>
+					  	<!-- checkout-step-09  -->
+					  	
+					</div><!-- /.checkout-steps -->
+				</div>
+			</div><!-- /.row -->
+		</div><!-- /.checkout-box -->
+		<!-- ============================================== BRANDS CAROUSEL ============================================== -->
+<div id="brands-carousel" class="logo-slider wow fadeInUp">
+
+		<div class="logo-slider-inner">	
+			<div id="brand-slider" class="owl-carousel brand-slider custom-carousel owl-theme">
+				<div class="item m-t-15">
+					<a href="#" class="image">
+						<img data-echo="assets/images/brands/brand1.png" src="assets/images/blank.gif" alt="">
+					</a>	
+				</div><!--/.item-->
+
+				<div class="item m-t-10">
+					<a href="#" class="image">
+						<img data-echo="assets/images/brands/brand2.png" src="assets/images/blank.gif" alt="">
+					</a>	
+				</div><!--/.item-->
+
+				<div class="item">
+					<a href="#" class="image">
+						<img data-echo="assets/images/brands/brand3.png" src="assets/images/blank.gif" alt="">
+					</a>	
+				</div><!--/.item-->
+
+				<div class="item">
+					<a href="#" class="image">
+						<img data-echo="assets/images/brands/brand4.png" src="assets/images/blank.gif" alt="">
+					</a>	
+				</div><!--/.item-->
+
+				<div class="item">
+					<a href="#" class="image">
+						<img data-echo="assets/images/brands/brand5.png" src="assets/images/blank.gif" alt="">
+					</a>	
+				</div><!--/.item-->
+
+				<div class="item">
+					<a href="#" class="image">
+						<img data-echo="assets/images/brands/brand6.png" src="assets/images/blank.gif" alt="">
+					</a>	
+				</div><!--/.item-->
+
+				<div class="item">
+					<a href="#" class="image">
+						<img data-echo="assets/images/brands/brand2.png" src="assets/images/blank.gif" alt="">
+					</a>	
+				</div><!--/.item-->
+
+				<div class="item">
+					<a href="#" class="image">
+						<img data-echo="assets/images/brands/brand4.png" src="assets/images/blank.gif" alt="">
+					</a>	
+				</div><!--/.item-->
+
+				<div class="item">
+					<a href="#" class="image">
+						<img data-echo="assets/images/brands/brand1.png" src="assets/images/blank.gif" alt="">
+					</a>	
+				</div><!--/.item-->
+
+				<div class="item">
+					<a href="#" class="image">
+						<img data-echo="assets/images/brands/brand5.png" src="assets/images/blank.gif" alt="">
+					</a>	
+				</div><!--/.item-->
+		    </div><!-- /.owl-carousel #logo-slider -->
+		</div><!-- /.logo-slider-inner -->
+	
+</div><!-- /.logo-slider -->
+<!-- ============================================== BRANDS CAROUSEL : END ============================================== -->	</div><!-- /.container -->
+</div><!-- /.body-content -->
+<!-- ============================================================= FOOTER ============================================================= -->
+<footer id="footer" class="footer color-bg">
+
+
+    <div class="footer-bottom">
         <div class="container">
-          <div class="row">
-            <div class="copy-right-inner">
-              <p>Copyright © 2017 Designed by Upperthemes. All rights reserved.</p>
-              <div class="widget widget-footer widget-footer-creadit-card">
-                <ul class="list-unstyle">
-                  <li>
-                    <a href="#">
-                      <img src="images/icons/creadit-card-01.png" alt="creadit card" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <img src="images/icons/creadit-card-02.png" alt="creadit card" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <img src="images/icons/creadit-card-03.png" alt="creadit card" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <img src="images/icons/creadit-card-04.png" alt="creadit card" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading">
+                        <h4 class="module-title">Contact Us</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+        <ul class="toggle-footer" style="">
+            <li class="media">
+                <div class="pull-left">
+                     <span class="icon fa-stack fa-lg">
+                            <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="media-body">
+                    <p>ThemesGround, 789 Main rd, Anytown, CA 12345 USA</p>
+                </div>
+            </li>
+
+              <li class="media">
+                <div class="pull-left">
+                     <span class="icon fa-stack fa-lg">
+                      <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="media-body">
+                    <p>+(888) 123-4567<br>+(888) 456-7890</p>
+                </div>
+            </li>
+
+              <li class="media">
+                <div class="pull-left">
+                     <span class="icon fa-stack fa-lg">
+                      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="media-body">
+                    <span><a href="#">flipmart@themesground.com</a></span>
+                </div>
+            </li>
+              
+            </ul>
+    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading">
+                        <h4 class="module-title">Customer Service</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                            <li class="first"><a href="#" title="Contact us">My Account</a></li>
+                <li><a href="#" title="About us">Order History</a></li>
+                <li><a href="#" title="faq">FAQ</a></li>
+                <li><a href="#" title="Popular Searches">Specials</a></li>
+                <li class="last"><a href="#" title="Where is my order?">Help Center</a></li>
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading">
+                        <h4 class="module-title">Corporation</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                          <li class="first"><a title="Your Account" href="#">About us</a></li>
+                <li><a title="Information" href="#">Customer Service</a></li>
+                <li><a title="Addresses" href="#">Company</a></li>
+                <li><a title="Addresses" href="#">Investor Relations</a></li>
+                <li class="last"><a title="Orders History" href="#">Advanced Search</a></li>
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading">
+                        <h4 class="module-title">Why Choose Us</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                            <li class="first"><a href="#" title="About us">Shopping Guide</a></li>
+                <li><a href="#" title="Blog">Blog</a></li>
+                <li><a href="#" title="Company">Company</a></li>
+                <li><a href="#" title="Investor Relations">Investor Relations</a></li>
+                <li class=" last"><a href="contact-us.html" title="Suppliers">Contact Us</a></li>
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </footer>
-    <script src="js/library/jquery.min.js"></script>
-    <script src="js/library/bootstrap.min.js"></script>
-    <script src="js/function-check-viewport.js"></script>
-    <script src="js/library/slick.min.js"></script>
-    <script src="js/library/select2.full.min.js"></script>
-    <script src="js/library/imagesloaded.pkgd.min.js"></script>
-    <script src="js/library/jquery.mmenu.all.min.js"></script>
-    <script src="js/library/rellax.min.js"></script>
-    <script src="js/library/isotope.pkgd.min.js"></script>
-    <script src="js/library/bootstrap-notify.min.js"></script>
-    <script src="js/library/bootstrap-slider.js"></script>
-    <script src="js/library/in-view.min.js"></script>
-    <script src="js/library/countUp.js"></script>
-    <script src="js/library/animsition.min.js"></script>
-    <script src="js/global.js"></script>
-    <script src="js/config-mm-menu.js"></script>
-    <script src="js/config-set-bg-blog-thumb.js"></script>
-    <script src="js/config-accrodion.js">
+    </div>
+
+    <div class="copyright-bar">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 no-padding social">
+                <ul class="link">
+                  <li class="fb pull-left"><a target="_blank" rel="nofollow" href="#" title="Facebook"></a></li>
+                  <li class="tw pull-left"><a target="_blank" rel="nofollow" href="#" title="Twitter"></a></li>
+                  <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li>
+                  <li class="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li>
+                  <li class="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li>
+                  <li class="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li>
+                  <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="#" title="Youtube"></a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 no-padding">
+                <div class="clearfix payment-methods">
+                    <ul>
+                        <li><img src="assets/images/payments/1.png" alt=""></li>
+                        <li><img src="assets/images/payments/2.png" alt=""></li>
+                        <li><img src="assets/images/payments/3.png" alt=""></li>
+                        <li><img src="assets/images/payments/4.png" alt=""></li>
+                        <li><img src="assets/images/payments/5.png" alt=""></li>
+                    </ul>
+                </div><!-- /.payment-methods -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ============================================================= FOOTER : END============================================================= -->
 
 
-    </script>
-  </body>
+	<!-- For demo purposes – can be removed on production -->
+	
+	
+	<!-- For demo purposes – can be removed on production : End -->
+
+	<!-- JavaScripts placed at the end of the document so the pages load faster -->
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	
+	<script src="assets/js/bootstrap.min.js"></script>
+	
+	<script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	
+	<script src="assets/js/echo.min.js"></script>
+	<script src="assets/js/jquery.easing-1.3.min.js"></script>
+	<script src="assets/js/bootstrap-slider.min.js"></script>
+    <script src="assets/js/jquery.rateit.min.js"></script>
+    <script type="text/javascript" src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+
+	<!-- For demo purposes – can be removed on production -->
+	
+	<script src="switchstylesheet/switchstylesheet.js"></script>
+	
+	<script>
+		$(document).ready(function(){ 
+			$(".changecolor").switchstylesheet( { seperator:"color"} );
+			$('.show-theme-options').click(function(){
+				$(this).parent().toggleClass('open');
+				return false;
+			});
+		});
+
+		$(window).bind("load", function() {
+		   $('.show-theme-options').delay(2000).trigger('click');
+		});
+	</script>
+	<!-- For demo purposes – can be removed on production : End -->
+
+	
+
+</body>
 </html>
