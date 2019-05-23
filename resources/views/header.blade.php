@@ -198,10 +198,10 @@
                						<div class="yamm-content ">
             <div class="row">
                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-					   @foreach(\App\Product::$catefories as $url => $category)
+					   @foreach(\App\Product::$categories as $url => $category)
                         <h2 class="title">Men</h2>
                         <ul class="links">
-							@foreach(\App\Product::$catefory as $url => $category_item)
+							@foreach(\App\Product::$categories as $url => $category_item)
                             <li><a href="/{{$url}}"> {{$category_item}}">Suits</a></li>
 							@endforeach
                         </ul>
