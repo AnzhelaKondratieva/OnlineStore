@@ -203,12 +203,6 @@
                         <ul class="links">
 							@foreach(\App\Product::$catefory as $url => $category_item)
                             <li><a href="/{{$url}}"> {{$category_item}}">Suits</a></li>
-                            <li><a href="/{{$url}}"> {{$category_item}}">Shoes</a></li>
-                            <li><a href="/{{$url}}"> {{$category_item}}">Jeans</a></li>
-                            <li><a href="/{{$url}}"> {{$category_item}}">Sunglasses</a></li>
-                            <li><a href="/{{$url}}"> {{$category_item}}">Sport Wear</a></li>
-                             <li><a href="/{{$url}}"> {{$category_item}}">Underwear</a></li>
-                              <li><a href="/{{$url}}"> {{$category_item}}">Shirts</a></li>
 							@endforeach
                         </ul>
 						   @endforeach
