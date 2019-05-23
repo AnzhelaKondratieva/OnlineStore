@@ -264,13 +264,13 @@
                     <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
                         <h2 class="title">Girls</h2>
                         <ul class="links">
-                            <li><a href="#">Sandals </a></li> 
+                            <li><a href="#">Shoes</a></li>
                             <li><a href="#">Shorts</a></li>
                             <li><a href="#">Dresses</a></li>
-                            <li><a href="#">Jwellery</a></li>
+                            <li><a href="#">Shirts</a></li>
                             <li><a href="#">Bags</a></li>
-                             <li><a href="#">Night Dress</a></li>
-                              <li><a href="#">Swim Wear</a></li>
+                             <li><a href="#">Winter wear</a></li>
+                              <li><a href="#">Swimwear</a></li>
                           
                                    
                         </ul>
@@ -305,16 +305,11 @@
            <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
                 <h2 class="title">Laptops</h2>
                 <ul class="links">
-                   <li><a href="#">Gaming</a></li>
-                   <li><a href="#">Laptop Skins</a></li>
                     <li><a href="#">Apple</a></li>
                     <li><a href="#">Dell</a></li>
                     <li><a href="#">Lenovo</a></li>
-                    <li><a href="#">Microsoft</a></li>
                     <li><a href="#">Asus</a></li>
-                     <li><a href="#">Adapters</a></li>
-                     <li><a href="#">Batteries</a></li>
-                     <li><a href="#">Cooling Pads</a></li>
+					<li><a href="#">Others</a></li>
                 </ul>
             </div><!-- /.col -->
 

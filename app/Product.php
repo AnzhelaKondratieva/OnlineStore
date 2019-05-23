@@ -21,8 +21,23 @@ class Product {
                                                         'Shool bags' => 'Школьные сумки',
                                                         'Suits' => 'Костюмы',
                                                         'Winter wear' => 'Зимняя одежда'],
-    ],
-        'Electronics' => 'Электроника',
+                                              'Girls' => ['Shoes' => 'Обувь',
+                                                        'Shorts' => 'Футболки',
+                                                        'Dresses' => 'Платья',
+                                                        'Shirts' => 'Юбки',
+                                                        'Bags' => 'Сумки',
+                                                        'Winter wear' => 'Зимняя одежда',
+                                                        'Swimwear' => 'Купальные костюмы']],
+                                'Electronics' => ['Laptops' => ['Apple' => 'Apple',
+                                                        'Dell' => 'Dell',
+                                                        'Asus' => 'Asus',
+                                                        'Others' => 'Другие'],
+                                                  'Desctops' => [
+
+
+                                                  ]
+
+                                ],
         'Shoes'=>'Обувь',
         'Watches' => 'Часы',
         'Jewellery' => 'Ювелирные изделия',
