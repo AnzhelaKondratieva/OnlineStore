@@ -192,7 +192,7 @@
 				<a href="/home" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home</a>
 			</li>
 			@foreach(\App\Product::$categories as $url => $category)
-				@foreach(\App\Product::$category as $url => $category_item)
+				@foreach($category as $url => $category_item)
 			<li class="dropdown yamm mega-menu">
 				<a href="/{{$url}}"> {{$category}}" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"></a>
                 <ul class="dropdown-menu container">
