@@ -191,44 +191,30 @@
 			<li class="active dropdown yamm-fw">
 				<a href="/home" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home</a>
 			</li>
+			@foreach(\App\Product::$categories as $url => $category)
+				@foreach(\App\Product::$category as $url => $category_item)
 			<li class="dropdown yamm mega-menu">
-				<a href="/home" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Clothing</a>
+				<a href="/{{$url}}"> {{$category}}" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"></a>
                 <ul class="dropdown-menu container">
 					<li>
                						<div class="yamm-content ">
             <div class="row">
                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-					   @foreach(\App\Product::$categories as $url => $category)
                         <h2 class="title">Men</h2>
                         <ul class="links">
-							@foreach(\App\Product::$categories as $url => $category_item)
-                            <li><a href="/{{$url}}"> {{$category_item}}">Suits</a></li>
-							@endforeach
+							<li><a href="/{{$url}}"> {{$category_item}}"></a></li>
                         </ul>
-						   @endforeach
                     </div><!-- /.col -->
                     <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
                         <h2 class="title">Women</h2>
                         <ul class="links">
-                            <li><a href="#">Handbags</a></li>
-                            <li><a href="#">Jewelry</a></li>
-                            <li><a href="#">Swimwear </a></li>                   
-                            <li><a href="#">Underwear</a></li>
-                            <li><a href="#">Skirts</a></li>
-                             <li><a href="#">Shoes</a></li>
-                              <li><a href="#">Winter Wear</a></li>
+							<li><a href="/{{$url}}"> {{$category_item}}"></a></li>
                         </ul>
                     </div><!-- /.col -->
                     <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
                         <h2 class="title">Boys</h2>
                         <ul class="links">
-                            <li><a href="#">Toys & Games</a></li>
-                            <li><a href="#">Jeans</a></li>
-                            <li><a href="#">Shirts</a></li>
-                            <li><a href="#">Shoes</a></li>
-                             <li><a href="#">School Bags</a></li>
-                              <li><a href="#">Suits</a></li>
-                               <li><a href="#">Winter wear</a></li>
+							<li><a href="/{{$url}}"> {{$category_item}}"></a></li>
                         </ul>
                     </div><!-- /.col -->
                     <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
@@ -355,6 +341,8 @@
 						</div><!-- /.yamm-content -->					</li>
 				</ul>
 			</li>
+			@endforeach
+			@endforeach
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Blog</a>
 				<ul class="dropdown-menu pages">
