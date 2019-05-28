@@ -192,175 +192,29 @@
 				<a href="/home" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home</a>
 			</li>
 			@foreach(\App\Product::$categories as $url => $category)
-				@foreach($category as $url => $category_item)
 			<li class="dropdown yamm mega-menu">
-				<a href="/{{$url}}"> {{$category}}" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"></a>
+				<a href="#" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">{{$category['type']}}</a>
                 <ul class="dropdown-menu container">
 					<li>
                						<div class="yamm-content ">
             <div class="row">
                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                        <h2 class="title">Men</h2>
-                        <ul class="links">
-							<li><a href="/{{$url}}"> {{$category_item}}"></a></li>
-                        </ul>
+					   @foreach($category as $url => $categor)
+					   <a href="/{{$url}}" class="title">{{$categor['name']}}</a>
+					   <ul class="links list-unstyled">
+						   @foreach($categor['children'] as $url => $subcategory)
+						   <li><a href="/{{$url}}">{{$subcategory}}</a></li>
+					   </ul>
                     </div><!-- /.col -->
-                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                        <h2 class="title">Women</h2>
-                        <ul class="links">
-							<li><a href="/{{$url}}"> {{$category_item}}"></a></li>
-                        </ul>
-                    </div><!-- /.col -->
-                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                        <h2 class="title">Boys</h2>
-                        <ul class="links">
-							<li><a href="/{{$url}}"> {{$category_item}}"></a></li>
-                        </ul>
-                    </div><!-- /.col -->
-                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                        <h2 class="title">Girls</h2>
-                        <ul class="links">
-                            <li><a href="#">Shoes</a></li>
-                            <li><a href="#">Shorts</a></li>
-                            <li><a href="#">Dresses</a></li>
-                            <li><a href="#">Shirts</a></li>
-                            <li><a href="#">Bags</a></li>
-                             <li><a href="#">Winter wear</a></li>
-                              <li><a href="#">Swimwear</a></li>
-                        </ul>
-                    </div><!-- /.col -->
+                    		@endforeach
+						@endforeach
        <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image">
                                     <img class="img-responsive" src="assets/images/banners/top-menu-banner.jpg" alt="">
-</div><!-- /.yamm-content -->					
+</div><!-- /.yamm-content -->
+@endforeach
 </div>
 </div>
 </li>
-				</ul>
-			</li>
-			<li class="dropdown mega-menu">
-				<a href="/category"  data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Electronics
-				   <span class="menu-label hot-menu hidden-xs">hot</span>
-				</a>
-                <ul class="dropdown-menu container">
-					<li>
-						<div class="yamm-content">
-    <div class="row">
-           <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                <h2 class="title">Laptops</h2>
-                <ul class="links">
-                    <li><a href="#">Apple</a></li>
-                    <li><a href="#">Dell</a></li>
-                    <li><a href="#">Lenovo</a></li>
-                    <li><a href="#">Asus</a></li>
-					<li><a href="#">Others</a></li>
-                </ul>
-            </div><!-- /.col -->
-            <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                <h2 class="title">Desktops</h2>
-                <ul class="links">
-                    <li><a href="#">Routers & Modems</a></li>
-                    <li><a href="#">CPUs, Processors</a></li>
-                    <li><a href="#">PC Gaming Store</a></li>
-                    <li><a href="#">Graphics Cards</a></li>
-                    <li><a href="#">Components</a></li>
-                    <li><a href="#">Webcam</a></li>
-                    <li><a href="#">Memory (RAM)</a></li>
-                    <li><a href="#">Motherboards</a></li>
-                    <li><a href="#">Keyboards</a></li>
-                    <li><a href="#">Headphones</a></li>
-                </ul>
-            </div><!-- /.col -->
-            <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                <h2 class="title">Cameras</h2>
-                <ul class="links">
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Binoculars</a></li>
-                    <li><a href="#">Telescopes</a></li>
-                    <li><a href="#">Camcorders</a></li>
-                    <li><a href="#">Digital</a></li>
-                     <li><a href="#">Film Cameras</a></li>
-                     <li><a href="#">Flashes</a></li>
-                     <li><a href="#">Lenses</a></li>
-                     <li><a href="#">Surveillance</a></li>
-                      <li><a href="#">Tripods</a></li>
-                </ul>
-            </div><!-- /.col -->
-            <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                <h2 class="title">Mobile Phones</h2>
-                <ul class="links">
-                    <li><a href="#">Apple</a></li>
-                    <li><a href="#">Samsung</a></li>
-                    <li><a href="#">Lenovo</a></li>
-                    <li><a href="#">Motorola</a></li>
-                    <li><a href="#">LeEco</a></li>
-                    <li><a href="#">Asus</a></li>
-                    <li><a href="#">Acer</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Headphones</a></li>
-                     <li><a href="#">Memory Cards</a></li>
-                </ul>
-            </div>
-             <div class="col-xs-12 col-sm-12 col-md-4 col-menu custom-banner">
-             <a href="#"><img alt="" src="assets/images/banners/banner-side.png"></a>
-             </div>
-    </div><!-- /.row -->
-</div><!-- /.yamm-content -->					</li>
-				</ul>
-			</li>
-			<li class="dropdown mega-menu">
-				<a href="/category"  data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Health and Beauty
-					<span class="menu-label hot-menu hidden-xs">hot</span>
-				</a>
-				<ul class="dropdown-menu container">
-					<li>
-						<div class="yamm-content">
-							<div class="row">
-								<div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-									<h2 class="title">Sport</h2>
-									<ul class="links">
-										<li><a href="#">Sportwear</a></li>
-										<li><a href="#">Bodybuilding</a></li>
-										<li><a href="#">Sportgames</a></li>
-										<li><a href="#">Tourism</a></li>
-									</ul>
-								</div><!-- /.col -->
-
-								<div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-									<h2 class="title">Cosmetics</h2>
-									<ul class="links">
-										<li><a href="#">Creams</a></li>
-										<li><a href="#">Parfumes</a></li>
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Shampoo</a></li>
-									</ul>
-								</div><!-- /.col -->
-								<div class="col-xs-12 col-sm-12 col-md-4 col-menu custom-banner">
-									<a href="#"><img alt="" src="assets/images/banners/banner-side.png"></a>
-								</div>
-							</div><!-- /.row -->
-						</div><!-- /.yamm-content -->					</li>
-				</ul>
-			</li>
-			@endforeach
-			@endforeach
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Blog</a>
-				<ul class="dropdown-menu pages">
-					<li>
-						<div class="yamm-content">
-							<div class="row">
-								
-									<div class="col-xs-12 col-menu">
-	                                  <ul class="links">
-		                                  	<li><a href="/home">Our products</a></li>
-											<li><a href="/category">Articles</a></li>
-	                                  </ul>
-									</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</li>
              <li class="dropdown  navbar-right special-menu">
 				<a href="#">Todays offer</a>
 			</li>
