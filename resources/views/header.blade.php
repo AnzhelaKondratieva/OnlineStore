@@ -200,14 +200,16 @@
             <div class="row">
                    <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
 					   @foreach($category as $url => $categor)
-					   <a href="/{{$url}}" class="title">{{$categor['name']}}</a>
+						   @foreach($categor as $url => $subcategory)
+					   <a href="/{{$url}}" class="title">{{$subcategory['name']}}</a>
 					   <ul class="links list-unstyled">
-						   @foreach($categor['children'] as $url => $subcategory)
-						   <li><a href="/{{$url}}">{{$subcategory}}</a></li>
+						   @foreach($subcategory['children'] as $url => $category_item)
+						   <li><a href="/{{$url}}">{{$category_item}}</a></li>
 					   </ul>
                     </div><!-- /.col -->
                     		@endforeach
 						@endforeach
+				@endforeach
        <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image">
                                     <img class="img-responsive" src="assets/images/banners/top-menu-banner.jpg" alt="">
 </div><!-- /.yamm-content -->
