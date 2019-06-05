@@ -201,46 +201,13 @@
                                     <a href="/home" data-hover="dropdown" class="dropdown-toggle"
                                        data-toggle="dropdown">Home</a>
                                 </li>
-                                @foreach(\App\Product::$categories as $url => $category)
-                                    <li class="dropdown yamm mega-menu">
-                                        <a href="/{{$url}}" data-hover="dropdown" class="dropdown-toggle"
-                                           data-toggle="dropdown">{{$category['type']}}</a>
-                                                <ul class="dropdown-menu container">
-                                                    <li>
-                                                        <div class="yamm-content ">
-                                                            <div class="row">
-                                                                <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                                                                    @foreach($category['subtype'] as $url => $category_first)
-                                                                        @foreach($category_first as $url => $category_second)
-                                                                    @foreach($category_second as $url => $subcategory)
-                                                                        <h2 class="title">{{$subcategory['name']}}</h2>
-                                                                        <ul class="links list-unstyled">
-                                                                            @foreach($subcategory['children'] as $url => $category_item)
-                                                                                <li>
-                                                                                    <a href="/{{$url}}">{{$category_item}}</a>
-                                                                            @endforeach
-                                                                        </ul>
-                                                                    @endforeach
-                                                                        @endforeach
-                                                                    @endforeach
-                                                                </div><!-- /.col -->
-
-                                                                <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image">
-                                                                    <img class="img-responsive"
-                                                                         src="assets/images/banners/top-menu-banner.jpg"
-                                                                         alt="">
-
-                                                                </div><!-- /.yamm-content -->
-
-                                                            </div>
-                                                        </div>
-                                                    </li
-                                                    @endforeach
-                                                    <li class="dropdown  navbar-right special-menu">
-                                                        <a href="#">Todays offer</a>
-                                                    </li>
-                                                </ul><!-- /.navbar-nav -->
-                                                <div class="clearfix"></div>
+                                @include('partials.category_menu')
+                                <li class="dropdown  navbar-right special-menu">
+                                    <a href="#">Todays offer</a>
+                                </li>
+                            </ul><!-- /.navbar-nav -->
+                            <div class="clearfix"></div>
+                            </ul>
                         </div><!-- /.nav-outer -->
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.nav-bg-class -->

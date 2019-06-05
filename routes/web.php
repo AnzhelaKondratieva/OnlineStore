@@ -15,65 +15,73 @@
 //     return view('welcome');
 // });
 Route::get('/home', function () {
-return view('home');
+    dump(\App\Product::$categories);
+    return view('home');
 });
 
 Route::get('/blog', function () {
-return view('blog');
+    return view('blog');
 });
 
 Route::get('/404', function () {
-return view('404');
+    return view('404');
 });
 
 Route::get('/about', function () {
-return view('about');
+    return view('about');
 });
 
 Route::get('/category', function () {
-return view('category');
+    return view('category');
 });
 
 Route::get('/faq', function () {
-return view('faq');
+    return view('faq');
 });
 
 Route::get('/blog-details', function () {
-return view('blog-details');
+    return view('blog-details');
 });
 
 Route::get('/checkout', function () {
-return view('checkout');
+    return view('checkout');
 });
 
 Route::get('/sign-in', function () {
-return view('sign-in');
+    return view('sign-in');
 });
 
 Route::get('/shopping-cart', function () {
-return view('shopping-cart');
+    return view('shopping-cart');
 });
 
 Route::get('/my-wishlist', function () {
-return view('my-wishlist');
+    return view('my-wishlist');
 });
 
 Route::get('/contact', function () {
-return view('contact');
+    return view('contact');
 });
 
 Route::get('/detail', function () {
-return view('detail');
+    return view('detail');
 });
 
 Route::get('/product-comparison', function () {
-return view('product-comparison');
+    return view('product-comparison');
 });
 
 Route::get('/terms-conditions', function () {
-return view('terms-conditions');
+    return view('terms-conditions');
 });
 
 Route::get('/track-orders', function () {
-return view('track-orders');
+    return view('track-orders');
 });
+
+
+Route::get('/products/{slug}', function ($slug) {
+    $product = \App\Product::find($slug);
+    dd($product->attributes);
+    return view('category');
+})->name('products.index');
