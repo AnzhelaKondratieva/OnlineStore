@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<!-- Meta -->
-		<meta charset="utf-8">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<meta name="description" content="">
-		<meta name="author" content="">
-	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
-	    <meta name="robots" content="all">
 
-	    <title>Flipmart premium HTML5 & CSS3 Template</title>
-
-	    <!-- Bootstrap Core CSS -->
-	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	    
-	    <!-- Customizable CSS -->
-	    <link rel="stylesheet" href="assets/css/main.css">
-	    <link rel="stylesheet" href="assets/css/blue.css">
-	    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-		<link rel="stylesheet" href="assets/css/owl.transitions.css">
-		<link rel="stylesheet" href="assets/css/animate.min.css">
-		<link rel="stylesheet" href="assets/css/rateit.css">
-		<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-
-		
-
-		
-		<!-- Icons/Glyphs -->
-		<link rel="stylesheet" href="assets/css/font-awesome.css">
-
-        <!-- Fonts --> 
-		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-
-	</head>
-    <body>
 		<!-- ============================================== HEADER ============================================== -->
 @include ('header');
 <!-- ============================================== HEADER : END ============================================== -->
@@ -183,24 +144,24 @@
 <!-- ============================================== SIDEBAR CATEGORY : END ============================================== -->
 
 		            	<!-- ============================================== PRICE SILDER============================================== -->
-<div class="sidebar-widget wow fadeInUp">
-	<div class="widget-header">
-		<h4 class="widget-title">Price Slider</h4>
-	</div>
-	<div class="sidebar-widget-body m-t-10">
-		<div class="price-range-holder">
+						<div class="sidebar-widget wow fadeInUp">
+							<div class="widget-header">
+								<h4 class="widget-title">Price Slider</h4>
+							</div>
+							<div class="sidebar-widget-body m-t-10">
+								<div class="price-range-holder">
       	    <span class="min-max">
-                 <span class="pull-left">$200.00</span>
-                 <span class="pull-right">$800.00</span>
+                 <span class="pull-left">$5.00</span>
+                 <span class="pull-right">$1000.00</span>
             </span>
-            <input type="text" id="amount" style="border:0; color:#666666; font-weight:bold;text-align:center;">
+									<input type="text" id="amount" style="border:0; color:#666666; font-weight:bold;text-align:center;">
 
-            <input type="text" class="price-slider" value="" >
+									<input type="text" class="price-slider" value="" >
 
-        </div><!-- /.price-range-holder -->
-        <a href="#" class="lnk btn btn-primary">Show Now</a>
-	</div><!-- /.sidebar-widget-body -->
-</div><!-- /.sidebar-widget -->
+								</div><!-- /.price-range-holder -->
+								<a href="#" class="lnk btn btn-primary">Show Now</a>
+							</div><!-- /.sidebar-widget-body -->
+						</div><!-- /.sidebar-widget -->
 <!-- ============================================== PRICE SILDER : END ============================================== -->
 		            	<!-- ============================================== MANUFACTURES============================================== -->
 <div class="sidebar-widget wow fadeInUp">
@@ -328,63 +289,60 @@
 			
 <!-- ========================================= SECTION – HERO : END ========================================= -->
 				<div class="clearfix filters-container m-t-10">
-	<div class="row">
-		<div class="col col-sm-6 col-md-2">
-			<div class="filter-tabs">
-				<ul id="filter-tabs" class="nav nav-tabs nav-tab-box nav-tab-fa-icon">
-					<li class="active">
-						<a data-toggle="tab" href="#grid-container"><i class="icon fa fa-th-large"></i>Grid</a>
-					</li>
-					<li><a data-toggle="tab" href="#list-container"><i class="icon fa fa-th-list"></i>List</a></li>
-				</ul>
-			</div><!-- /.filter-tabs -->
-		</div><!-- /.col -->
-		<div class="col col-sm-12 col-md-6">
-			<div class="col col-sm-3 col-md-6 no-padding">
-				<div class="lbl-cnt">
-					<span class="lbl">Sort by</span>
-					<div class="fld inline">
-						<div class="dropdown dropdown-small dropdown-med dropdown-white inline">
-							<button data-toggle="dropdown" type="button" class="btn dropdown-toggle">
-								Position <span class="caret"></span>
-							</button>
+					<div class="row">
+						<div class="col col-sm-6 col-md-2">
+							<div class="filter-tabs">
+								<ul id="filter-tabs" class="nav nav-tabs nav-tab-box nav-tab-fa-icon">
+									<li class="active">
+										<a data-toggle="tab" href="#grid-container"><i class="icon fa fa-th-large"></i>Grid</a>
+									</li>
+									<li><a data-toggle="tab" href="#list-container"><i class="icon fa fa-th-list"></i>List</a></li>
+								</ul>
+							</div><!-- /.filter-tabs -->
+						</div><!-- /.col -->
+						<div class="col col-sm-12 col-md-6">
+							<div class="col col-sm-3 col-md-6 no-padding">
+								<div class="lbl-cnt">
+									<span class="lbl">Sort by</span>
+									<div class="fld inline">
+										<div class="dropdown dropdown-small dropdown-med dropdown-white inline">
+											<button data-toggle="dropdown" type="button" class="btn dropdown-toggle">
+												Position <span class="caret"></span>
+											</button>
 
-							<ul role="menu" class="dropdown-menu">
-								<li role="presentation"><a href="#">position</a></li>
-								<li role="presentation"><a href="#">Price:Lowest first</a></li>
-								<li role="presentation"><a href="#">Price:HIghest first</a></li>
-								<li role="presentation"><a href="#">Product Name:A to Z</a></li>
-							</ul>
-						</div>
-					</div><!-- /.fld -->
-				</div><!-- /.lbl-cnt -->
-			</div><!-- /.col -->
-			<div class="col col-sm-3 col-md-6 no-padding">
-				<div class="lbl-cnt">
-					<span class="lbl">Show</span>
-					<div class="fld inline">
-						<div class="dropdown dropdown-small dropdown-med dropdown-white inline">
-							<button data-toggle="dropdown" type="button" class="btn dropdown-toggle">
-								1 <span class="caret"></span>
-							</button>
+											<ul role="menu" class="dropdown-menu">
+												<li role="presentation"><a href="#">Price: Lowest first</a></li>
+												<li role="presentation"><a href="#">Price: Highest first</a></li>
+												<li role="presentation"><a href="#">Product Name: A to Z</a></li>
+												<li role="presentation"><a href="#">Product Name: Z to A</a></li>
+											</ul>
+										</div>
+									</div><!-- /.fld -->
+								</div><!-- /.lbl-cnt -->
+							</div><!-- /.col -->
+							<div class="col col-sm-3 col-md-6 no-padding">
+								<div class="lbl-cnt">
+									<span class="lbl">Show</span>
+									<div class="fld inline">
+										<div class="dropdown dropdown-small dropdown-med dropdown-white inline">
+											<button data-toggle="dropdown" type="button" class="btn dropdown-toggle">
+												1 <span class="caret"></span>
+											</button>
 
-							<ul role="menu" class="dropdown-menu">
-								<li role="presentation"><a href="#">1</a></li>
-								<li role="presentation"><a href="#">2</a></li>
-								<li role="presentation"><a href="#">3</a></li>
-								<li role="presentation"><a href="#">4</a></li>
-								<li role="presentation"><a href="#">5</a></li>
-								<li role="presentation"><a href="#">6</a></li>
-								<li role="presentation"><a href="#">7</a></li>
-								<li role="presentation"><a href="#">8</a></li>
-								<li role="presentation"><a href="#">9</a></li>
-								<li role="presentation"><a href="#">10</a></li>
-							</ul>
-						</div>
-					</div><!-- /.fld -->
-				</div><!-- /.lbl-cnt -->
-			</div><!-- /.col -->
-		</div><!-- /.col -->
+											<ul role="menu" class="dropdown-menu">
+												<li role="presentation"><a href="#">1</a></li>
+												<li role="presentation"><a href="#">2</a></li>
+												<li role="presentation"><a href="#">5</a></li>
+												<li role="presentation"><a href="#">10</a></li>
+												<li role="presentation"><a href="#">20</a></li>
+												<li role="presentation"><a href="#">40</a></li>
+												<li role="presentation"><a href="#">50</a></li>
+											</ul>
+										</div>
+									</div><!-- /.fld -->
+								</div><!-- /.lbl-cnt -->
+							</div><!-- /.col -->
+						</div><!-- /.col -->
 		<div class="col col-sm-6 col-md-4 text-right">
 			<div class="pagination-container">
 	<ul class="list-inline list-unstyled">
@@ -418,14 +376,14 @@
 			
 		
 		<div class="product-info text-left">
-			<h3 class="name"><a href="/detail">Floral Print Buttoned</a></h3>
+			<h3 class="name"><a href="/detail">Blue Checked Shirt</a></h3>
 			<div class="rating rateit-small"></div>
 			<div class="description"></div>
 
 			<div class="product-price">	
 				<span class="price">
-					$450.99				</span>
-										     <span class="price-before-discount">$ 800</span>
+					$123.29				</span>
+										     <span class="price-before-discount">$ 200</span>
 									
 			</div><!-- /.product-price -->
 			
@@ -474,14 +432,14 @@
 			
 		
 		<div class="product-info text-left">
-			<h3 class="name"><a href="/detail">Floral Print Buttoned</a></h3>
+			<h3 class="name"><a href="/detail">Black Leather Trainers</a></h3>
 			<div class="rating rateit-small"></div>
 			<div class="description"></div>
 
 			<div class="product-price">	
 				<span class="price">
-					$450.99				</span>
-										     <span class="price-before-discount">$ 800</span>
+					$316.67			</span>
+										     <span class="price-before-discount">$ 400</span>
 									
 			</div><!-- /.product-price -->
 			
@@ -530,13 +488,13 @@
 			
 		
 		<div class="product-info text-left">
-			<h3 class="name"><a href="/detail">Floral Print Buttoned</a></h3>
+			<h3 class="name"><a href="/detail">Patterned Dress</a></h3>
 			<div class="rating rateit-small"></div>
 			<div class="description"></div>
 
 			<div class="product-price">	
 				<span class="price">
-					$450.99				</span>
+					$99.99				</span>
 										     <span class="price-before-discount">$ 800</span>
 									
 			</div><!-- /.product-price -->
@@ -1097,12 +1055,12 @@
 		</div><!-- /.col -->
 		<div class="col col-sm-8 col-lg-8">
 			<div class="product-info">
-				<h3 class="name"><a href="/detail">Floral Print Buttoned</a></h3>
+				<h3 class="name"><a href="/detail">Blue Checked Shirt</a></h3>
 				<div class="rating rateit-small"></div>
 				<div class="product-price">	
 					<span class="price">
-						$450.99					</span>
-												     <span class="price-before-discount">$ 800</span>
+						$123.29					</span>
+												     <span class="price-before-discount">$ 200</span>
 											
 				</div><!-- /.product-price -->
 				<div class="description m-t-10">Suspendisse posuere arcu diam, id accumsan eros pharetra ac. Nulla enim risus, facilisis bibendum gravida eget, lacinia id purus. Suspendisse posuere arcu diam, id accumsan eros pharetra ac. Nulla enim risus, facilisis bibendum gravida eget.</div>
@@ -1153,12 +1111,12 @@
 		</div><!-- /.col -->
 		<div class="col col-sm-8 col-lg-8">
 			<div class="product-info">
-				<h3 class="name"><a href="/detail">Floral Print Buttoned</a></h3>
+				<h3 class="name"><a href="/detail">Black Leather Trainers</a></h3>
 				<div class="rating rateit-small"></div>
 				<div class="product-price">	
 					<span class="price">
-						$450.99					</span>
-												     <span class="price-before-discount">$ 800</span>
+						$316.67				</span>
+												     <span class="price-before-discount">$ 400</span>
 											
 				</div><!-- /.product-price -->
 				<div class="description m-t-10">Suspendisse posuere arcu diam, id accumsan eros pharetra ac. Nulla enim risus, facilisis bibendum gravida eget, lacinia id purus. Suspendisse posuere arcu diam, id accumsan eros pharetra ac. Nulla enim risus, facilisis bibendum gravida eget.</div>
@@ -1209,12 +1167,12 @@
 		</div><!-- /.col -->
 		<div class="col col-sm-8 col-lg-8">
 			<div class="product-info">
-				<h3 class="name"><a href="/detail">Floral Print Buttoned</a></h3>
+				<h3 class="name"><a href="/detail">Patterned Dress</a></h3>
 				<div class="rating rateit-small"></div>
 				<div class="product-price">	
 					<span class="price">
-						$450.99					</span>
-												     <span class="price-before-discount">$ 800</span>
+						$99.99					</span>
+												     <span class="price-before-discount">$ 150</span>
 											
 				</div><!-- /.product-price -->
 				<div class="description m-t-10">Suspendisse posuere arcu diam, id accumsan eros pharetra ac. Nulla enim risus, facilisis bibendum gravida eget, lacinia id purus. Suspendisse posuere arcu diam, id accumsan eros pharetra ac. Nulla enim risus, facilisis bibendum gravida eget.</div>
@@ -1854,32 +1812,6 @@
 <!-- ============================================================= FOOTER ============================================================= -->
 @include ('footer');
 <!-- ============================================================= FOOTER : END============================================================= -->
-
-
-	<!-- For demo purposes – can be removed on production -->
-	
-	
-	<!-- For demo purposes – can be removed on production : End -->
-
-	<!-- JavaScripts placed at the end of the document so the pages load faster -->
-	<script src="assets/js/jquery-1.11.1.min.js"></script>
-	
-	<script src="assets/js/bootstrap.min.js"></script>
-	
-	<script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	
-	<script src="assets/js/echo.min.js"></script>
-	<script src="assets/js/jquery.easing-1.3.min.js"></script>
-	<script src="assets/js/bootstrap-slider.min.js"></script>
-    <script src="assets/js/jquery.rateit.min.js"></script>
-    <script src="assets/js/bootstrap-select.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-	<script src="assets/js/scripts.js"></script>
-
-	
-
-	
 
 </body>
 </html>
