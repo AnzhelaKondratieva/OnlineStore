@@ -13,7 +13,7 @@
 								<div class="row">
 									@foreach($main_category['subtype'] as $url => $subcategory)
 									<div class="col-sm-12 col-md-3">
-										<h2 class="title">Men</h2>
+										<h2 class="title">{{$subcategory['name']}}</h2>
 										<ul class="links list-unstyled">
 											@foreach($subcategory['children'] as $url => $products_type)
 												<li><a href="/{{$url}}">{{$products_type}}</a></li>
