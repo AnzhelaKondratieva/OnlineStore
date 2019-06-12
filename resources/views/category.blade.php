@@ -18,7 +18,7 @@
 	<div class='container'>
 		<div class='row'>
 			<div class='col-md-3 sidebar'>
-	            @include ('sidemenu');
+	            @include ('partials.sidemenu');
 <!-- ================================== TOP NAVIGATION : END ================================== -->	            <div class="sidebar-module-container">
 
 	            	<div class="sidebar-filter">
@@ -315,6 +315,8 @@
 												<li role="presentation"><a href="#">Price: Highest first</a></li>
 												<li role="presentation"><a href="#">Product Name: A to Z</a></li>
 												<li role="presentation"><a href="#">Product Name: Z to A</a></li>
+												<li role="presentation"><a href="#">New</a></li>
+												<li role="presentation"><a href="#">Popular</a></li>
 											</ul>
 										</div>
 									</div><!-- /.fld -->
@@ -1810,5 +1812,5 @@
 
 </div><!-- /.body-content -->
 <!-- ============================================================= FOOTER ============================================================= -->
-@include ('footer');
+@include ('partials.footer');
 <!-- ============================================================= FOOTER : END============================================================= -->
