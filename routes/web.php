@@ -20,7 +20,7 @@ Route::get('/home', function () {
 });
 
 Route::get('/blog', function () {
-    return view('blog');
+    return view('blog.blog');
 });
 
 Route::get('/404', function () {
@@ -32,19 +32,19 @@ Route::get('/about', function () {
 });
 
 Route::get('/category', function () {
-    return view('category');
+    return view('products.category');
 });
 
 Route::get('/faq', function () {
-    return view('faq');
+    return view('info.faq');
 });
 
 Route::get('/blog-details', function () {
-    return view('blog-details');
+    return view('blog.blog-details');
 });
 
 Route::get('/checkout', function () {
-    return view('checkout');
+    return view('order.checkout');
 });
 
 Route::get('/sign-in', function () {
@@ -52,15 +52,15 @@ Route::get('/sign-in', function () {
 });
 
 Route::get('/shopping-cart', function () {
-    return view('shopping-cart');
+    return view('order.shopping-cart');
 });
 
 Route::get('/my-wishlist', function () {
-    return view('my-wishlist');
+    return view('order.my-wishlist');
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('info.contact');
 });
 
 Route::get('/detail', function () {
@@ -68,15 +68,15 @@ Route::get('/detail', function () {
 });
 
 Route::get('/product-comparison', function () {
-    return view('product-comparison');
+    return view('order.product-comparison');
 });
 
 Route::get('/terms-conditions', function () {
-    return view('terms-conditions');
+    return view('info.terms-conditions');
 });
 
 Route::get('/track-orders', function () {
-    return view('track-orders');
+    return view('order.track-orders');
 });
 
 

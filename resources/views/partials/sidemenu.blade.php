@@ -27,10 +27,3 @@
 			</nav><!-- /.megamenu-horizontal -->
 		</div><!-- /.side-menu -->
 		<!-- ================================== TOP NAVIGATION : END ================================== -->
-
-	<!-- For demo purposes – can be removed on production -->
-	
-	
-	<!-- For demo purposes – can be removed on production : End -->
-
-	<!-- JavaScripts placed at the end of the document so the pages load faster -->

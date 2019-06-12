@@ -1,7 +1,5 @@
-
-		<!-- ============================================== HEADER ============================================== -->
-@include ('header');
-<!-- ============================================== HEADER : END ============================================== -->
+@extends('layouts.layout')
+@section('content')
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-inner">
@@ -163,35 +161,4 @@
 		</div>
 	</div>
 </div>
-<!-- ============================================================= FOOTER ============================================================= -->
-		@include ('partials.footer');
-<!-- ============================================================= FOOTER : END============================================================= -->
-
-
-	<!-- For demo purposes – can be removed on production -->
-	
-	
-	<!-- For demo purposes – can be removed on production : End -->
-
-	<!-- JavaScripts placed at the end of the document so the pages load faster -->
-
-	
-	<script>
-		$(document).ready(function(){ 
-			$(".changecolor").switchstylesheet( { seperator:"color"} );
-			$('.show-theme-options').click(function(){
-				$(this).parent().toggleClass('open');
-				return false;
-			});
-		});
-
-		$(window).bind("load", function() {
-		   $('.show-theme-options').delay(2000).trigger('click');
-		});
-	</script>
-	<!-- For demo purposes – can be removed on production : End -->
-
-	
-
-</body>
-</html>
+@endsection

@@ -1,6 +1,5 @@
-
-		@include ('header');
-<!-- ============================================== HEADER : END ============================================== -->
+@extends('layouts.layout')
+@section('content')
 <div class="body-content outer-top-bd">
 	<div class="container">
 		<div class="x-page inner-bottom-sm">
@@ -18,14 +17,4 @@
 		</div><!-- /.sigin-in-->
 	</div><!-- /.container -->
 </div><!-- /.body-content -->
-<!-- ============================================================= FOOTER ============================================================= -->
-        @include ('partials.footer');
-<!-- ============================================================= FOOTER : END============================================================= -->
-
-
-	<!-- For demo purposes – can be removed on production -->
-	
-	
-	<!-- For demo purposes – can be removed on production : End -->
-
-	<!-- JavaScripts placed at the end of the document so the pages load faster -->
+@endsection

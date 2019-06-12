@@ -1,6 +1,6 @@
 
 	<!-- ============================================================= FOOTER ============================================================= -->
-	<footer id="footer" class="footer color-bg">
+	<footer id="footer" class="footer">
 
 
 		<div class="footer-bottom">
@@ -129,11 +129,3 @@
 		</div>
 	</footer>
 	<!-- ============================================================= FOOTER : END============================================================= -->
-
-
-	<!-- For demo purposes – can be removed on production -->
-	
-	
-	<!-- For demo purposes – can be removed on production : End -->
-
-	<!-- JavaScripts placed at the end of the document so the pages load faster -->
