@@ -14,74 +14,34 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/home', function () {
-    dump(\App\Product::$categories);
-    return view('home');
-});
+Route::get('/home', 'ViewController@home');
 
-Route::get('/blog', function () {
-    return view('blog.blog');
-});
+Route::get('/blog', 'ViewController@blog');
 
-Route::get('/404', function () {
-    return view('404');
-});
+Route::get('/404', 'ViewController@error');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', 'ViewController@about');
 
-Route::get('/category', function () {
-    return view('products.category');
-});
+Route::get('/category', 'ViewController@category');
 
-Route::get('/faq', function () {
-    return view('info.faq');
-});
+Route::get('/faq', 'ViewController@faq');
 
-Route::get('/blog-details', function () {
-    return view('blog.blog-details');
-});
+Route::get('/blog-details', 'ViewController@blogDetails');
 
-Route::get('/checkout', function () {
-    return view('order.checkout');
-});
+Route::get('/checkout', 'ViewController@checkout');
 
-Route::get('/sign-in', function () {
-    return view('sign-in');
-});
+Route::get('/sign-in', 'ViewController@signIn');
 
-Route::get('/shopping-cart', function () {
-    return view('order.shopping-cart');
-});
+Route::get('/shopping-cart', 'ViewController@shoppingCart');
 
-Route::get('/my-wishlist', function () {
-    return view('order.my-wishlist');
-});
+Route::get('/my-wishlist', 'ViewController@myWishlist');
 
-Route::get('/contact', function () {
-    return view('info.contact');
-});
+Route::get('/contact', 'ViewController@contact');
 
-Route::get('/detail', function () {
-    return view('detail');
-});
+Route::get('/detail', 'ViewController@detail');
 
-Route::get('/product-comparison', function () {
-    return view('order.product-comparison');
-});
+Route::get('/product-comparison', 'ViewController@productComparison');
 
-Route::get('/terms-conditions', function () {
-    return view('info.terms-conditions');
-});
+Route::get('/terms-conditions', 'ViewController@termsConditions');
 
-Route::get('/track-orders', function () {
-    return view('order.track-orders');
-});
-
-
-Route::get('/products/{slug}', function ($slug) {
-    $product = \App\Product::find($slug);
-    dd($product->attributes);
-    return view('category');
-})->name('products.index');
+Route::get('/track-orders', 'ViewController@trackOrders');
