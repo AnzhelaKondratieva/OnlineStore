@@ -14,34 +14,34 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/home', 'ViewController@home');
+Route::get('/home', 'ViewController@home') -> name('home');
 
-Route::get('/blog', 'ViewController@blog');
+Route::get('/blog', 'ViewController@blog') -> name('blog');
 
-Route::get('/404', 'ViewController@error');
+Route::get('/404', 'ViewController@error') -> name('error');
 
-Route::get('/about', 'ViewController@about');
+Route::get('/about', 'ViewController@about') -> name('about');
 
-Route::get('/category', 'ViewController@category');
+Route::get('/category', 'ViewController@category') -> name('category');
 
-Route::get('/faq', 'ViewController@faq');
+Route::get('/faq', 'ViewController@faq') -> name('faq');
 
-Route::get('/blog-details', 'ViewController@blogDetails');
+Route::get('/blog-details', 'ViewController@blogDetails') -> name('blog-details');
 
-Route::get('/checkout', 'ViewController@checkout');
+Route::get('/checkout', 'ViewController@checkout') -> name('checkout');
 
-Route::get('/sign-in', 'ViewController@signIn');
+Route::get('/sign-in', 'ViewController@signIn') -> name('sign-in');
 
-Route::get('/shopping-cart', 'ViewController@shoppingCart');
+Route::get('/shopping-cart', 'ViewController@shoppingCart') -> name('shopping-cart');
 
-Route::get('/my-wishlist', 'ViewController@myWishlist');
+Route::get('/my-wishlist', 'ViewController@myWishlist') -> name('my-wishlist');
 
-Route::get('/contact', 'ViewController@contact');
+Route::get('/contact', 'ViewController@contact') -> name('contact');
 
-Route::get('/detail', 'ViewController@detail');
+Route::get('/detail', 'ViewController@detail') -> name('detail');
 
-Route::get('/product-comparison', 'ViewController@productComparison');
+Route::get('/product-comparison', 'ViewController@productComparison') -> name('product-comparison');
 
-Route::get('/terms-conditions', 'ViewController@termsConditions');
+Route::get('/terms-conditions', 'ViewController@termsConditions') -> name('terms-conditions');
 
-Route::get('/track-orders', 'ViewController@trackOrders');
+Route::get('/track-orders', 'ViewController@trackOrders') -> name('track-orders');
