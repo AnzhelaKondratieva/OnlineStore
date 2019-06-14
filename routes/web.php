@@ -45,3 +45,6 @@ Route::get('/product-comparison', 'ViewController@productComparison') -> name('p
 Route::get('/terms-conditions', 'ViewController@termsConditions') -> name('terms-conditions');
 
 Route::get('/track-orders', 'ViewController@trackOrders') -> name('track-orders');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
