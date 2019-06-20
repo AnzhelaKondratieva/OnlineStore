@@ -9,6 +9,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Product extends Authenticatable
 {
+    protected $fillable = [
+        'id', 'name', 'articul', 'brand', 'image_path', 'description', 'price', 'category_id', 'is publish'
+    ];
+
+    protected $table = 'products';
 
     public static $categories =
         [
