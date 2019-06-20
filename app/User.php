@@ -38,4 +38,17 @@ class User extends Authenticatable
     ];
 
     protected $table = 'users';
+
+    public function Users() {
+        $name = ['Amelia','Oliver', 'Jack', 'Mark', 'EMILY'];
+
+        for($i=0; $i< 100; $i++) {
+            $model = new User();
+            $user->name = 'user'.$i;
+            $c = count($name)-1;
+            $model->email = $name[rand(0,$c)].$i.'@gmail.com';
+            $model->password =\Hash::make($model->email);
+            $model->save();
+        }
+    }
 }

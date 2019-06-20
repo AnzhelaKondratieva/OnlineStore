@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 class ViewController extends Controller
 {
     public function home() {
-        return view('home');
+        return view('home', [
+            'user' => $model
+            ]
+            );
     }
     public function blog() {
         return view('blog.blog');
