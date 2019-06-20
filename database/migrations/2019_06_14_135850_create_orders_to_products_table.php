@@ -15,7 +15,9 @@ class CreateOrdersToProductsTable extends Migration
     {
         Schema::create('orders_to_products', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->integer('order_id');
+            $table->integer('product_id');
+            $table->decimal('price');
         });
     }
 

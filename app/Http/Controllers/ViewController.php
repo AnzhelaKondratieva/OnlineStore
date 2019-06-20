@@ -18,9 +18,17 @@ class ViewController extends Controller
     public function about() {
         return view('about');
     }
-    public function category() {
-        return view('products.category');
+
+    public function category($slug) {
+        $category = Category::where(
+            [
+                'is_public' => 1,
+                'slug' => $slug
+            ]
+        )->firstOrFail();
+        return view('products.category', ['category'=>$category]);
     }
+
     public function faq() {
         return view('info.faq');
     }
@@ -30,8 +38,8 @@ class ViewController extends Controller
     public function checkout() {
         return view('order.checkout');
     }
-    public function signIn() {
-        return view('sign-in');
+    public function logIn() {
+        return view('auth.login');
     }
     public function shoppingCart() {
         return view('order.shopping-cart');
@@ -44,6 +52,9 @@ class ViewController extends Controller
     }
     public function detail() {
         return view('products.detail');
+    }
+    public function myAccount() {
+        return view('auth.myaccount');
     }
     public function productComparison() {
         return view('order.product-comparison');

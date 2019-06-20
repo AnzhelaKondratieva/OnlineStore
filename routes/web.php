@@ -22,7 +22,7 @@ Route::get('/404', 'ViewController@error') -> name('error');
 
 Route::get('/about', 'ViewController@about') -> name('about');
 
-Route::get('/category', 'ViewController@category') -> name('category');
+Route::get('/category/{slug}', 'ViewController@category') -> name('category');
 
 Route::get('/faq', 'ViewController@faq') -> name('faq');
 
@@ -30,11 +30,13 @@ Route::get('/blog-details', 'ViewController@blogDetails') -> name('blog-details'
 
 Route::get('/checkout', 'ViewController@checkout') -> name('checkout');
 
-Route::get('/sign-in', 'ViewController@signIn') -> name('sign-in');
+Route::get('/myaccount', 'ViewController@myAccount') -> name('myaccount');
+
+Route::get('/login', 'ViewController@logIn') -> name('login');
 
 Route::get('/shopping-cart', 'ViewController@shoppingCart') -> name('shopping-cart');
 
-Route::get('/my-wishlist', 'ViewController@myWishlist') -> name('my-wishlist');
+Route::get('my-wishlist', 'ViewController@myWishlist') -> name('my-wishlist');
 
 Route::get('/contact', 'ViewController@contact') -> name('contact');
 
@@ -47,4 +49,3 @@ Route::get('/terms-conditions', 'ViewController@termsConditions') -> name('terms
 Route::get('/track-orders', 'ViewController@trackOrders') -> name('track-orders');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

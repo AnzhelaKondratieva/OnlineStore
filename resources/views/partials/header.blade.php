@@ -8,11 +8,11 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-                        <li><a href="#"><i class="icon fa fa-user"></i>My Account</a></li>
-                        <li><a href="/my-wishlist"><i class="icon fa fa-heart"></i>Wishlist</a></li>
-                        <li><a href="/shopping-cart"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
-                        <li><a href="/checkout"><i class="icon fa fa-check"></i>Checkout</a></li>
-                        <li><a href="/sign-in"><i class="icon fa fa-lock"></i>Login</a></li>
+                        <li><a href="{{route('myaccount')}}"><i class="icon fa fa-user"></i>My Account</a></li>
+                        <li><a href="{{route('my-wishlist')}}"><i class="icon fa fa-heart"></i>Wishlist</a></li>
+                        <li><a href="{{route('shopping-cart')}}"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
+                        <li><a href="{{route('checkout')}}"><i class="icon fa fa-check"></i>Checkout</a></li>
+                        <li><a href="{{route('login')}}"><i class="icon fa fa-lock"></i>Login</a></li>
                     </ul>
                 </div><!-- /.cnt-account -->
 
@@ -65,15 +65,15 @@
                             <div class="control-group">
                                 <ul class="categories-filter animate-dropdown">
                                     <li class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/category">Categories <b
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <b
                                                     class="caret"></b></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li class="menu-header">Computer</li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/category">-
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">-
                                                     Clothing</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/category">-
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">-
                                                     Electronics</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/category">-
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">-
                                                     Health & Beauty</a></li>
                                         </ul>
                                     </li>
@@ -118,7 +118,7 @@
                                             <div class="price">$600.00</div>
                                         </div>
                                         <div class="col-xs-1 action">
-                                            <a href="#"><i class="fa fa-trash"></i></a>
+                                            <a href="{{route('shopping-cart')}}"><i class="fa fa-trash"></i></a>
                                         </div>
                                     </div>
                                 </div><!-- /.cart-item -->
@@ -131,7 +131,7 @@
                                     </div>
                                     <div class="clearfix"></div>
 
-                                    <a href="/checkout" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>
+                                    <a href="{{route('checkout')}}" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>
                                 </div><!-- /.cart-total-->
                             </li>
                         </ul><!-- /.dropdown-menu-->
@@ -160,7 +160,7 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active dropdown yamm-fw">
-                                    <a href="/home" data-hover="dropdown" class="dropdown-toggle"
+                                    <a href="{{route('home')}}" data-hover="dropdown" class="dropdown-toggle"
                                        data-toggle="dropdown">Home</a>
                                 </li>
                                 @include('partials.category_menu')
