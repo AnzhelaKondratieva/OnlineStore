@@ -2,14 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class ViewController extends Controller
 {
     public function home() {
-        return view('home', [
-            'user' => $model
-            ]
+        return view('home',
+            $name = ['Amelia','Oliver', 'Jack', 'Mark', 'EMILY'];
+            for($i=0; $i< 100; $i++) {
+                $model = new User();
+                $user->name = 'user' . $i;
+                $c = count($name) - 1;
+                $model->email = $name[rand(0, $c)] . $i . '@gmail.com';
+                $model->password = \Hash::make($model->email);
+                $model->save();
+            }
             );
     }
     public function blog() {
