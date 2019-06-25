@@ -2685,6 +2685,7 @@ age-container #owl-main .owl-next {
 .product .product-info .name {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
 }
 .product .product-info .name a {
   color: #555;
@@ -2693,7 +2694,7 @@ age-container #owl-main .owl-next {
   color: #ffb400;
 }
 .product .product-info .product-price .price {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 14px;
   line-height: 30px;
   margin-right: 8px;

@@ -23,7 +23,7 @@ class Product extends Authenticatable
                     'Men' => [
                         'name' => 'Men',
                         'children' => [
-                            'Suits', 'Shoes', 'Jeans', 'Sunglasses', 'Sport Wear', 'Underwear', 'Shirts']
+                            'Suits', 'Shoes', 'Jeans', 'Sunglasses', 'Sport Wear', 'Underwear']
                     ],
                     'Women' => [
                         'name' => 'Women', 'children' => [
@@ -42,14 +42,13 @@ class Product extends Authenticatable
                     'Desctops' => [
                         'name' => 'Desktops', 'children' => [
                             'Routers & Modems', 'CPUs, Processors', 'PC Gaming Stor', 'Graphics Cards',
-                            'Components', 'Webcam', 'Memory (RAM)', 'Motherboards', 'Keyboards', 'Headphones']],
+                            'Components', 'Webcam', 'Memory (RAM)', 'Motherboards']],
                     'Cameras' => [
                         'name' => 'Cameras', 'children' => [
-                            'Accessories', 'Binoculars', 'Telescopes', 'Camcorders', 'Digital', 'Film Cameras',
-                            'Flashes', 'Lenses', 'Surveillance', 'Tripods']],
+                            'Accessories', 'Digital', 'Film Cameras', 'Tripods']],
                     'Mobile phones' => [
                         'name' => 'Mobile phones', 'children' => [
-                            'Apple', 'Samsung', 'Lenovo', 'Motorola', 'LeEco', 'Asus', 'Acer',
+                            'Apple', 'Samsung', 'Lenovo',
                             'Accessories', 'Headphones', 'Memory Cards']]]],
             'Health and Beauty' => ['type' => 'Health and Beauty',
                 'subtype' => [
@@ -58,6 +57,6 @@ class Product extends Authenticatable
                             'Sport wear', 'Bodybuilding', 'Sportgames', 'Tourism']],
                     'Cosmetics' => [
                         'name' => 'Cosmetics', 'children' => [
-                            'Creams', 'Parfumes', 'Accessories', 'Shampoo']]]]];
+                            'Creams', 'Parfumes', 'Accessories']]]]];
 }
 

@@ -22,7 +22,8 @@ Route::get('/404', 'ViewController@error') -> name('error');
 
 Route::get('/about', 'ViewController@about') -> name('about');
 
-Route::get('/category/{slug}', 'ViewController@category') -> name('category');
+Route::get('/categories/', 'ViewController@categories') -> name('categories');
+Route::get('/category-detail/{slug}', 'ViewController@category') -> name('category-detail');
 
 Route::get('/faq', 'ViewController@faq') -> name('faq');
 

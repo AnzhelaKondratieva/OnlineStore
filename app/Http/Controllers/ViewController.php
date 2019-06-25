@@ -2,26 +2,48 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\User;
+use App\Category;
+use App\Product;
+use App\Order;
 use Illuminate\Http\Request;
 
 class ViewController extends Controller
 {
     public function home() {
-        return view('home',
-            $name = ['Amelia','Oliver', 'Jack', 'Mark', 'EMILY'];
-            for($i=0; $i< 100; $i++) {
-                $model = new User();
-                $user->name = 'user' . $i;
-                $c = count($name) - 1;
-                $model->email = $name[rand(0, $c)] . $i . '@gmail.com';
-                $model->password = \Hash::make($model->email);
-                $model->save();
-            }
-            );
+
+//        $name = ['Tania','Tom', 'Bred', 'Funny', 'Catherine'];
+//        for($i=0; $i< 5; $i++) {
+//            $model = new User();
+//            $model->name = $name[$i];
+//            $c = count($name) - 1;
+//            $model->email = $name[rand(0, $c)] . '@gmail.com';
+//            $model->password = \Hash::make($model->email);
+//            $model->save();
+//        }
+//        $categories = Category::where('is_publish', 1)->get();
+//        $menu = [];
+//        foreach($categories as $key => $category) {
+//            $menu[$category->parent_id][] = [
+//                'name' =>$category->name,
+//                'slug' =>$category->slug,
+//            ];
+//        }
+        return view('home');
     }
+//foreach ($menu as $key => $value) {
+//    foreach ($categories as $key => $category) {
+//        <li><a href="{{route('category',['slug'=>$category['slug'])}}">{{$category['name']}}<a></li>
+//во view}
+
     public function blog() {
-        return view('blog.blog');
+        $article = Article::where(
+            [
+                'is_publish' => 1
+            ]
+        )->paginate(2);
+        return view('blog.blog', ['article' => $article]);
     }
     public function error() {
         return view('404');
@@ -30,14 +52,15 @@ class ViewController extends Controller
         return view('about');
     }
 
-    public function category($slug) {
-        $category = Category::where(
-            [
-                'is_public' => 1,
-                'slug' => $slug
-            ]
-        )->firstOrFail();
-        return view('products.category', ['category'=>$category]);
+    public function category($slug)
+    {
+        $category = Category::where('slug',$slug)->first();
+        return view('products.category-detail', ['category' => $category]);
+
+    }
+    public function categories() {
+        $categories = Category::all();
+        return view('products.categories', ['categories' => $categories]);
     }
 
     public function faq() {
