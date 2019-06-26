@@ -18,8 +18,64 @@
 				<div class="sidebar-module-container">
 				<div class="home-banner outer-top-n">
 <img src="assets/images/banners/LHS-banner.jpg" alt="Image">
-</div>		
-  
+</div>
+                    <div class="row">
+                        <div class="col col-sm-6 col-md-2">
+                            <div class="filter-tabs">
+                                <ul id="filter-tabs" class="nav nav-tabs nav-tab-box nav-tab-fa-icon">
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#grid-container"><i class="icon fa fa-th-large"></i>Grid</a>
+                                    </li>
+                                    <li><a data-toggle="tab" href="#list-container"><i class="icon fa fa-th-list"></i>List</a></li>
+                                </ul>
+                            </div><!-- /.filter-tabs -->
+                        </div><!-- /.col -->
+                        <div class="col col-sm-12 col-md-6">
+                            <div class="col col-sm-3 col-md-6 no-padding">
+                                <div class="lbl-cnt">
+                                    <span class="lbl">Sort by</span>
+                                    <div class="fld inline">
+                                        <div class="dropdown dropdown-small dropdown-med dropdown-white inline">
+                                            <button data-toggle="dropdown" type="button" class="btn dropdown-toggle">
+                                                Position <span class="caret"></span>
+                                            </button>
+
+                                            <ul role="menu" class="dropdown-menu">
+                                                <li role="presentation"><a href="#">Price: Lowest first</a></li>
+                                                <li role="presentation"><a href="#">Price: Highest first</a></li>
+                                                <li role="presentation"><a href="#">Product Name: A to Z</a></li>
+                                                <li role="presentation"><a href="#">Product Name: Z to A</a></li>
+                                                <li role="presentation"><a href="#">New</a></li>
+                                                <li role="presentation"><a href="#">Popular</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- /.fld -->
+                                </div><!-- /.lbl-cnt -->
+                            </div><!-- /.col -->
+                            <div class="col col-sm-3 col-md-6 no-padding">
+                                <div class="lbl-cnt">
+                                    <span class="lbl">Show</span>
+                                    <div class="fld inline">
+                                        <div class="dropdown dropdown-small dropdown-med dropdown-white inline">
+                                            <button data-toggle="dropdown" type="button" class="btn dropdown-toggle">
+                                                1 <span class="caret"></span>
+                                            </button>
+
+                                            <ul role="menu" class="dropdown-menu">
+                                                <li role="presentation"><a href="#">1</a></li>
+                                                <li role="presentation"><a href="#">2</a></li>
+                                                <li role="presentation"><a href="#">5</a></li>
+                                                <li role="presentation"><a href="#">10</a></li>
+                                                <li role="presentation"><a href="#">20</a></li>
+                                                <li role="presentation"><a href="#">40</a></li>
+                                                <li role="presentation"><a href="#">50</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- /.fld -->
+                                </div><!-- /.lbl-cnt -->
+                            </div><!-- /.col -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
     
     
     	<!-- ============================================== HOT DEALS ============================================== -->
