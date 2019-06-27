@@ -47,11 +47,11 @@
 
                                                 <div class="product">
                                                     <div class="product-info text-left">
-                                                        <h1><a href="#"><b>{{$category->name}}</b></a></h1>
+                                                        <h1><a href="{{route('category-detail', ['slug' => $category->slug])}}"><b>{{$category->name}}</b></a></h1>
                                                         @foreach($category->child()->get() as $category_item)
-                                                            <h2><a href="#">{{$category_item->name}}</a></h2>
+                                                            <h2><a href="{{route('category-detail', ['slug' => $category_item->slug])}}">{{$category_item->name}}</a></h2>
                                                             @foreach($category_item->child()->get() as $subcategory)
-                                                                <p><a href="#">{{$subcategory->name}}</a></p>
+                                                                <p><a href="{{route('category-detail', ['slug' => $subcategory->slug])}}">{{$subcategory->name}}</a></p>
                                                             @endforeach
                                                         @endforeach
                                                     </div><!-- /.product-info -->
