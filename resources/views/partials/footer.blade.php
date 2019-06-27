@@ -57,7 +57,7 @@
 
 						<div class="module-body">
 							<ul class='list-unstyled'>
-								<li class="first"><a href="#" title="Contact us">My Account</a></li>
+								<li class="first"><a href="{{route('myaccount')}}" title="Contact us">My Account</a></li>
 								<li><a href="{{route('track-orders')}}" title="About us">Order History</a></li>
 								<li><a href="{{route('faq')}}" title="faq">FAQ</a></li>
 							</ul>
@@ -72,7 +72,7 @@
 						<div class="module-body">
 							<ul class='list-unstyled'>
 								<li class="first"><a title="Your Account" href="{{route('about')}}">About us</a></li>
-								<li><a title="Information" href="#">Categories</a></li>
+								<li><a title="Information" href="{{route('categories')}}">Categories</a></li>
 								<li class="last"><a title="Terms and conditions" href="{{route('terms-conditions')}}">Terms and conditions</a></li>
 							</ul>
 						</div><!-- /.module-body -->
@@ -107,11 +107,11 @@
 				<div class="col-xs-12 col-sm-6 no-padding">
 					<div class="clearfix payment-methods">
 						<ul>
-							<li><img src="assets/images/payments/1.png" alt=""></li>
-							<li><img src="assets/images/payments/2.png" alt=""></li>
-							<li><img src="assets/images/payments/3.png" alt=""></li>
-							<li><img src="assets/images/payments/4.png" alt=""></li>
-							<li><img src="assets/images/payments/5.png" alt=""></li>
+							<li><img src="{{asset('/assets/images/payments/1.png')}}" alt=""></li>
+							<li><img src="{{asset('/assets/images/payments/2.png')}}" alt=""></li>
+							<li><img src="{{asset('/assets/images/payments/3.png')}}" alt=""></li>
+							<li><img src="{{asset('/assets/images/payments/4.png')}}" alt=""></li>
+							<li><img src="{{asset('/assets/images/payments/1.png')}}" alt=""></li>
 						</ul>
 					</div><!-- /.payment-methods -->
 				</div>

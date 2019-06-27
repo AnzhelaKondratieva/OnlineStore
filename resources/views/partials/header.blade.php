@@ -50,8 +50,8 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
                     <div class="logo">
-                        <a href="/home">
-                            <img src="assets/images/logo.png" alt="">
+                        <a href="{{route('home')}}">
+                            <img src="{{asset('assets/images/logo.png')}}" alt="">
                         </a>
                     </div><!-- /.logo -->
                     <!-- ============================================================= LOGO : END ============================================================= -->
@@ -65,11 +65,11 @@
                             <div class="control-group">
                                 <ul class="categories-filter animate-dropdown">
                                     <li class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <b
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="{{route('categories')}}">Categories <b
                                                     class="caret"></b></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li class="menu-header">Computer</li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">-
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{{route('category-detail')}}">-
                                                     Clothing</a></li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">-
                                                     Electronics</a></li>

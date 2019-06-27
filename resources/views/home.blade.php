@@ -15,7 +15,7 @@
                             <div class="products">
                                 <div class="hot-deal-wrapper">
                                     <div class="image">
-                                        <img src="assets/images/hot-deals/p25.jpg" alt="">
+                                        <img src="/assets/images/hot-deals/p25.jpg" alt="">
                                     </div>
                                     <div class="sale-offer-tag"><span>49%<br>off</span></div>
                                     <div class="timing-wrapper">
@@ -518,15 +518,15 @@
                     <h3 class="section-title">Product tags</h3>
                     <div class="sidebar-widget-body outer-top-xs">
                         <div class="tag-list">
-                            <a class="item" title="Phone" href="/category">Phone</a>
-                            <a class="item active" title="Vest" href="/category">Vest</a>
-                            <a class="item" title="Smartphone" href="/category">Smartphone</a>
-                            <a class="item" title="Furniture" href="/category">Furniture</a>
-                            <a class="item" title="T-shirt" href="/category">T-shirt</a>
-                            <a class="item" title="Sweatpants" href="/category">Sweatpants</a>
-                            <a class="item" title="Sneaker" href="/category">Sneaker</a>
-                            <a class="item" title="Toys" href="/category">Toys</a>
-                            <a class="item" title="Rose" href="/category">Rose</a>
+{{--                            <a class="item" title="Phone" href="{{route('category-detail/{slug}')}}">Apple</a>--}}
+{{--                            <a class="item active" title="Vest" href="{{route('category-detail')}}">Suits</a>--}}
+{{--                            <a class="item" title="Smartphone" href="{{route('category-detail')}}">Shoes</a>--}}
+{{--                            <a class="item" title="Furniture" href="{{route('category-detail')}}">Dell</a>--}}
+{{--                            <a class="item" title="T-shirt" href="{{route('category-detail')}}">Winter wear</a>--}}
+{{--                            <a class="item" title="Sweatpants" href="{{route('category-detail')}}">Headphones</a>--}}
+{{--                            <a class="item" title="Sneaker" href="{{route('category-detail')}}">Underwear</a>--}}
+{{--                            <a class="item" title="Toys" href="{{route('category-detail')}}">Toys & Games</a>--}}
+{{--                            <a class="item" title="Rose" href="{{route('category-detail')}}">Bodybuilding</a>--}}
                         </div><!-- /.tag-list -->
                     </div><!-- /.sidebar-widget-body -->
                 </div><!-- /.sidebar-widget -->
@@ -887,7 +887,7 @@
                 <div id="hero">
                     <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
 
-                        <div class="item" style="background-image: url(assets/images/sliders/01.jpg);">
+                        <div class="item" style="background-image: url(assets/images/sliders/first.jpeg);">
                             <div class="container-fluid">
                                 <div class="caption bg-color vertical-center text-left">
                                     <div class="slider-header fadeInDown-1">Top Brands</div>
@@ -908,12 +908,12 @@
                             </div><!-- /.container-fluid -->
                         </div><!-- /.item -->
 
-                        <div class="item" style="background-image: url(assets/images/sliders/02.jpg);">
+                        <div class="item" style="background-image: url(assets/images/sliders/second.jpg);">
                             <div class="container-fluid">
                                 <div class="caption bg-color vertical-center text-left">
                                     <div class="slider-header fadeInDown-1">Spring 2016</div>
                                     <div class="big-text fadeInDown-1">
-                                        Women <span class="highlight">Fashion</span>
+                                       <span class="highlight">Fashion</span>
                                     </div>
 
                                     <div class="excerpt fadeInDown-2 hidden-xs">

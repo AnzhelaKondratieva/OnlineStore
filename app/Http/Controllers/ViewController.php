@@ -48,10 +48,12 @@ class ViewController extends Controller
         return view('blog.blog', ['article' => $article, 'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function error() {
-        return view('404');
+        return view('404', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function about() {
-        return view('about');
+        return view('about', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
 
     public function category($slug)
@@ -66,7 +68,8 @@ class ViewController extends Controller
     }
 
     public function faq() {
-        return view('info.faq');
+        return view('info.faq', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function blogDetails($slug) {
         $article = Article::where('slug', $slug)->first();
@@ -75,33 +78,43 @@ class ViewController extends Controller
         ]);
     }
     public function checkout() {
-        return view('order.checkout');
+        return view('order.checkout', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function logIn() {
-        return view('auth.login');
+        return view('auth.login', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function shoppingCart() {
-        return view('order.shopping-cart');
+        return view('order.shopping-cart', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function myWishlist() {
-        return view('order.my-wishlist');
+        return view('order.my-wishlist', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function contact() {
-        return view('info.contact');
+        return view('info.contact', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function detail() {
-        return view('products.detail');
+        return view('products.detail', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function myAccount() {
-        return view('auth.myaccount');
+        return view('auth.myaccount', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function productComparison() {
-        return view('order.product-comparison');
+        return view('order.product-comparison', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function termsConditions() {
-        return view('info.terms-conditions');
+        return view('info.terms-conditions', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function trackOrders() {
-        return view('order.track-orders');
+        return view('order.track-orders', [
+            'categories' => Category::where('is_publish', 1)->get()]);
     }
 }

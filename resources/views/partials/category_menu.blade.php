@@ -17,7 +17,7 @@
                             </div><!-- /.col -->
                         @endforeach
                             <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image">
-                                <img class="img-responsive" src="assets/images/banners/top-menu-banner.jpg" alt="">
+                                <img class="img-responsive" src="/assets/images/banners/top-menubanner.jpg" alt="">
                             </div><!-- /.yamm-content -->
                     </div>
                 </div>
