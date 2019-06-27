@@ -22,12 +22,13 @@ Route::get('/404', 'ViewController@error') -> name('error');
 
 Route::get('/about', 'ViewController@about') -> name('about');
 
-Route::get('/categories/', 'ViewController@categories') -> name('categories');
+Route::get('/categories', 'ViewController@categories') -> name('categories');
+
 Route::get('/category-detail/{slug}', 'ViewController@category') -> name('category-detail');
 
 Route::get('/faq', 'ViewController@faq') -> name('faq');
 
-Route::get('/blog-details', 'ViewController@blogDetails') -> name('blog-details');
+Route::get('/blog-details/{slug}', 'ViewController@blogDetails') -> name('blog-details');
 
 Route::get('/checkout', 'ViewController@checkout') -> name('checkout');
 

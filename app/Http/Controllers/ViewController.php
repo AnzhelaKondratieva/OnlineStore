@@ -30,7 +30,9 @@ class ViewController extends Controller
 //                'slug' =>$category->slug,
 //            ];
 //        }
-        return view('home');
+        return view('home', [
+            'categories' => Category::where('is_publish', 1)->get()
+        ]);
     }
 //foreach ($menu as $key => $value) {
 //    foreach ($categories as $key => $category) {
@@ -43,7 +45,7 @@ class ViewController extends Controller
                 'is_publish' => 1
             ]
         )->paginate(2);
-        return view('blog.blog', ['article' => $article]);
+        return view('blog.blog', ['article' => $article, 'categories' => Category::where('is_publish', 1)->get()]);
     }
     public function error() {
         return view('404');
@@ -55,7 +57,7 @@ class ViewController extends Controller
     public function category($slug)
     {
         $category = Category::where('slug',$slug)->first();
-        return view('products.category-detail', ['category' => $category]);
+        return view('products.category-detail', ['category' => $category,  'categories' => Category::where('is_publish', 1)->get()]);
 
     }
     public function categories() {
@@ -66,8 +68,11 @@ class ViewController extends Controller
     public function faq() {
         return view('info.faq');
     }
-    public function blogDetails() {
-        return view('blog.blog-details');
+    public function blogDetails($slug) {
+        $article = Article::where('slug', $slug)->first();
+        return view('blog.blog-details', [
+            'article' => $article, 'categories' => Category::where('is_publish', 1)->get()
+        ]);
     }
     public function checkout() {
         return view('order.checkout');

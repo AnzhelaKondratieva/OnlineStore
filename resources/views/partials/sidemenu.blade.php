@@ -5,18 +5,18 @@
 			<div class="head"><i class="icon fa fa-align-justify fa-fw"></i> Categories</div>
 			<nav class="yamm megamenu-horizontal" role="navigation">
 				<ul class="nav">
-					@foreach(\App\Product::$categories as $url=>$main_category)
+					@foreach($categories->where('parent_id',0) as $category)
 					<li class="dropdown menu-item">
-						<a href="/{{$url}}" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-shopping-bag"></i>{{$main_category['type']}}</a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-shopping-bag"></i>{{$category->name}}</a>
 						<ul class="dropdown-menu mega-menu">
 							<li class="yamm-content">
 								<div class="row">
-									@foreach($main_category['subtype'] as $url => $subcategory)
+									@foreach($category->child()->get() as $category_item)
 									<div class="col-sm-12 col-md-3">
-										<h2 class="title">{{$subcategory['name']}}</h2>
+										<h2 class="title">{{$category_item->name}}</h2>
 										<ul class="links list-unstyled">
-											@foreach($subcategory['children'] as $url => $products_type)
-												<li><a href="/{{$url}}">{{$products_type}}</a></li>
+											@foreach($category_item->child()->get() as $subcategory)
+												<li><a href="#">{{$subcategory->name}}</a></li>
 											@endforeach
 										</ul>
 									</div><!-- /.col -->

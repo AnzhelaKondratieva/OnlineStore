@@ -5834,3 +5834,7 @@ z-index:10000
     margin-top: 30px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
 	}
+
+.image__article {
+  background-image: url("{{$article_item->image_path}}")
+}

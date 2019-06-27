@@ -7,8 +7,8 @@
 				<div class="col-md-9">
 					@foreach($article as $article_item)
 					<div class="blog-post  wow fadeInUp">
-	<a href="{{route('blog-details')}}"><img class="img-responsive" src="assets/images/blog-post/blog_big_01.jpg" alt=""></a>
-	<h1><a href="{{route('blog-details')}}">{{$article_item->title}}</a></h1>
+	<a href="{{route('blog-details', ['slug' => $article_item->slug])}}"><img class="img-responsive" src="{{$article_item->image_path}}" alt=""></a>
+	<h1><a href="{{route('blog-details', ['slug' => $article_item->slug])}}">{{$article_item->title}}</a></h1>
 	<span class="author">John Doe</span>
 	<span class="review">6 Comments</span>
 	<span class="date-time">{{$article_item->created_at}}</span>
