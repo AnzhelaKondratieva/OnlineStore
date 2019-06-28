@@ -16,7 +16,7 @@ class Product extends Authenticatable
     protected $table = 'products';
 
     public function category() {
-        return $this->hasMany('App\Category');
+        return $this->hasMany('App\Product');
     }
 
     public function product()

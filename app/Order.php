@@ -11,4 +11,12 @@ class Order extends Model
     ];
 
     protected $table = 'orders';
+
+    public function user() {
+        return $this->hasMany('App\Order');
+    }
+
+    public function order() {
+        return $this->belongsTo('App\User');
+    }
 }
