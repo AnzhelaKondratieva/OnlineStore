@@ -26,6 +26,8 @@ Route::get('/categories', 'ViewController@categories') -> name('categories');
 
 Route::get('/category-detail/{slug}', 'ViewController@category') -> name('category-detail');
 
+Route::get('/product/{id}', 'ViewController@product') -> name('product');
+
 Route::get('/faq', 'ViewController@faq') -> name('faq');
 
 Route::get('/blog-details/{slug}', 'ViewController@blogDetails') -> name('blog-details');
