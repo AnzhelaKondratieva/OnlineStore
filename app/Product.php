@@ -15,13 +15,13 @@ class Product extends Authenticatable
 
     protected $table = 'products';
 
-    public function child() {
-        return $this->hasOne('App\Category','parent_id');
+    public function category() {
+        return $this->hasMany('App\Category');
     }
 
-    public function parent()
+    public function product()
     {
-        return $this->belongsTo('App\Category','parent_id');
+        return $this->belongsTo('App\Category');
     }
 }
 

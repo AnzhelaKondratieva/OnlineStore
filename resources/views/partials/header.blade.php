@@ -69,7 +69,7 @@
                                                     class="caret"></b></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li class="menu-header">Computer</li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{{route('category-detail')}}">-
+{{--                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{{route('category-detail')}}">---}}
                                                     Clothing</a></li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">-
                                                     Electronics</a></li>

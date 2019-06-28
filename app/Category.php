@@ -13,7 +13,7 @@ class Category extends Model
     protected $table = 'categories';
 
     public function child() {
-        return $this->hasOne('App\Category','parent_id');
+        return $this->hasMany('App\Category','parent_id');
     }
 
     public function parent()
