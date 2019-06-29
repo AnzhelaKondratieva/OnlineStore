@@ -10,5 +10,6 @@ class Article extends Model
         'id', 'title', 'slug', 'description', 'created_at', 'updated_at', 'image_path', 'is_publish'
     ];
 
+
     protected $table = 'articles';
 }

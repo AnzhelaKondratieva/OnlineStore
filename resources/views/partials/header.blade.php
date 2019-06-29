@@ -13,6 +13,7 @@
                         <li><a href="{{route('shopping-cart')}}"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
                         <li><a href="{{route('checkout')}}"><i class="icon fa fa-check"></i>Checkout</a></li>
                         <li><a href="{{route('login')}}"><i class="icon fa fa-lock"></i>Login</a></li>
+                        <li><a href="{{route('register')}}"><i class="icon fa fa-lock"></i>Register</a></li>
                     </ul>
                 </div><!-- /.cnt-account -->
 

@@ -13,11 +13,14 @@ class Product extends Authenticatable
         'id', 'name', 'articul', 'brand', 'image_path', 'description', 'price', 'category_id', 'is publish'
     ];
 
+
     protected $table = 'products';
+
 
     public function category() {
         return $this->hasMany('App\Product');
     }
+
 
     public function product()
     {

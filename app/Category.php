@@ -10,16 +10,20 @@ class Category extends Model
         'id', 'name', 'description', 'is_publish', 'parent_id', 'slug'
     ];
 
+
     protected $table = 'categories';
+
 
     public function child() {
         return $this->hasMany('App\Category','parent_id');
     }
 
+
     public function parent()
     {
         return $this->belongsTo('App\Category','parent_id');
     }
+
 
     public function product()
     {
