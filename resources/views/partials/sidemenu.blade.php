@@ -16,7 +16,7 @@
 										<h2 class="title">{{$category_item->name}}</h2>
 										<ul class="links list-unstyled">
 											@foreach($category_item->child()->get() as $subcategory)
-												<li><a href="#">{{$subcategory->name}}</a></li>
+												<li><a href="{{route('category-detail', ['slug' => $subcategory->slug])}}">{{$subcategory->name}}</a></li>
 											@endforeach
 										</ul>
 									</div><!-- /.col -->
