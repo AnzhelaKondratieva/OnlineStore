@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
-use App\User;
-use App\Category;
-use App\Product;
-use App\Order;
+use App\Models\Article;
+use App\Models\User;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class ViewController extends Controller
@@ -105,10 +105,18 @@ class ViewController extends Controller
 
 
     public function myAccount() {
-        return view('auth.myaccount', [
+        $user = \Auth::user();
+        return view('auth.myaccount', [ 'user' => $user,
             'categories' => Category::where('is_publish', 1)->get()]);
     }
 
+    public function myAccountSave(Request $request) {
+//        dd($request->all());
+        $user = \Auth::user();
+        $user->name = $request->name;
+        $user->save();
+        return redirect()->back();
+    }
 
     public function productComparison() {
         return view('order.product-comparison', [

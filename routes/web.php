@@ -41,10 +41,13 @@ Route::get('/faq', 'ViewController@faq') -> name('faq');
 Route::get('/blog-details/{slug}', 'ViewController@blogDetails') -> name('blog-details');
 
 
-Route::get('/checkout', 'ViewController@checkout') -> name('checkout');
+Route::post('/checkout', 'ViewController@checkout') -> name('checkout');
 
 
-Route::get('/myaccount', 'ViewController@myAccount') -> name('myaccount');
+Route::post('/myaccount', 'ViewController@myAccount') -> name('myaccount');
+
+
+Route::get('/myaccount/save', 'ViewController@myAccountSave') -> name('myaccount.save');
 
 
 Route::get('/shopping-cart', 'ViewController@shoppingCart') -> name('shopping-cart');

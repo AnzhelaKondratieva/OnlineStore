@@ -18,13 +18,13 @@ class Product extends Authenticatable
 
 
     public function category() {
-        return $this->hasMany('App\Product');
+        return $this->hasMany('App\Models\Product');
     }
 
 
     public function product()
     {
-        return $this->belongsTo('App\Category');
+        return $this->belongsTo('App\Models\Category');
     }
 }
 
