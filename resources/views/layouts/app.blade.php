@@ -60,7 +60,7 @@
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
-                                <a class="dropdown-item" href="{{route('myaccount')}}">Edit</a>
+                                <a class="dropdown-item" href="{{route('myaccount', ['id' => \Auth::user()->id])}}">Edit</a>
                                 <form id="logout-form" action="{{ route('home') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>

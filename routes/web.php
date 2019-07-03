@@ -20,6 +20,9 @@ Route::get('/home', 'ViewController@home') -> name('home');
 Route::get('/blog', 'ViewController@blog') -> name('blog');
 
 
+Route::get('/blog-details/{slug}', 'ViewController@blogDetails') -> name('blog-details');
+
+
 Route::get('/404', 'ViewController@error') -> name('error');
 
 
@@ -38,16 +41,36 @@ Route::get('/product/{id}', 'ViewController@product') -> name('product');
 Route::get('/faq', 'ViewController@faq') -> name('faq');
 
 
-Route::get('/blog-details/{slug}', 'ViewController@blogDetails') -> name('blog-details');
-
-
 Route::post('/checkout', 'ViewController@checkout') -> name('checkout');
 
 
-Route::post('/myaccount', 'ViewController@myAccount') -> name('myaccount');
+
+// Админка для редактирования пользователей
+
+Route::get('/accounts/list', 'ViewController@accountsList') -> name('accounts.list');
+
+Route::post('/myaccount/{id?}', 'ViewController@myAccount') -> name('myaccount');
+
+Route::post('/myaccount/save{id}', 'ViewController@myAccountSave') -> name('myaccount.save');
+
+Route::post('/myaccount/delete{id}', 'ViewController@myAccountDelete') -> name('myaccount.delete');
+
+Route::post('/myaccount/create', 'ViewController@myAccountCreate') -> name('myaccount.create');
 
 
-Route::get('/myaccount/save', 'ViewController@myAccountSave') -> name('myaccount.save');
+// Админка для блога
+
+Route::get('/blog/list', 'ViewController@blogList') -> name('blog.list');
+
+Route::get('/blog/create', 'ViewController@blogCreate') -> name('blog.create');
+
+Route::get('/blog/edit/{id?}', 'ViewController@blogEdit') -> name('blog.edit');
+
+Route::get('/blog/save/{id}', 'ViewController@blogSave') -> name('blog.save');
+
+Route::get('/blog/delete', 'ViewController@blogDelete') -> name('blog.delete');
+
+
 
 
 Route::get('/shopping-cart', 'ViewController@shoppingCart') -> name('shopping-cart');

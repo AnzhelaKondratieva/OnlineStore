@@ -104,19 +104,97 @@ class ViewController extends Controller
     }
 
 
-    public function myAccount() {
-        $user = \Auth::user();
-        return view('auth.myaccount', [ 'user' => $user,
-            'categories' => Category::where('is_publish', 1)->get()]);
+
+
+    // Админка для редактирования пользователей
+    public function accountsList() {
+        $users = User::paginate(20);
+        return view('auth.list', ['users' => $users]);
     }
 
-    public function myAccountSave(Request $request) {
-//        dd($request->all());
-        $user = \Auth::user();
-        $user->name = $request->name;
-        $user->save();
-        return redirect()->back();
+
+    public function myAccount($id) {
+        $user = User::find($id);
+        return view('auth.myaccount', [ 'user' => $user]);
     }
+
+
+    public function myAccountSave($id=null, Request $request) {
+        $request->validate([
+            'name' => 'required|max:255|unique',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:8'
+        ]);
+
+        if($id === null) {
+            $user = new User;
+            $user->password = \Hash::make($request->password);
+        }
+       else {
+           $user = User::find($id);
+       }
+        $user->fill($request->only('name', 'email', 'password'));
+        $user->save();
+        return redirect(route('accounts.list'))->with('success','User' . $user->name . '!');
+    }
+
+
+    public function myAccountDelete($id) {
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->back()->with('success','User deleted successfully!');
+    }
+
+
+    public function myAccountCreate() {
+        return view('auth.myaccount');
+    }
+
+
+    //Админка для блога
+
+    public function blogList() {
+        $articles = Article::paginate(5);
+        return view('blog.list', ['articles' => $articles]);
+    }
+
+
+    public function blogEdit($id) {
+        $article = Article::find($id);
+        return view('blog.edit', [ 'article' => $article]);
+    }
+
+    public function blogSave($id=null, Request $request) {
+        $request->validate([
+            'title' => 'required|max:255|unique',
+            'description' => 'required',
+            'image' => 'required'
+        ]);
+
+        if($id === null) {
+            $article = new Article;
+        }
+        else {
+            $article = Article::find($id);
+        }
+        $article->fill($request->only('title', 'description', 'image'));
+        $article->save();
+        return redirect(route('blog.list'))->with('success','Article' . $article->title . '!');
+    }
+
+    public function blogCreate() {
+        return view('blog.edit');
+    }
+
+
+    public function blogDelete($id) {
+        $article = Article::find($id);
+        $article->delete();
+        return redirect()->back()->with('success','Article deleted successfully!');
+    }
+
+
+
 
     public function productComparison() {
         return view('order.product-comparison', [

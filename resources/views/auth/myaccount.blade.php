@@ -8,16 +8,21 @@
 					<div class="card-header">{{ __('Login') }}</div>
 
 					<div class="card-body">
-						<form method="POST" action="{{ route('myaccount.save') }}">
+						<form method="POST"
+							  @if(isset($user))
+							  action="{{route('myaccount.save', ['id' => $user()->id])}}">
+								@else
+								action="{{route('myaccount.save')}}">
+							@endif
 							@csrf
 
 							<div class="form-group row">
 								<label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
 
 								<div class="col-md-6">
-									<input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="name" value="{{$user->name}}" required autofocus>
+									<input id="email" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="@if(isset($user)){{$user->name}}@endif" autofocus>
 
-									@error('email')
+									@error('name')
 									<span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -29,7 +34,7 @@
 								<label for="name" class="col-md-4 col-form-label text-md-right">Email</label>
 
 								<div class="col-md-6">
-									<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{$user->email}}" required autofocus>
+									<input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="@if(isset($user)){{$user->email}}@endif" autofocus>
 
 									@error('email')
 									<span class="invalid-feedback" role="alert">
@@ -43,7 +48,7 @@
 								<label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
 
 								<div class="col-md-6">
-									<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value ="" required>
+									<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value ="">
 
 									@error('password')
 									<span class="invalid-feedback" role="alert">
