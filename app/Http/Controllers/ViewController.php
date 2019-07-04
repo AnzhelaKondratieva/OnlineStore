@@ -121,8 +121,8 @@ class ViewController extends Controller
 
     public function myAccountSave($id=null, Request $request) {
         $request->validate([
-            'name' => 'required|max:255|unique',
-            'email' => 'required|email|unique:users,email',
+            'name' => 'required|max:255|unique:users,name',
+            'email' => 'required|email',
             'password' => 'required|min:8',
             'role' => 'required'
         ]);
@@ -259,10 +259,8 @@ class ViewController extends Controller
 
     public function productsSave($id=null, Request $request) {
         $request->validate([
-            'name' => 'required|max:255|unique',
-            'articul' => 'required|max:255|unique',
-            'brand' => 'required|max:255|unique',
-            'image' => 'required',
+            'name' => 'required|max:255|unique:products,name',
+            'articul' => 'required|max:255|unique:products,articul',
             'description' => 'required',
             'price' => 'required',
             'category_id' => 'required|max:11',
@@ -277,7 +275,7 @@ class ViewController extends Controller
         }
         $product->fill($request->only('name', 'description', 'parent_id', 'is_publish', 'slug'));
         $product->save();
-        return redirect(route('categories.list'))->with('success','Category' . $category->title . '!');
+        return redirect(route('products.list'))->with('success','Category' . $product->title . '!');
     }
 
     public function productsCreate() {

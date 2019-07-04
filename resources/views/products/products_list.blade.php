@@ -9,7 +9,7 @@
                         <strong>{{ $message }}</strong>
                     </div>
                 @endif
-                <a href="{{route('products.create')}}">Add new user</a>
+                <a href="{{route('products.create')}}">Add new product</a>
                 <table width="100%" border="5px solid black" cellpadding="5%">
                     <tr>
                         <td>Id</td>

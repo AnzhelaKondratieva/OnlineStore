@@ -49,7 +49,7 @@ Route::post('/checkout', 'ViewController@checkout') -> name('checkout');
 
 Route::get('/accounts/list', 'ViewController@accountsList') -> name('accounts.list');
 
-Route::post('/myaccount/{id?}', 'ViewController@myAccount') -> name('myaccount');
+Route::get('/myaccount/{id?}', 'ViewController@myAccount') -> name('myaccount');
 
 Route::post('/myaccount/save{id}', 'ViewController@myAccountSave') -> name('myaccount.save');
 
@@ -91,7 +91,7 @@ Route::get('/products/list', 'ViewController@productsList') -> name('products.li
 
 Route::get('/products/edit/{id?}', 'ViewController@productsEdit') -> name('products.edit');
 
-Route::get('/products/save/{id}', 'ViewController@productsSave') -> name('products.save');
+Route::post('/products/save/{id}', 'ViewController@productsSave') -> name('products.save');
 
 Route::get('/products/create', 'ViewController@productsCreate') -> name('products.create');
 
