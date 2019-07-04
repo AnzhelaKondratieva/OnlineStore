@@ -123,7 +123,8 @@ class ViewController extends Controller
         $request->validate([
             'name' => 'required|max:255|unique',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:8'
+            'password' => 'required|min:8',
+            'role' => 'required'
         ]);
 
         if($id === null) {
@@ -168,7 +169,9 @@ class ViewController extends Controller
         $request->validate([
             'title' => 'required|max:255|unique',
             'description' => 'required',
-            'image' => 'required'
+            'image' => 'required',
+            'slug' => 'required',
+            'is_publish' => 'required|max:11'
         ]);
 
         if($id === null) {
@@ -191,6 +194,101 @@ class ViewController extends Controller
         $article = Article::find($id);
         $article->delete();
         return redirect()->back()->with('success','Article deleted successfully!');
+    }
+
+
+
+    //Админка для категорий
+
+    public function сategoriesList() {
+        $categories = Category::paginate(10);
+        return view('products.category_list', ['categories' => $categories]);
+    }
+
+
+    public function сategoriesEdit($id) {
+        $category = Category::find($id);
+        return view('products.category_edit', [ 'category' => $category]);
+    }
+
+    public function categoriesSave($id=null, Request $request) {
+        $request->validate([
+            'name' => 'required|max:255|unique',
+            'description' => 'required',
+            'parent_id' => 'required|max:11',
+            'is_publish' => 'required|max:11',
+            'slug' => 'required'
+        ]);
+
+        if($id === null) {
+            $category = new Category;
+        }
+        else {
+            $category = Category::find($id);
+        }
+        $category->fill($request->only('name', 'description', 'parent_id', 'is_publish', 'slug'));
+        $category->save();
+        return redirect(route('categories.list'))->with('success','Category' . $category->title . '!');
+    }
+
+
+    public function categoriesCreate() {
+        return view('products.category_edit');
+    }
+
+
+    public function categoriesDelete($id) {
+        $category = Category::find($id);
+        $category->delete();
+        return redirect()->back()->with('success','Category deleted successfully!');
+    }
+
+
+    //Админка для продуктов
+
+    public function productsList() {
+        $products = Product::paginate(10);
+        return view('products.products_list', ['products' => $products]);
+    }
+
+
+    public function productsEdit($id) {
+        $product = Product::find($id);
+        return view('products.products_edit', [ 'product' => $product]);
+    }
+
+    public function productsSave($id=null, Request $request) {
+        $request->validate([
+            'name' => 'required|max:255|unique',
+            'articul' => 'required|max:255|unique',
+            'brand' => 'required|max:255|unique',
+            'image' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'category_id' => 'required|max:11',
+            'is_publish' => 'required|max:11'
+        ]);
+
+        if($id === null) {
+            $product = new Product;
+        }
+        else {
+            $product = Product::find($id);
+        }
+        $product->fill($request->only('name', 'description', 'parent_id', 'is_publish', 'slug'));
+        $product->save();
+        return redirect(route('categories.list'))->with('success','Category' . $category->title . '!');
+    }
+
+    public function productsCreate() {
+        return view('products.products_edit');
+    }
+
+
+    public function productsDelete($id) {
+        $product = Product::find($id);
+        $product->delete();
+        return redirect()->back()->with('success','Category deleted successfully!');
     }
 
 

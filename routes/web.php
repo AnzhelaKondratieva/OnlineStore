@@ -71,6 +71,34 @@ Route::get('/blog/save/{id}', 'ViewController@blogSave') -> name('blog.save');
 Route::get('/blog/delete', 'ViewController@blogDelete') -> name('blog.delete');
 
 
+// Админка для категорий
+
+Route::get('/categories/list', 'ViewController@сategoriesList') -> name('categories.list');
+
+Route::get('/categories/edit/{id?}', 'ViewController@сategoriesEdit') -> name('categories.edit');
+
+Route::get('/categories/save/{id}', 'ViewController@categoriesSave') -> name('categories.save');
+
+Route::get('/categories/create', 'ViewController@categoriesCreate') -> name('categories.create');
+
+Route::get('/categories/delete', 'ViewController@categoriesDelete') -> name('categories.delete');
+
+
+
+//Админка для продуктов
+
+Route::get('/products/list', 'ViewController@productsList') -> name('products.list');
+
+Route::get('/products/edit/{id?}', 'ViewController@productsEdit') -> name('products.edit');
+
+Route::get('/products/save/{id}', 'ViewController@productsSave') -> name('products.save');
+
+Route::get('/products/create', 'ViewController@productsCreate') -> name('products.create');
+
+Route::get('/products/delete', 'ViewController@productsDelete') -> name('products.delete');
+
+
+
 
 
 Route::get('/shopping-cart', 'ViewController@shoppingCart') -> name('shopping-cart');

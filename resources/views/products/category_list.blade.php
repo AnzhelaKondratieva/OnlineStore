@@ -9,37 +9,37 @@
                         <strong>{{ $message }}</strong>
                     </div>
                 @endif
-                <a href="{{route('blog.create')}}">Add new article</a>
+                <a href="{{route('categories.create')}}">Add new category</a>
                 <table width="100%" border="5px solid black" cellpadding="10%">
                     <tr>
                         <td>Id</td>
-                        <td>Title</td>
+                        <td>Name</td>
                         <td>Description</td>
-                        <td>Image</td>
-                        <td>Slug</td>
+                        <td>Parent_id</td>
                         <td>Is_publish</td>
+                        <td>Slug</td>
                         <td>Created_at</td>
                         <td>Updated_at</td>
                         <td></td>
                         <td></td>
                     </tr>
-                    @foreach($articles as $article)
+                    @foreach($categories as $category)
                         <tr>
-                            <td>{{$article->id}}</td>
-                            <td>{{$article->title}}</td>
-                            <td>{{$article->description}}</td>
-                            <td>{{$article->image_path}}</td>
-                            <td>{{$article->slug}}</td>
-                            <td>{{$article->is_publish}}</td>
-                            <td>{{$article->created_at}}</td>
-                            <td>{{$article->updated_at}}</td>
-                            <td><a href="{{route('blog.edit', ['id' => $article->id])}}">Edit</a></td>
-                            <td><a href="{{route('blog.delete',['id' => $article->id])}}">Delete</a></td>
+                            <td>{{$category->id}}</td>
+                            <td>{{$category->name}}</td>
+                            <td>{{$category->description}}</td>
+                            <td>{{$category->parent_id}}</td>
+                            <td>{{$category->is_publish}}</td>
+                            <td>{{$category->slug}}</td>
+                            <td>{{$category->created_at}}</td>
+                            <td>{{$category->updated_at}}</td>
+                            <td><a href="{{route('categories.edit', ['id' => $category->id])}}">Edit</a></td>
+                            <td><a href="{{route('categories.delete',['id' => $category->id])}}">Delete</a></td>
                         </tr>
                     @endforeach
                 </table>
             </div>
         </div>
-        {{$articles->links()}}
+        {{$categories->links()}}
     </div>
 @endsection
