@@ -45,12 +45,12 @@
                             </div>
 
                                 <div class="form-group row">
-                                    <label for="name" class="col-md-4 col-form-label text-md-right">Image</label>
+                                    <label for="image_path" class="col-md-4 col-form-label text-md-right">Image_path</label>
 
                                     <div class="col-md-6">
-                                        <input id="email" type="text" class="form-control @error('image') is-invalid @enderror" name="image" value="@if(isset($article)){{$article->image_path}}@endif" autofocus>
+                                        <input id="image_path" type="text" class="form-control @error('image_path') is-invalid @enderror" name="image_path" value="@if(isset($article)){{$article->image_path}}@endif" autofocus>
 
-                                        @error('image')
+                                        @error('image_path')
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

@@ -51,11 +51,11 @@ Route::get('/accounts/list', 'ViewController@accountsList') -> name('accounts.li
 
 Route::get('/myaccount/{id?}', 'ViewController@myAccount') -> name('myaccount');
 
-Route::post('/myaccount/save{id}', 'ViewController@myAccountSave') -> name('myaccount.save');
+Route::post('/myaccount/save/{id?}', 'ViewController@myAccountSave') -> name('myaccount.save');
 
-Route::post('/myaccount/delete{id}', 'ViewController@myAccountDelete') -> name('myaccount.delete');
+Route::get('/myaccount/delete/{id}', 'ViewController@myAccountDelete') -> name('myaccount.delete');
 
-Route::post('/myaccount/create', 'ViewController@myAccountCreate') -> name('myaccount.create');
+Route::get('/myaccount/create', 'ViewController@myAccountCreate') -> name('myaccount.create');
 
 
 // Админка для блога
@@ -66,9 +66,9 @@ Route::get('/blog/create', 'ViewController@blogCreate') -> name('blog.create');
 
 Route::get('/blog/edit/{id?}', 'ViewController@blogEdit') -> name('blog.edit');
 
-Route::get('/blog/save/{id}', 'ViewController@blogSave') -> name('blog.save');
+Route::post('/blog/save/{id?}', 'ViewController@blogSave') -> name('blog.save');
 
-Route::get('/blog/delete', 'ViewController@blogDelete') -> name('blog.delete');
+Route::get('/blog/delete/{id}', 'ViewController@blogDelete') -> name('blog.delete');
 
 
 // Админка для категорий
@@ -77,11 +77,11 @@ Route::get('/categories/list', 'ViewController@сategoriesList') -> name('catego
 
 Route::get('/categories/edit/{id?}', 'ViewController@сategoriesEdit') -> name('categories.edit');
 
-Route::get('/categories/save/{id}', 'ViewController@categoriesSave') -> name('categories.save');
+Route::post('/categories/save/{id?}', 'ViewController@categoriesSave') -> name('categories.save');
 
 Route::get('/categories/create', 'ViewController@categoriesCreate') -> name('categories.create');
 
-Route::get('/categories/delete', 'ViewController@categoriesDelete') -> name('categories.delete');
+Route::get('/categories/delete/{id}', 'ViewController@categoriesDelete') -> name('categories.delete');
 
 
 
@@ -91,11 +91,11 @@ Route::get('/products/list', 'ViewController@productsList') -> name('products.li
 
 Route::get('/products/edit/{id?}', 'ViewController@productsEdit') -> name('products.edit');
 
-Route::post('/products/save/{id}', 'ViewController@productsSave') -> name('products.save');
+Route::post('/products/save/{id?}', 'ViewController@productsSave') -> name('products.save');
 
 Route::get('/products/create', 'ViewController@productsCreate') -> name('products.create');
 
-Route::get('/products/delete', 'ViewController@productsDelete') -> name('products.delete');
+Route::get('/products/delete/{id}', 'ViewController@productsDelete') -> name('products.delete');
 
 
 

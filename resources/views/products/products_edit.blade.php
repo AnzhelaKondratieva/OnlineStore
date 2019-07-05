@@ -34,7 +34,7 @@
                                     <label for="articul" class="col-md-4 col-form-label text-md-right">Articul</label>
 
                                     <div class="col-md-6">
-                                        <input id="articul" type="text" class="form-control @error('articul') is-invalid @enderror" name="darticul" value="@if(isset($product)){{$product->articul}}@endif" autofocus>
+                                        <input id="articul" type="text" class="form-control @error('articul') is-invalid @enderror" name="articul" value="@if(isset($product)){{$product->articul}}@endif" autofocus>
 
                                         @error('articul')
                                         <span class="invalid-feedback" role="alert">
@@ -48,7 +48,7 @@
                                     <label for="brand" class="col-md-4 col-form-label text-md-right">Brand</label>
 
                                     <div class="col-md-6">
-                                        <input id="brand" type="text" class="form-control @error('brand') is-invalid @enderror" name="articul" value="@if(isset($product)){{$product->brand}}@endif" autofocus>
+                                        <input id="brand" type="text" class="form-control @error('brand') is-invalid @enderror" name="brand" value="@if(isset($product)){{$product->brand}}@endif" autofocus>
 
                                         @error('brand')
                                         <span class="invalid-feedback" role="alert">
@@ -59,12 +59,12 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="image" class="col-md-4 col-form-label text-md-right">Image</label>
+                                    <label for="image_path" class="col-md-4 col-form-label text-md-right">Image_path</label>
 
                                     <div class="col-md-6">
-                                        <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image">
+                                        <input id="image_path" type="text" class="form-control @error('image_path') is-invalid @enderror" name="image_path">
 
-                                        @error('image')
+                                        @error('image_path')
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

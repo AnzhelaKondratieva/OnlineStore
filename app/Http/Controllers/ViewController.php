@@ -167,9 +167,9 @@ class ViewController extends Controller
 
     public function blogSave($id=null, Request $request) {
         $request->validate([
-            'title' => 'required|max:255|unique',
+            'title' => 'required|max:255|unique:articles,title',
             'description' => 'required',
-            'image' => 'required',
+            'image_path' => 'required',
             'slug' => 'required',
             'is_publish' => 'required|max:11'
         ]);
@@ -180,7 +180,7 @@ class ViewController extends Controller
         else {
             $article = Article::find($id);
         }
-        $article->fill($request->only('title', 'description', 'image'));
+        $article->fill($request->only('title', 'description', 'image_path', 'slug', 'is_publish'));
         $article->save();
         return redirect(route('blog.list'))->with('success','Article' . $article->title . '!');
     }
@@ -213,7 +213,7 @@ class ViewController extends Controller
 
     public function categoriesSave($id=null, Request $request) {
         $request->validate([
-            'name' => 'required|max:255|unique',
+            'name' => 'required|max:255|unique:categories,name',
             'description' => 'required',
             'parent_id' => 'required|max:11',
             'is_publish' => 'required|max:11',
@@ -259,8 +259,10 @@ class ViewController extends Controller
 
     public function productsSave($id=null, Request $request) {
         $request->validate([
-            'name' => 'required|max:255|unique:products,name',
-            'articul' => 'required|max:255|unique:products,articul',
+            'name' => 'required|max:255',
+            'articul' => 'required|max:255',
+            'brand' => 'required',
+            'image_path' => 'required',
             'description' => 'required',
             'price' => 'required',
             'category_id' => 'required|max:11',
@@ -269,11 +271,21 @@ class ViewController extends Controller
 
         if($id === null) {
             $product = new Product;
+            $request->validate([
+                'name' => 'required|max:255|unique:products,name',
+                'articul' => 'required|max:255|unique:products,articul',
+                'description' => 'required',
+                'brand' => 'required',
+                'image_path' => 'required',
+                'price' => 'required',
+                'category_id' => 'required|max:11',
+                'is_publish' => 'required|max:11'
+            ]);
         }
         else {
             $product = Product::find($id);
         }
-        $product->fill($request->only('name', 'description', 'parent_id', 'is_publish', 'slug'));
+        $product->fill($request->only('name', 'articul', 'brand', 'image_path', 'description', 'price', 'category_id', 'is_publish'));
         $product->save();
         return redirect(route('products.list'))->with('success','Category' . $product->title . '!');
     }
