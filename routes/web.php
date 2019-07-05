@@ -99,6 +99,21 @@ Route::get('/products/delete/{id}', 'ViewController@productsDelete') -> name('pr
 
 
 
+//Админка для заказов
+
+Route::get('/orders/list', 'ViewController@ordersList') -> name('orders.list');
+
+Route::get('/orders/edit/{id?}', 'ViewController@ordersEdit') -> name('orders.edit');
+
+Route::post('/orders/save/{id?}', 'ViewController@ordersSave') -> name('orders.save');
+
+Route::get('/orders/create', 'ViewController@ordersCreate') -> name('orders.create');
+
+Route::get('/orders/delete/{id}', 'ViewController@ordersDelete') -> name('orders.delete');
+
+
+
+
 
 
 Route::get('/shopping-cart', 'ViewController@shoppingCart') -> name('shopping-cart');

@@ -265,22 +265,12 @@ class ViewController extends Controller
             'image_path' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'category_id' => 'required|max:11',
-            'is_publish' => 'required|max:11'
+            'category_id' => 'required|max:11'
         ]);
 
         if($id === null) {
             $product = new Product;
-            $request->validate([
-                'name' => 'required|max:255|unique:products,name',
-                'articul' => 'required|max:255|unique:products,articul',
-                'description' => 'required',
-                'brand' => 'required',
-                'image_path' => 'required',
-                'price' => 'required',
-                'category_id' => 'required|max:11',
-                'is_publish' => 'required|max:11'
-            ]);
+            $product->is_publish = false;
         }
         else {
             $product = Product::find($id);
@@ -300,6 +290,62 @@ class ViewController extends Controller
         $product->delete();
         return redirect()->back()->with('success','Category deleted successfully!');
     }
+
+
+
+
+    //Админка для заказов
+
+    public function ordersList() {
+        $orders = Order::paginate(10);
+        return view('auth.orders_list', ['orders' => $orders]);
+    }
+
+
+    public function ordersEdit($id) {
+        $order = Order::find($id);
+        return view('auth.orders_edit', [ 'order' => $order]);
+    }
+
+    public function ordersSave($id=null, Request $request) {
+        $request->validate([
+            'user_id' => 'required|max:11',
+            'phone' => 'required|max:11'
+        ]);
+
+        if($id === null) {
+            $order = new Order;
+            $order->validate([
+                'user_id' => 'required|max:11',
+                'phone' => 'required|max:11'
+            ]);
+        }
+        else {
+            $product = Product::find($id);
+        }
+        $order->fill($request->only('user_id', 'phone'));
+        $order->save();
+        return redirect(route('auth.orders_list'))->with('success','Category' . $order->id . '!');
+    }
+
+    public function ordersCreate() {
+        return view('auth.orders_edit');
+    }
+
+
+    public function ordersDelete($id) {
+        $order = Order::find($id);
+        $order->delete();
+        return redirect()->back()->with('success','Category deleted successfully!');
+    }
+
+
+
+
+
+
+
+
 
 
 
