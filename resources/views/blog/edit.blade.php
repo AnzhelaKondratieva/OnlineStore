@@ -10,10 +10,11 @@
                     <div class="card-body">
                         <form method="POST"
                               @if(isset($article))
-                              action="{{route('blog.save', ['id' => $article->id])}}">
+                              action="{{route('blog.save', ['id' => $article->id])}}"
                             @else
-                                action="{{route('blog.save')}}">
-                            @endif
+                                action="{{route('blog.save')}}"
+                            @endif enctype = "multipart/form-data"
+                            >
                             @csrf
 
                             <div class="form-group row">
@@ -48,7 +49,7 @@
                                     <label for="image_path" class="col-md-4 col-form-label text-md-right">Image_path</label>
 
                                     <div class="col-md-6">
-                                        <input id="image_path" type="text" class="form-control @error('image_path') is-invalid @enderror" name="image_path" value="@if(isset($article)){{$article->image_path}}@endif" autofocus>
+                                        <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path" value="@if(isset($article)){{$article->image_path}}@endif" autofocus>
 
                                         @error('image_path')
                                         <span class="invalid-feedback" role="alert">

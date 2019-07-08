@@ -150,10 +150,10 @@ class ViewController extends Controller
        }
 
         $email_rules = 'required|email';
-        if($user->isDirty('email')) {
+        if($user->isDirty('email') || $user->id===null) {
             $email_rules.='|unique:users,email';
         }
-        
+
         $request->validate([
             'name' => 'required|max:255',
             'email' => $email_rules,
@@ -208,6 +208,21 @@ class ViewController extends Controller
         else {
             $article = Article::find($id);
         }
+
+        if ($request->has('image_path')) {
+            // Get image file
+            $image = $request->file('image_path');
+            // Define folder path
+            $name = md5(time());
+            $folder = '/assets/images/blog-post';
+            // Make a file path where image will be stored [ folder path + file name + file extension]
+            $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
+            $image->move(public_path($folder), $name. '.' . $image->getClientOriginalExtension());
+            dd(\realpath(public_path($folder)));
+            // Set user profile image path in database to filePath
+            $article->image_path = $filePath;
+        }
+
         $article->fill($request->only('title', 'description', 'image_path', 'slug', 'is_publish'));
         $article->save();
         return redirect(route('blog.list'))->with('success','Article' . $article->title . '!');

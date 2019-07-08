@@ -28,7 +28,7 @@
                             <td>{{$article->id}}</td>
                             <td>{{$article->title}}</td>
                             <td>{{$article->description}}</td>
-                            <td>{{$article->image_path}}</td>
+                            <td><img src="{{$article->image_path}}"></td>
                             <td>{{$article->slug}}</td>
                             <td>{{$article->is_publish}}</td>
                             <td>{{$article->created_at}}</td>
