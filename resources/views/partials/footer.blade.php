@@ -57,7 +57,9 @@
 
 						<div class="module-body">
 							<ul class='list-unstyled'>
-								<li class="first"><a href="{{route('myaccount', ['id' => \Auth::user()->id])}}" title="Contact us">My Account</a></li>
+								@if(\Auth::user())
+									<li><a href="{{route('myaccount', ['id' => \Auth::user()->id])}}"><i class="icon fa fa-user"></i>My Account</a></li>
+								@endif
 								<li><a href="{{route('track-orders')}}" title="About us">Order History</a></li>
 								<li><a href="{{route('faq')}}" title="faq">FAQ</a></li>
 							</ul>

@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 
 class ViewController extends Controller
 {
+
+    //ОСНОВНЫЕ СТРАНИЦЫ САЙТА
+
     public function home() {
         return view('home', [
             'categories' => Category::where('is_publish', 1)->get()
@@ -104,9 +107,26 @@ class ViewController extends Controller
     }
 
 
+    public function productComparison() {
+        return view('order.product-comparison', [
+            'categories' => Category::where('is_publish', 1)->get()]);
+    }
 
 
-    // Админка для редактирования пользователей
+    public function termsConditions() {
+        return view('info.terms-conditions', [
+            'categories' => Category::where('is_publish', 1)->get()]);
+    }
+
+
+    public function trackOrders() {
+        return view('order.track-orders', [
+            'categories' => Category::where('is_publish', 1)->get()]);
+    }
+
+
+
+    // АДМИНКА ДЛЯ РЕДАКТИРОВАНИЯ ПОЛЬЗОВАТЕЛЕЙ
     public function accountsList() {
         $users = User::paginate(20);
         return view('auth.list', ['users' => $users]);
@@ -120,20 +140,27 @@ class ViewController extends Controller
 
 
     public function myAccountSave($id=null, Request $request) {
-        $request->validate([
-            'name' => 'required|max:255|unique:users,name',
-            'email' => 'required|email',
-            'password' => 'required|min:8',
-            'role' => 'required'
-        ]);
-
         if($id === null) {
             $user = new User;
             $user->password = \Hash::make($request->password);
         }
        else {
            $user = User::find($id);
+           $user->password = \Hash::make($request->password);
        }
+
+        $email_rules = 'required|email';
+        if($user->isDirty('email')) {
+            $email_rules.='|unique:users,email';
+        }
+        
+        $request->validate([
+            'name' => 'required|max:255',
+            'email' => $email_rules,
+            'password' => 'required|min:8',
+            'role' => 'required'
+        ]);
+
         $user->fill($request->only('name', 'email', 'password'));
         $user->save();
         return redirect(route('accounts.list'))->with('success','User' . $user->name . '!');
@@ -152,7 +179,8 @@ class ViewController extends Controller
     }
 
 
-    //Админка для блога
+
+    //АДМИНКА ДЛЯ БЛОГА
 
     public function blogList() {
         $articles = Article::paginate(5);
@@ -198,7 +226,7 @@ class ViewController extends Controller
 
 
 
-    //Админка для категорий
+    //АДМИНКА ДЛЯ КАТЕГОРИЙ
 
     public function сategoriesList() {
         $categories = Category::paginate(10);
@@ -244,7 +272,7 @@ class ViewController extends Controller
     }
 
 
-    //Админка для продуктов
+    //АДМИНКА ДЛЯ ПРОДУКТОВ
 
     public function productsList() {
         $products = Product::paginate(10);
@@ -293,8 +321,7 @@ class ViewController extends Controller
 
 
 
-
-    //Админка для заказов
+    //АДМИНКА ДЛЯ ЗАКАЗОВ
 
     public function ordersList() {
         $orders = Order::paginate(10);
@@ -310,22 +337,22 @@ class ViewController extends Controller
     public function ordersSave($id=null, Request $request) {
         $request->validate([
             'user_id' => 'required|max:11',
-            'phone' => 'required|max:11'
+            'phone' => 'required|max:20'
         ]);
 
         if($id === null) {
             $order = new Order;
-            $order->validate([
+            $request->validate([
                 'user_id' => 'required|max:11',
-                'phone' => 'required|max:11'
+                'phone' => 'required|max:20'
             ]);
         }
         else {
-            $product = Product::find($id);
+            $order = Product::find($id);
         }
         $order->fill($request->only('user_id', 'phone'));
         $order->save();
-        return redirect(route('auth.orders_list'))->with('success','Category' . $order->id . '!');
+        return redirect(route('orders.list'))->with('success','Category' . $order->id . '!');
     }
 
     public function ordersCreate() {
@@ -337,33 +364,5 @@ class ViewController extends Controller
         $order = Order::find($id);
         $order->delete();
         return redirect()->back()->with('success','Category deleted successfully!');
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-    public function productComparison() {
-        return view('order.product-comparison', [
-            'categories' => Category::where('is_publish', 1)->get()]);
-    }
-
-
-    public function termsConditions() {
-        return view('info.terms-conditions', [
-            'categories' => Category::where('is_publish', 1)->get()]);
-    }
-
-
-    public function trackOrders() {
-        return view('order.track-orders', [
-            'categories' => Category::where('is_publish', 1)->get()]);
     }
 }
