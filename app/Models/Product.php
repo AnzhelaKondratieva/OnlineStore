@@ -22,7 +22,7 @@ class Product extends Authenticatable
     }
 
     public function getUrl() {
-        return $this->product()->first()->slug;
+        return $this->category()->first()->slug;
     }
 }
 
