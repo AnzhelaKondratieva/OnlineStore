@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-offset-2 col-md-8">
+            <div class="col-md-offset-1 col-md-9">
                 @if ($message = Session::get('success'))
                     <div class="alert alert-success alert-block">
                         <button type="button" class="close" data-dismiss="alert">×</button>
@@ -28,7 +28,7 @@
                             <td>{{$article->id}}</td>
                             <td>{{$article->title}}</td>
                             <td>{{$article->description}}</td>
-                            <td><img src="{{$article->image_path}}"></td>
+                            <td><img src="{{$article->image_path}}" width="150px"></td>
                             <td>{{$article->slug}}</td>
                             <td>{{$article->is_publish}}</td>
                             <td>{{$article->created_at}}</td>

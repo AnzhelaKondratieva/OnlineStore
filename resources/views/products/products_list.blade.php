@@ -32,7 +32,7 @@
                             <td>{{$product->name}}</td>
                             <td>{{$product->articul}}</td>
                             <td>{{$product->brand}}</td>
-                            <td>{{$product->image_path}}</td>
+                            <td><img src="{{$product->image_path}}" width="150px"></td>
                             <td>{{$product->description}}</td>
                             <td>{{$product->price}}</td>
                             <td>{{$product->category_id}}</td>

@@ -214,16 +214,15 @@ class ViewController extends Controller
             $image = $request->file('image_path');
             // Define folder path
             $name = md5(time());
-            $folder = '/assets/images/blog-post';
+            $folder = '/assets/images/blog-post/';
             // Make a file path where image will be stored [ folder path + file name + file extension]
             $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
             $image->move(public_path($folder), $name. '.' . $image->getClientOriginalExtension());
-            dd(\realpath(public_path($folder)));
             // Set user profile image path in database to filePath
             $article->image_path = $filePath;
         }
 
-        $article->fill($request->only('title', 'description', 'image_path', 'slug', 'is_publish'));
+        $article->fill($request->only('title', 'description', 'slug', 'is_publish'));
         $article->save();
         return redirect(route('blog.list'))->with('success','Article' . $article->title . '!');
     }
@@ -318,7 +317,21 @@ class ViewController extends Controller
         else {
             $product = Product::find($id);
         }
-        $product->fill($request->only('name', 'articul', 'brand', 'image_path', 'description', 'price', 'category_id', 'is_publish'));
+
+        if ($request->has('image_path')) {
+            // Get image file
+            $image = $request->file('image_path');
+            // Define folder path
+            $name = md5(time());
+            $folder = '/assets/images/products/';
+            // Make a file path where image will be stored [ folder path + file name + file extension]
+            $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
+            $image->move(public_path($folder), $name. '.' . $image->getClientOriginalExtension());
+            // Set user profile image path in database to filePath
+            $article->image_path = $filePath;
+        }
+
+        $product->fill($request->only('name', 'articul', 'brand', 'description', 'price', 'category_id', 'is_publish'));
         $product->save();
         return redirect(route('products.list'))->with('success','Category' . $product->title . '!');
     }
