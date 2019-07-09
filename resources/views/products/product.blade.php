@@ -5,7 +5,7 @@
             <div class="breadcrumb-inner">
                 <ul class="list-inline list-unstyled">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Clothing</a></li>
+{{--                    <li><a href="#">{{$product->product()}}</a></li>--}}
                     <li class='active'>{{$product->name}}</li>
                 </ul>
             </div><!-- /.breadcrumb-inner -->

@@ -53,6 +53,9 @@ class ViewController extends Controller
 
     public function product($id) {
         $product = Product::find($id);
+//        \DB::enableQueryLog();
+//        dd($product->category()->get(),
+//            \DB::getQueryLog());
         return view('products.product', ['product' => $product]);
     }
 

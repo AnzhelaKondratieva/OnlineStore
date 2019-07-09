@@ -10,10 +10,11 @@
                     <div class="card-body">
                         <form method="POST"
                               @if(isset($product))
-                              action="{{route('products.save', ['id' => $product->id])}}">
+                              action="{{route('products.save', ['id' => $product->id])}}"
                             @else
-                                action="{{route('products.save')}}">
-                            @endif
+                                action="{{route('products.save')}}"
+                            @endif enctype = "multipart/form-data"
+                                >
                             @csrf
 
                             <div class="form-group row">

@@ -16,9 +16,9 @@ class Product extends Authenticatable
 
     protected $table = 'products';
 
-    public function product()
+    public function category()
     {
-        return $this->belongsTo('App\Models\Category');
+        return $this->belongsTo('App\Models\Category', 'category_id');
     }
 
     public function getUrl() {

@@ -211,7 +211,7 @@ class AdminController extends Controller
             $image = $request->file('image_path');
             // Define folder path
             $name = md5(time());
-            $folder = '/assets/images/products/'.$product->getUrl();
+            $folder = '/assets/images/products/'.$product->getUrl().'/';
             dd($folder);
             // Make a file path where image will be stored [ folder path + file name + file extension]
             $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
