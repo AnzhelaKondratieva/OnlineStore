@@ -16,15 +16,13 @@ class Product extends Authenticatable
 
     protected $table = 'products';
 
-
-    public function category() {
-        return $this->hasMany('App\Models\Product');
-    }
-
-
     public function product()
     {
         return $this->belongsTo('App\Models\Category');
+    }
+
+    public function getUrl() {
+        return $this->product()->first()->slug;
     }
 }
 

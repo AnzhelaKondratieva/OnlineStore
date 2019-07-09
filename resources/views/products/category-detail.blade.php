@@ -324,7 +324,7 @@
 											<div class="product">
 												<div class="product-image">
 													<div class="image">
-														<a href="{{route('product', ['id' => $product_item->id])}}"><img  src="{{$product_item->image_path}}" alt=""></a>
+														<a href="{{route('product', ['id' => $product_item->id])}}"><img  src="{{$product_item->image_path}}" alt="" width="30%" height="300px"></a>
 													</div><!-- /.image -->
 													<div class="tag new"><span>new</span></div>
 												</div><!-- /.product-image -->

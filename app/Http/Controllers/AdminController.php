@@ -142,16 +142,16 @@ class AdminController extends Controller
     }
 
     public function categoriesSave($id=null, Request $request) {
-        $request->validate([
-            'name' => 'required|max:255|unique:categories,name',
-            'description' => 'required',
-            'parent_id' => 'required|max:11',
-            'is_publish' => 'required|max:11',
-            'slug' => 'required'
-        ]);
 
         if($id === null) {
             $category = new Category;
+            $request->validate([
+                'name' => 'required|max:255|unique:categories,name',
+                'description' => 'required',
+                'parent_id' => 'required|max:11',
+                'is_publish' => 'required|max:11',
+                'slug' => 'required'
+            ]);
         }
         else {
             $category = Category::find($id);
@@ -211,9 +211,11 @@ class AdminController extends Controller
             $image = $request->file('image_path');
             // Define folder path
             $name = md5(time());
-            $folder = '/assets/images/products/';
+            $folder = '/assets/images/products/'.$product->getUrl();
+            dd($folder);
             // Make a file path where image will be stored [ folder path + file name + file extension]
             $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
+
             $image->move(public_path($folder), $name. '.' . $image->getClientOriginalExtension());
             // Set user profile image path in database to filePath
             $article->image_path = $filePath;
