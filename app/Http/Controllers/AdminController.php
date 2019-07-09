@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    public function adminpanel() {
+        return view('adminpanel');
+    }
     // АДМИНКА ДЛЯ РЕДАКТИРОВАНИЯ ПОЛЬЗОВАТЕЛЕЙ
     public function accountsList() {
         $users = User::paginate(20);

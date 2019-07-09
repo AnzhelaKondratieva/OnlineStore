@@ -5,15 +5,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 class Cart {
-    public $product;
-    public $sum;
+    public $products;
+    public $bonus_products;
     public $count;
+    public $sum;
 
     public function __construct()
     {
-        $cart = session('cart');
+        $cart = session()->get('cart');
         if($cart) {
-            $this->products = $cart['products'];
+            $this->products = $cart;
             $this->calc();
         }
         else {
@@ -21,7 +22,7 @@ class Cart {
         }
     }
 
-    public function add(Request $request) {
+    public function add($product, $count) {
         $id = $request->products_id;
         $count = $request->count;
         $product = Product::find($id);
