@@ -57,69 +57,69 @@ Route::auth();
 
 // АДМИНКА ДЛЯ РЕДАКТИРОВАНИЯ ПОЛЬЗОВАТЕЛЕЙ
 
-Route::get('/accounts/list', 'ViewController@accountsList') -> name('accounts.list');
+Route::get('/accounts/list', 'AdminController@accountsList') -> name('accounts.list');
 
-Route::get('/myaccount/{id?}', 'ViewController@myAccount') -> name('myaccount');
+Route::get('/myaccount/{id?}', 'AdminController@myAccount') -> name('myaccount');
 
-Route::post('/myaccount/save/{id?}', 'ViewController@myAccountSave') -> name('myaccount.save');
+Route::post('/myaccount/save/{id?}', 'AdminController@myAccountSave') -> name('myaccount.save');
 
-Route::get('/myaccount/delete/{id}', 'ViewController@myAccountDelete') -> name('myaccount.delete');
+Route::get('/myaccount/delete/{id}', 'AdminController@myAccountDelete') -> name('myaccount.delete');
 
-Route::get('/myaccount/create', 'ViewController@myAccountCreate') -> name('myaccount.create');
+Route::get('/myaccount/create', 'AdminController@myAccountCreate') -> name('myaccount.create');
 
 
 // АДМИНКА ДЛЯ БЛОГА
 
-Route::get('/blog/list', 'ViewController@blogList') -> name('blog.list');
+Route::get('/blog/list', 'AdminController@blogList') -> name('blog.list');
 
-Route::get('/blog/create', 'ViewController@blogCreate') -> name('blog.create');
+Route::get('/blog/create', 'AdminController@blogCreate') -> name('blog.create');
 
-Route::get('/blog/edit/{id?}', 'ViewController@blogEdit') -> name('blog.edit');
+Route::get('/blog/edit/{id?}', 'AdminController@blogEdit') -> name('blog.edit');
 
-Route::post('/blog/save/{id?}', 'ViewController@blogSave') -> name('blog.save');
+Route::post('/blog/save/{id?}', 'AdminController@blogSave') -> name('blog.save');
 
-Route::get('/blog/delete/{id}', 'ViewController@blogDelete') -> name('blog.delete');
+Route::get('/blog/delete/{id}', 'AdminController@blogDelete') -> name('blog.delete');
 
 
 // АДМИНКА ДЛЯ КАТЕГОРИЙ
 
-Route::get('/categories/list', 'ViewController@сategoriesList') -> name('categories.list');
+Route::get('/categories/list', 'AdminController@сategoriesList') -> name('categories.list');
 
-Route::get('/categories/edit/{id?}', 'ViewController@сategoriesEdit') -> name('categories.edit');
+Route::get('/categories/edit/{id?}', 'AdminController@сategoriesEdit') -> name('categories.edit');
 
-Route::post('/categories/save/{id?}', 'ViewController@categoriesSave') -> name('categories.save');
+Route::post('/categories/save/{id?}', 'AdminController@categoriesSave') -> name('categories.save');
 
-Route::get('/categories/create', 'ViewController@categoriesCreate') -> name('categories.create');
+Route::get('/categories/create', 'AdminController@categoriesCreate') -> name('categories.create');
 
-Route::get('/categories/delete/{id}', 'ViewController@categoriesDelete') -> name('categories.delete');
+Route::get('/categories/delete/{id}', 'AdminController@categoriesDelete') -> name('categories.delete');
 
 
 
 //АДМИНКА ДЛЯ ПРОДУКТОВ
 
-Route::get('/products/list', 'ViewController@productsList') -> name('products.list');
+Route::get('/products/list', 'AdminController@productsList') -> name('products.list');
 
-Route::get('/products/edit/{id?}', 'ViewController@productsEdit') -> name('products.edit');
+Route::get('/products/edit/{id?}', 'AdminController@productsEdit') -> name('products.edit');
 
-Route::post('/products/save/{id?}', 'ViewController@productsSave') -> name('products.save');
+Route::post('/products/save/{id?}', 'AdminController@productsSave') -> name('products.save');
 
-Route::get('/products/create', 'ViewController@productsCreate') -> name('products.create');
+Route::get('/products/create', 'AdminController@productsCreate') -> name('products.create');
 
-Route::get('/products/delete/{id}', 'ViewController@productsDelete') -> name('products.delete');
+Route::get('/products/delete/{id}', 'AdminController@productsDelete') -> name('products.delete');
 
 
 
 //АДМИНКА ДЛЯ ЗАКАЗОВ
 
-Route::get('/orders/list', 'ViewController@ordersList') -> name('orders.list');
+Route::get('/orders/list', 'AdminController@ordersList') -> name('orders.list');
 
-Route::get('/orders/edit/{id?}', 'ViewController@ordersEdit') -> name('orders.edit');
+Route::get('/orders/edit/{id?}', 'AdminController@ordersEdit') -> name('orders.edit');
 
-Route::post('/orders/save/{id?}', 'ViewController@ordersSave') -> name('orders.save');
+Route::post('/orders/save/{id?}', 'AdminController@ordersSave') -> name('orders.save');
 
-Route::get('/orders/create', 'ViewController@ordersCreate') -> name('orders.create');
+Route::get('/orders/create', 'AdminController@ordersCreate') -> name('orders.create');
 
-Route::get('/orders/delete/{id}', 'ViewController@ordersDelete') -> name('orders.delete');
+Route::get('/orders/delete/{id}', 'AdminController@ordersDelete') -> name('orders.delete');
 
 
 
