@@ -13,9 +13,6 @@ Route::get('/blog-details/{slug}', 'ViewController@blogDetails') -> name('blog-d
 Route::get('/404', 'ViewController@error') -> name('error');
 
 
-Route::get('/about', 'ViewController@about') -> name('about');
-
-
 Route::get('/categories', 'ViewController@categories') -> name('categories');
 
 

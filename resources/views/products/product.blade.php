@@ -16,12 +16,6 @@
             <div class='row single-product'>
                 <div class='col-md-3 sidebar'>
                     <div class="sidebar-module-container">
-                        <div class="home-banner outer-top-n">
-                            <img src="assets/images/banners/LHS-banner.jpg" alt="Image">
-                        </div>
-
-
-
                         <!-- ============================================== HOT DEALS ============================================== -->
                         <div class="sidebar-widget hot-deals wow fadeInUp outer-top-vs">
                             <h3 class="section-title">hot deals</h3>
@@ -31,7 +25,7 @@
                                     <div class="products">
                                         <div class="hot-deal-wrapper">
                                             <div class="image">
-                                                <img src="assets/images/hot-deals/p5.jpg" alt="">
+                                                <img src="{{$product->image_path}}" alt="">
                                             </div>
                                             <div class="sale-offer-tag"><span>35%<br>off</span></div>
                                             <div class="timing-wrapper">
@@ -66,7 +60,7 @@
                                         </div><!-- /.hot-deal-wrapper -->
 
                                         <div class="product-info text-left m-t-20">
-                                            <h3 class="name"><a href="detail.html">{{$product->name}}</a></h3>
+                                            <h3 class="name"><a href="#">{{$product->name}}</a></h3>
                                             <div class="rating rateit-small"></div>
 
                                             <div class="product-price">
@@ -95,144 +89,6 @@
                                         </div><!-- /.cart -->
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <div class="products">
-                                        <div class="hot-deal-wrapper">
-                                            <div class="image">
-                                                <img src="assets/images/products/p6.jpg" alt="">
-                                            </div>
-                                            <div class="sale-offer-tag"><span>35%<br>off</span></div>
-                                            <div class="timing-wrapper">
-                                                <div class="box-wrapper">
-                                                    <div class="date box">
-                                                        <span class="key">120</span>
-                                                        <span class="value">Days</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="box-wrapper">
-                                                    <div class="hour box">
-                                                        <span class="key">20</span>
-                                                        <span class="value">HRS</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="box-wrapper">
-                                                    <div class="minutes box">
-                                                        <span class="key">36</span>
-                                                        <span class="value">MINS</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="box-wrapper hidden-md">
-                                                    <div class="seconds box">
-                                                        <span class="key">60</span>
-                                                        <span class="value">SEC</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!-- /.hot-deal-wrapper -->
-
-                                        <div class="product-info text-left m-t-20">
-                                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                                            <div class="rating rateit-small"></div>
-
-                                            <div class="product-price">
-								<span class="price">
-									$600.00
-								</span>
-
-                                                <span class="price-before-discount">$800.00</span>
-
-                                            </div><!-- /.product-price -->
-
-                                        </div><!-- /.product-info -->
-
-                                        <div class="cart clearfix animate-effect">
-                                            <div class="action">
-
-                                                <div class="add-cart-button btn-group">
-                                                    <button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-                                                        <i class="fa fa-shopping-cart"></i>
-                                                    </button>
-                                                    <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-
-                                                </div>
-
-                                            </div><!-- /.action -->
-                                        </div><!-- /.cart -->
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="products">
-                                        <div class="hot-deal-wrapper">
-                                            <div class="image">
-                                                <img src="assets/images/products/p7.jpg" alt="">
-                                            </div>
-                                            <div class="sale-offer-tag"><span>35%<br>off</span></div>
-                                            <div class="timing-wrapper">
-                                                <div class="box-wrapper">
-                                                    <div class="date box">
-                                                        <span class="key">120</span>
-                                                        <span class="value">Days</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="box-wrapper">
-                                                    <div class="hour box">
-                                                        <span class="key">20</span>
-                                                        <span class="value">HRS</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="box-wrapper">
-                                                    <div class="minutes box">
-                                                        <span class="key">36</span>
-                                                        <span class="value">MINS</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="box-wrapper hidden-md">
-                                                    <div class="seconds box">
-                                                        <span class="key">60</span>
-                                                        <span class="value">SEC</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!-- /.hot-deal-wrapper -->
-
-                                        <div class="product-info text-left m-t-20">
-                                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                                            <div class="rating rateit-small"></div>
-
-                                            <div class="product-price">
-								<span class="price">
-									$600.00
-								</span>
-
-                                                <span class="price-before-discount">$800.00</span>
-
-                                            </div><!-- /.product-price -->
-
-                                        </div><!-- /.product-info -->
-
-                                        <div class="cart clearfix animate-effect">
-                                            <div class="action">
-
-                                                <div class="add-cart-button btn-group">
-                                                    <button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-                                                        <i class="fa fa-shopping-cart"></i>
-                                                    </button>
-                                                    <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-
-                                                </div>
-
-                                            </div><!-- /.action -->
-                                        </div><!-- /.cart -->
-                                    </div>
-                                </div>
-
-
                             </div><!-- /.sidebar-widget -->
                         </div>
                         <!-- ============================================== HOT DEALS: END ============================================== -->					<!-- ==============================================
@@ -252,35 +108,6 @@
                             </div><!-- /.sidebar-widget-body -->
                         </div><!-- /.sidebar-widget -->
                         <!-- ============================================== NEWSLETTER: END ============================================== -->
-
-                        <!-- ============================================== Testimonials============================================== -->
-                        <div class="sidebar-widget  wow fadeInUp outer-top-vs ">
-                            <div id="advertisement" class="advertisement">
-                                <div class="item">
-                                    <div class="avatar"><img src="assets/images/testimonials/member1.png" alt="Image"></div>
-                                    <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-                                    <div class="clients_author">John Doe	<span>Abc Company</span>	</div><!-- /.container-fluid -->
-                                </div><!-- /.item -->
-
-                                <div class="item">
-                                    <div class="avatar"><img src="assets/images/testimonials/member3.png" alt="Image"></div>
-                                    <div class="testimonials"><em>"</em>Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-                                    <div class="clients_author">Stephen Doe	<span>Xperia Designs</span>	</div>
-                                </div><!-- /.item -->
-
-                                <div class="item">
-                                    <div class="avatar"><img src="assets/images/testimonials/member2.png" alt="Image"></div>
-                                    <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-                                    <div class="clients_author">Saraha Smith	<span>Datsun &amp; Co</span>	</div><!-- /.container-fluid -->
-                                </div><!-- /.item -->
-
-                            </div><!-- /.owl-carousel -->
-                        </div>
-
-                        <!-- ============================================== Testimonials: END ============================================== -->
-
-
-
                     </div>
                 </div><!-- /.sidebar -->
                 <div class='col-md-9'>
@@ -300,48 +127,6 @@
                                         <div class="single-product-gallery-item" id="slide2">
                                             <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p9.jpg">
                                                 <img class="img-responsive" alt="" src="{{$product->image_path}}" data-echo="assets/images/products/p9.jpg" />
-                                            </a>
-                                        </div><!-- /.single-product-gallery-item -->
-
-                                        <div class="single-product-gallery-item" id="slide3">
-                                            <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p10.jpg">
-                                                <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p10.jpg" />
-                                            </a>
-                                        </div><!-- /.single-product-gallery-item -->
-
-                                        <div class="single-product-gallery-item" id="slide4">
-                                            <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p11.jpg">
-                                                <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p11.jpg" />
-                                            </a>
-                                        </div><!-- /.single-product-gallery-item -->
-
-                                        <div class="single-product-gallery-item" id="slide5">
-                                            <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p12.jpg">
-                                                <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p12.jpg" />
-                                            </a>
-                                        </div><!-- /.single-product-gallery-item -->
-
-                                        <div class="single-product-gallery-item" id="slide6">
-                                            <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p13.jpg">
-                                                <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p13.jpg" />
-                                            </a>
-                                        </div><!-- /.single-product-gallery-item -->
-
-                                        <div class="single-product-gallery-item" id="slide7">
-                                            <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p14.jpg">
-                                                <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p14.jpg" />
-                                            </a>
-                                        </div><!-- /.single-product-gallery-item -->
-
-                                        <div class="single-product-gallery-item" id="slide8">
-                                            <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p15.jpg">
-                                                <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p15.jpg" />
-                                            </a>
-                                        </div><!-- /.single-product-gallery-item -->
-
-                                        <div class="single-product-gallery-item" id="slide9">
-                                            <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p16.jpg">
-                                                <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p16.jpg" />
                                             </a>
                                         </div><!-- /.single-product-gallery-item -->
 
@@ -447,7 +232,7 @@
                                     </div><!-- /.stock-container -->
 
                                     <div class="description-container m-t-20">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        {{$product->description}}
                                     </div><!-- /.description-container -->
 
                                     <div class="price-container info-container m-t-20">
@@ -463,10 +248,10 @@
 
                                             <div class="col-sm-6">
                                                 <div class="favorite-button m-t-10">
-                                                    <a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Wishlist" href="#">
+                                                    <a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Wishlist" href="{{route('my-wishlist')}}">
                                                         <i class="fa fa-heart"></i>
                                                     </a>
-                                                    <a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Add to Compare" href="#">
+                                                    <a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Add to Compare" href="{{route('product-comparison')}}">
                                                         <i class="fa fa-signal"></i>
                                                     </a>
                                                     <a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="E-mail" href="#">
@@ -530,7 +315,7 @@
 
                                     <div id="description" class="tab-pane in active">
                                         <div class="product-tab">
-                                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            <p class="text">{{$product->description}}<br><br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                         </div>
                                     </div><!-- /.tab-pane -->
 

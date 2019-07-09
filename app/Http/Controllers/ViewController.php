@@ -15,9 +15,7 @@ class ViewController extends Controller
     //ОСНОВНЫЕ СТРАНИЦЫ САЙТА
 
     public function home() {
-        return view('home', [
-            'categories' => Category::where('is_publish', 1)->get()
-        ]);
+        return view('home');
     }
 
     public function blog() {
@@ -26,19 +24,17 @@ class ViewController extends Controller
                 'is_publish' => 1
             ]
         )->paginate(2);
-        return view('blog.blog', ['article' => $article, 'categories' => Category::where('is_publish', 1)->get()]);
+        return view('blog.blog', ['article' => $article]);
     }
 
 
     public function error() {
-        return view('404', [
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('404');
     }
 
 
     public function about() {
-        return view('about', [
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('about');
     }
 
 
@@ -55,72 +51,61 @@ class ViewController extends Controller
         return view('products.categories', ['categories' => $categories]);
     }
 
-
     public function product($id) {
         $product = Product::find($id);
-        return view('products.product', ['product' => $product,
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('products.product', ['product' => $product]);
     }
 
 
     public function faq() {
-        return view('info.faq', [
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('info.faq');
     }
 
 
     public function blogDetails($slug) {
         $article = Article::where('slug', $slug)->first();
         return view('blog.blog-details', [
-            'article' => $article, 'categories' => Category::where('is_publish', 1)->get()
+            'article' => $article
         ]);
     }
 
 
     public function checkout() {
-        return view('order.checkout', [
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('order.checkout');
     }
 
 
     public function shoppingCart() {
-        return view('order.shopping-cart', [
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('order.shopping-cart');
     }
 
 
     public function myWishlist() {
-        return view('order.my-wishlist', [
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('order.my-wishlist');
     }
 
 
     public function contact() {
-        return view('info.contact', [
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('info.contact');
     }
 
 
     public function detail() {
-        return view('products.detail', [
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('products.detail');
     }
 
 
     public function productComparison() {
-        return view('order.product-comparison', [
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('order.product-comparison');
     }
 
 
     public function termsConditions() {
-        return view('info.terms-conditions', [
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('info.terms-conditions');
     }
 
 
     public function trackOrders() {
-        return view('order.track-orders', [
-            'categories' => Category::where('is_publish', 1)->get()]);
+        return view('order.track-orders');
     }
 }

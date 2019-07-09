@@ -73,7 +73,6 @@
 
 						<div class="module-body">
 							<ul class='list-unstyled'>
-								<li class="first"><a title="Your Account" href="{{route('about')}}">About us</a></li>
 								<li><a title="Information" href="{{route('categories')}}">Categories</a></li>
 								<li class="last"><a title="Terms and conditions" href="{{route('terms-conditions')}}">Terms and conditions</a></li>
 							</ul>
