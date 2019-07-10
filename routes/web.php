@@ -28,7 +28,6 @@ Route::get('/faq', 'ViewController@faq') -> name('faq');
 Route::post('/checkout', 'ViewController@checkout') -> name('checkout');
 
 
-Route::get('/shopping-cart', 'ViewController@shoppingCart') -> name('shopping-cart');
 
 
 Route::get('my-wishlist', 'ViewController@myWishlist') -> name('my-wishlist');
@@ -123,13 +122,13 @@ Route::get('/adminpanel/orders/delete/{id}', 'AdminController@ordersDelete') -> 
 
 
 //КОРЗИНА
-Route::post('/cart/add', 'CartController@add')->name('cart.add');
+Route::post('/shopping-cart', 'CartController@shoppingCart') -> name('shopping-cart');
 
-Route::post('/cart/remove', 'CartController@remove')->name('cart.remove');
+Route::post('/shopping-cart/add', 'CartController@add') -> name('shopping-cart.add');
 
-Route::post('/cart/change', 'CartController@change')->name('cart.change');
+Route::post('/shopping-cart/remove', 'CartController@remove')->name('shopping-cart.remove');
 
-Route::post('/cart/clear', 'CartController@clear')->name('cart.clear');
+Route::post('/shopping-cart/change', 'CartController@change')->name('shopping-cart.change');
 
 
 

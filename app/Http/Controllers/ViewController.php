@@ -41,7 +41,7 @@ class ViewController extends Controller
     public function category($slug) {
         $category = Category::where('slug',$slug)->first();
         $products = Product::where('category_id',$category->id)->paginate(10);
-        return view('products.category-detail', ['products' => $products,  'categories' => Category::where('is_publish', 1)->get()]);
+        return view('products.category-detail', ['category' => $category, 'products' => $products,  'categories' => Category::where('is_publish', 1)->get()]);
 
     }
 

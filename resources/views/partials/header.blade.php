@@ -12,7 +12,7 @@
                         <li><a href="{{route('myaccount', ['id' => \Auth::user()->id])}}"><i class="icon fa fa-user"></i>My Account</a></li>
                         @endif
                         <li><a href="{{route('my-wishlist')}}"><i class="icon fa fa-heart"></i>Wishlist</a></li>
-                        <li><a href="{{route('shopping-cart')}}"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
+{{--                        <li><a href="{{route('shopping-cart.add')}}"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>--}}
                         <li><a href="{{route('checkout')}}"><i class="icon fa fa-check"></i>Checkout</a></li>
                         <li><a href="{{route('login')}}"><i class="icon fa fa-lock"></i>Login</a></li>
                         <li><a href="{{route('register')}}"><i class="icon fa fa-lock"></i>Register</a></li>
@@ -121,7 +121,7 @@
                                             <div class="price">$600.00</div>
                                         </div>
                                         <div class="col-xs-1 action">
-                                            <a href="{{route('shopping-cart')}}"><i class="fa fa-trash"></i></a>
+{{--                                            <a href="{{route('shopping-cart')}}"><i class="fa fa-trash"></i></a>--}}
                                         </div>
                                     </div>
                                 </div><!-- /.cart-item -->

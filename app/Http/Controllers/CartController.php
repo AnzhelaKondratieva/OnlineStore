@@ -5,36 +5,32 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\Cart;
+use App\Models\Product;
 
 
 class CartController extends Controller
 {
-    public $product;
-    public $sum;
-    public $count;
+    private $cart;
 
-    public function __construct()
-    {
-        $cart = session('cart');
-        if($cart) {
-            $this->products = $cart['products'];
-            $this->calc();
-        }
-        else {
-            $this->products=[];
-        }
-    }
+//    public function __construct(){
+//        //     $this->cart = new Cart();
+//        // }
 
     public function add(Request $request) {
-        $id = $request->products_id;
+        $id = $request->id;
         $count = $request->count;
         $product = Product::find($id);
-        $this->products[]= [
-            'id'=>$product->id,
-            'price'=>$product->price,
-            'count'=>$count
-        ];
+        dd($product);
+        $this->cart->add($product, $count);
+        return redirect(route('shopping-cart'));
+
     }
+    public function shoppingCart(Request $request) {
+
+        return view('order.shopping-cart');
+    }
+
     public function remove() {
 
     }
@@ -50,7 +46,7 @@ class CartController extends Controller
 
     }
 
-    public function __destruct {
+    public function __destruct() {
         session(['cart'=> $this->products]);
     }
 }

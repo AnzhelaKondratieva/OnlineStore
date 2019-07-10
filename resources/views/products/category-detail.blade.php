@@ -4,9 +4,10 @@
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Clothing</a></li>
-				<li class='active'>Floral Print Buttoned</li>
+				<li><a href="{{route('home')}}">Home</a></li>
+				<li><a href="#">{{$category->parent->parent->name}}</a></li>
+				<li><a href="#">{{$category->parent->name}}</a></li>
+				<li class='active'>{{$category->name}}</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -338,7 +339,7 @@
 														</span>
 														<span class="price-before-discount">{{$product_item->price}}</span>
 													</div><!-- /.product-price -->
-													<button style="border-radius: 20px; background-color: yellow"; type="button">Add to cart</button>
+													<button class="btn btn-primary cart-btn" type="button">Add to cart</button>
 												</div><!-- /.product-info -->
 												<div class="cart clearfix animate-effect">
 													<div class="action">
@@ -347,18 +348,16 @@
 																<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
 																	<i class="fa fa-shopping-cart"></i>
 																</button>
-
-
 															</li>
 
 															<li class="lnk wishlist">
-																<a class="add-to-cart" href="{{route('product', ['id' => $product_item->id])}}" title="Wishlist">
+																<a class="add-to-cart" href="{{route('my-wishlist')}}" title="Wishlist">
 																	<i class="icon fa fa-heart"></i>
 																</a>
 															</li>
 
 															<li class="lnk">
-																<a class="add-to-cart" href="{{route('product', ['id' => $product_item->id])}}" title="Compare">
+																<a class="add-to-cart" href="{{route('product-comparison')}}" title="Compare">
 																	<i class="fa fa-signal"></i>
 																</a>
 															</li>

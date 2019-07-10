@@ -4,8 +4,10 @@
         <div class="container">
             <div class="breadcrumb-inner">
                 <ul class="list-inline list-unstyled">
-                    <li><a href="#">Home</a></li>
-{{--                    <li><a href="#">{{$product->product()}}</a></li>--}}
+                    <li><a href="{{route('home')}}">Home</a></li>
+                    <li><a href="#">{{$product->category->parent->parent->name}}</a></li>
+                    <li><a href="#">{{$product->category->parent->name}}</a></li>
+                    <li><a href="#">{{$product->category->name}}</a></li>
                     <li class='active'>{{$product->name}}</li>
                 </ul>
             </div><!-- /.breadcrumb-inner -->
@@ -265,28 +267,30 @@
 
                                     <div class="quantity-container info-container">
                                         <div class="row">
+                                            <form method="POST" action="{{route('shopping-cart.add')}}"
+                                                  @csrf
+                                                <div class="col-sm-2">
+                                                    <span class="label">Qty :</span>
+                                                </div>
 
-                                            <div class="col-sm-2">
-                                                <span class="label">Qty :</span>
-                                            </div>
-
-                                            <div class="col-sm-2">
-                                                <div class="cart-quantity">
-                                                    <div class="quant-input">
-                                                        <div class="arrows">
-                                                            <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
-                                                            <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
+                                                <div class="col-sm-2">
+                                                    <div class="cart-quantity">
+                                                        <div class="quant-input">
+{{--                                                            <div class="arrows">--}}
+{{--                                                                <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>--}}
+{{--                                                                <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>--}}
+{{--                                                            </div>--}}
+                                                            <input type="hidden" name="id" value="{{$product->id}}">
+                                                            <input type="number" name="count" min="1" value="1">
                                                         </div>
-                                                        <input type="text" value="1">
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="col-sm-7">
-                                                <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
-                                            </div>
+                                                <div class="col-sm-7">
+                                                        <button class="btn btn-primary" type="submit"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</button>
 
-
+                                                </div>
+                                            </form>
                                         </div><!-- /.row -->
                                     </div><!-- /.quantity-container -->
 
