@@ -14,9 +14,9 @@
 <div class="body-content outer-top-xs">
 	<div class="container">
 		<div class="row ">
-			@if(count($count->products)<1)
+			@if(count($cart->products)<1)
 				<h1>The shopping cart is empty</h1>
-			@endif
+			@else
 			<div class="shopping-cart">
 				<div class="shopping-cart-table ">
 	<div class="table-responsive">
@@ -35,8 +35,11 @@
 					<td colspan="7">
 						<div class="shopping-cart-btn">
 							<span class="">
-								<a href="#" class="btn btn-upper btn-primary outer-left-xs">Continue Shopping</a>
-								<a href="#" class="btn btn-upper btn-primary pull-right outer-right-xs">Update shopping cart</a>
+								<form method="POST" action="{{route('shopping-cart.change')}}">
+									@csrf
+									<button type="submit" class="btn btn-upper btn-primary outer-left-xs">Update shopping cart</button>
+								</form>
+								<a href="{{route('categories')}}" class="btn btn-upper btn-primary pull-right outer-right-xs">Continue shopping</a>
 							</span>
 						</div><!-- /.shopping-cart-btn -->
 					</td>
@@ -45,14 +48,20 @@
 			<tbody>
 			@foreach($cart->products as $product)
 				<tr>
-					<td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a></td>
+					<td class="romove-item">
+						<form method="POST" action="{{route('shopping-cart.remove')}}">
+							@csrf
+							<input name="id" type="hidden" value="{{$product['id']}}">
+						<button type="submit" title="cancel" class="icon"><i class="fa fa-trash-o"></i></button>
+						</form>
+					</td>
 					<td class="cart-image">
 						<a class="entry-thumbnail" href="/detail">
-						    <img src="{{$product->image_path}}" alt="" width="200px">
+						    <img src="{{$products->get($product['id'])->image_path}}" alt="" width="200px">
 						</a>
 					</td>
 					<td class="cart-product-name-info">
-						<h4 class='cart-product-description'><a href="/detail">{{$product->name}}</a></h4>
+						<h4 class='cart-product-description'><a href="/detail">{{$products->get($product['id'])->name}}</a></h4>
 						<div class="row">
 							<div class="col-sm-4">
 								<div class="rating rateit-small"></div>
@@ -69,14 +78,18 @@
 					</td>
 					<td class="cart-product-quantity">
 						<div class="quant-input">
-				                <div class="arrows">
-				                  <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
-				                  <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
-				                </div>
-				                <input type="text" value="1">
+{{--				                <div class="arrows">--}}
+{{--				                  <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>--}}
+{{--				                  <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>--}}
+{{--				                </div>--}}
+							<form method="POST" action="{{route('shopping-cart.change')}}">
+								@scrf
+								<input type="hidden" name="id" value="{{$product['id']}}">
+				                <input type="number" value="{{$product['count']}}" min="1" name="count">
+							</form>
 			              </div>
 		            </td>
-					<td class="cart-product-sub-total"><span class="cart-sub-total-price">{{$cart->price}}</span></td>
+					<td class="cart-product-sub-total"><span class="cart-sub-total-price">{{$products->get($product['id'])->price}}</span></td>
 				</tr>
 				@endforeach
 			</tbody><!-- /tbody -->
@@ -180,7 +193,9 @@
 				</tr>
 		</tbody><!-- /tbody -->
 	</table><!-- /table -->
-</div><!-- /.cart-shopping-total -->			</div><!-- /.shopping-cart -->
+</div><!-- /.cart-shopping-total -->
+			@endif
+			</div><!-- /.shopping-cart -->
 		</div> <!-- /.row -->
 		</div><!-- /.container -->
 </div><!-- /.body-content -->

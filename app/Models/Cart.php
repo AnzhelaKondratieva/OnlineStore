@@ -12,9 +12,9 @@ class Cart {
 
     public function __construct()
     {
-        $cart = session('cart');
+        $cart = session()->get('cart');
         if($cart) {
-            $this->products = $cart['products'];
+            $this->products = $cart;
             $this->calc();
         }
         else {
@@ -24,9 +24,9 @@ class Cart {
 
     public function add($product, $count) {
         $flag = true;
-        foreach($this->products as &$product_cart) {
+        foreach($this->products as $key => $product_cart) {
             if($product_cart['id']==$product->id) {
-                $product_cart['count'] += $count;
+                $this->products[$key]['count'] = $product_cart['count']+$count;
                 $flag = false;
                 break;
             }
@@ -40,22 +40,19 @@ class Cart {
         }
         $this->calc();
     }
-    public function remove(Request $request) {
-        $id = $request->products_id;
-        foreach($this->products as $product) {
+    public function remove($id) {
+        foreach($this->products as $key => $product) {
             if($product['id']==$id) {
-                unset($product);
+                unset($this->products['key']);
                 break;
             }
         }
         $this->calc();
     }
-    public function change(Request $request) {
-        $id = $request->products_id;
-        $count = $request->count;
-        foreach($this->products as $product) {
+    public function change($id, $count) {
+        foreach($this->products as $key => $product) {
             if($product['id']==$id) {
-                $product['count'] += $count;
+                $this->products[$key]['count'] = $count;
                 break;
             }
         }
@@ -72,10 +69,11 @@ class Cart {
             $this->sum += $product['price'] * $product['count'];
             $this->count += $product['count'];
         }
-
+        session(['cart' => $this->products]);
     }
 
-    public function __destruct {
+    public function __destruct() {
         session(['cart'=> $this->products]);
+        session(['cart' , $this->products]);
     }
 }

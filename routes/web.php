@@ -122,7 +122,7 @@ Route::get('/adminpanel/orders/delete/{id}', 'AdminController@ordersDelete') -> 
 
 
 //КОРЗИНА
-Route::post('/shopping-cart', 'CartController@shoppingCart') -> name('shopping-cart');
+Route::get('/shopping-cart', 'CartController@shoppingCart') -> name('shopping-cart');
 
 Route::post('/shopping-cart/add', 'CartController@add') -> name('shopping-cart.add');
 

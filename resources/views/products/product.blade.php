@@ -267,7 +267,7 @@
 
                                     <div class="quantity-container info-container">
                                         <div class="row">
-                                            <form method="POST" action="{{route('shopping-cart.add')}}"
+                                            <form method="POST" action="{{route('shopping-cart.add')}}">
                                                   @csrf
                                                 <div class="col-sm-2">
                                                     <span class="label">Qty :</span>

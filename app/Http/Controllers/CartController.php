@@ -21,32 +21,50 @@ class CartController extends Controller
         $id = $request->id;
         $count = $request->count;
         $product = Product::find($id);
-        dd($product);
+        $this->cart = new Cart();
         $this->cart->add($product, $count);
         return redirect(route('shopping-cart'));
 
     }
     public function shoppingCart(Request $request) {
+        $this->cart = new Cart();
+        $ids=[];
+        foreach($this->cart->products as $product) {
+            $ids[] = $product['id'];
+        }
+        $products = Product::whereIn('id',$ids)
+            ->get()->keyBy('id');
 
-        return view('order.shopping-cart');
+        return view('order.shopping-cart',[
+            'cart'=> $this->cart,
+            'products' => $products
+        ]);
     }
 
-    public function remove() {
+    public function remove(Request $request) {
+        $id = $request->id;
+        $this->cart = new Cart();
+        $this->cart->remove($id);
+        dd($this->cart);
+        return redirect(route('shopping-cart'));
 
     }
-    public function change() {
+    public function change(Request $request) {
+        $id = $request->id;
+        $count = $request->count;
+        $this->cart = new Cart();
+        dd($this->cart);
+        $this->cart->change($id, $count);
+        return redirect(route('shopping-cart'));
+    }
+    public function buy() {
+        $this->cart = new Cart();
+
+        return view('shopping-cart',[
+            'cart'=> $this->cart
+        ]);
 
     }
-    public function clear() {
 
-    }
-    private function calc() {
-        $this->count = 0;
-        $this->sum = 0;
 
-    }
-
-    public function __destruct() {
-        session(['cart'=> $this->products]);
-    }
 }
