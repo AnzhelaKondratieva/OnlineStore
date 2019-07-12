@@ -33,6 +33,16 @@ class AlterOrdersToProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders_to_products');
+        Schema::table('orders_to_products', function (Blueprint $table) {
+            $table->integer('order_id')->change();
+
+            $table->dropForeign('order_id');
+        });
+
+        Schema::table('orders_to_products', function (Blueprint $table) {
+            $table->integer('product_id')->change();
+
+            $table->dropForeign('product_id');
+        });
     }
 }

@@ -27,6 +27,10 @@ class AlterOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::table('orders', function (Blueprint $table) {
+            $table->integer('user_id')->change();
+
+            $table->dropForeign('user_id');
+        });
     }
 }

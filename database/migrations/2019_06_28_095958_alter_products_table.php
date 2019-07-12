@@ -27,6 +27,10 @@ class AlterProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::table('products', function (Blueprint $table) {
+            $table->integer('category_id')->change();
+
+            $table->dropForeign('category_id');
+        });
     }
 }
