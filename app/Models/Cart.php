@@ -43,7 +43,7 @@ class Cart {
     public function remove($id) {
         foreach($this->products as $key => $product) {
             if($product['id']==$id) {
-                unset($this->products['key']);
+                unset($this->products[$key]);
                 break;
             }
         }

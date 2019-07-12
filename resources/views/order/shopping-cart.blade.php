@@ -27,7 +27,7 @@
 					<th class="cart-description item">Image</th>
 					<th class="cart-product-name item">Product Name</th>
 					<th class="cart-qty item">Quantity</th>
-					<th class="cart-sub-total item">Subtotal</th>
+					<th class="cart-sub-total item">Price</th>
 				</tr>
 			</thead><!-- /thead -->
 			<tfoot>
@@ -35,10 +35,6 @@
 					<td colspan="7">
 						<div class="shopping-cart-btn">
 							<span class="">
-								<form method="POST" action="{{route('shopping-cart.change')}}">
-									@csrf
-									<button type="submit" class="btn btn-upper btn-primary outer-left-xs">Update shopping cart</button>
-								</form>
 								<a href="{{route('categories')}}" class="btn btn-upper btn-primary pull-right outer-right-xs">Continue shopping</a>
 							</span>
 						</div><!-- /.shopping-cart-btn -->
@@ -83,13 +79,14 @@
 {{--				                  <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>--}}
 {{--				                </div>--}}
 							<form method="POST" action="{{route('shopping-cart.change')}}">
-								@scrf
+								@csrf
 								<input type="hidden" name="id" value="{{$product['id']}}">
 				                <input type="number" value="{{$product['count']}}" min="1" name="count">
+								<button type="submit" class="btn btn-upper btn-primary outer-left-xs" style="margin-top:40px">Update</button>
 							</form>
 			              </div>
 		            </td>
-					<td class="cart-product-sub-total"><span class="cart-sub-total-price">{{$products->get($product['id'])->price}}</span></td>
+					<td class="cart-product-sub-total"><span class="cart-sub-total-price">{{$product['price']}}</span></td>
 				</tr>
 				@endforeach
 			</tbody><!-- /tbody -->
@@ -186,7 +183,10 @@
 				<tr>
 					<td>
 						<div class="cart-checkout-btn pull-right">
+							<form method="POST" action="{{route('shopping-cart.buy')}}">
+								@csrf
 							<button type="submit" class="btn btn-primary checkout-btn">PROCCED TO CHEKOUT</button>
+							</form>
 							<span class="">Checkout with multiples address!</span>
 						</div>
 					</td>

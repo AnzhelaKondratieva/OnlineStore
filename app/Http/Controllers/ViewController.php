@@ -6,6 +6,7 @@ use App\Models\Article;
 use App\Models\User;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Cart;
 use App\Models\Order;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,14 @@ class ViewController extends Controller
     //ОСНОВНЫЕ СТРАНИЦЫ САЙТА
 
     public function home() {
-        return view('home');
+        $article = Article::where(
+            [
+                'is_publish' => 1
+            ]
+        )->get();
+        return view('home', [
+            'article' => $article
+        ]);
     }
 
     public function blog() {

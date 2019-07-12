@@ -798,12 +798,7 @@
                         </div><!-- /.home-owl-carousel -->
                     </section><!-- /.section -->
                     <!-- ============================================== UPSELL PRODUCTS : END ============================================== -->
-
                 </div><!-- /.col -->
                 <div class="clearfix"></div>
             </div><!-- /.row -->
-
-
-
-
 @endsection

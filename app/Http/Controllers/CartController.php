@@ -45,7 +45,6 @@ class CartController extends Controller
         $id = $request->id;
         $this->cart = new Cart();
         $this->cart->remove($id);
-        dd($this->cart);
         return redirect(route('shopping-cart'));
 
     }
@@ -53,16 +52,25 @@ class CartController extends Controller
         $id = $request->id;
         $count = $request->count;
         $this->cart = new Cart();
-        dd($this->cart);
         $this->cart->change($id, $count);
         return redirect(route('shopping-cart'));
     }
     public function buy() {
         $this->cart = new Cart();
+        $body = '';
+        foreach($this->cart->products as $product){
+            $body .= $product['id'].' '. $product['count'].'<br>';
+        }
 
-        return view('shopping-cart',[
+        $res =  \Mail::raw($body, function($message)
+        {
+            $message->from('anzhela.testmail@gmail.com', 'anzhela.testmail@gmail.com');
+
+            $message->to('kondratieva.anzhelika92@gmail.com');
+        });
+        return redirect(route('shopping-cart',[
             'cart'=> $this->cart
-        ]);
+        ]))->with('success','You successfully made your order!');
 
     }
 

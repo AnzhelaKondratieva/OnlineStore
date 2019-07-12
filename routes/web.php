@@ -130,6 +130,5 @@ Route::post('/shopping-cart/remove', 'CartController@remove')->name('shopping-ca
 
 Route::post('/shopping-cart/change', 'CartController@change')->name('shopping-cart.change');
 
-
-
+Route::post('/shopping-cart/buy', 'CartController@buy')->name('shopping-cart.buy');
 

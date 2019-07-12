@@ -339,17 +339,11 @@
 														</span>
 														<span class="price-before-discount">{{$product_item->price}}</span>
 													</div><!-- /.product-price -->
-													<button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+																<a href="{{route('product', ['id' => $product_item->id])}}" class="btn btn-primary cart-btn" type="submit">View</a>
 												</div><!-- /.product-info -->
 												<div class="cart clearfix animate-effect">
 													<div class="action">
 														<ul class="list-unstyled">
-															<li class="add-cart-button btn-group">
-																<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-																	<i class="fa fa-shopping-cart"></i>
-																</button>
-															</li>
-
 															<li class="lnk wishlist">
 																<a class="add-to-cart" href="{{route('my-wishlist')}}" title="Wishlist">
 																	<i class="icon fa fa-heart"></i>
