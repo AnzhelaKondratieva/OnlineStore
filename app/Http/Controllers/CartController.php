@@ -68,6 +68,7 @@ class CartController extends Controller
 
             $message->to('kondratieva.anzhelika92@gmail.com');
         });
+        $this->cart->clear();
         return redirect(route('shopping-cart',[
             'cart'=> $this->cart
         ]))->with('success','You successfully made your order!');

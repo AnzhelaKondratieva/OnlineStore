@@ -47,6 +47,7 @@ Route::get('/terms-conditions', 'ViewController@termsConditions') -> name('terms
 
 Route::get('/track-orders', 'ViewController@trackOrders') -> name('track-orders');
 
+
 Route::auth();
 
 

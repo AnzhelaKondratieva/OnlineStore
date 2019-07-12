@@ -35,6 +35,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body class="cnt-home">
+@include('partials.flash-message')
 @include('partials.header')
 @yield('content')
 @include('partials.brands_carousel')
