@@ -206,6 +206,7 @@ class AdminController extends Controller
             $product = Product::find($id);
         }
 
+        $product->fill($request->only('name', 'articul', 'brand', 'description', 'price', 'category_id', 'is_publish'));
         if ($request->has('image_path')) {
             // Get image file
             $image = $request->file('image_path');
@@ -215,13 +216,10 @@ class AdminController extends Controller
             dd($folder);
             // Make a file path where image will be stored [ folder path + file name + file extension]
             $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
-
             $image->move(public_path($folder), $name. '.' . $image->getClientOriginalExtension());
             // Set user profile image path in database to filePath
             $article->image_path = $filePath;
         }
-
-        $product->fill($request->only('name', 'articul', 'brand', 'description', 'price', 'category_id', 'is_publish'));
         $product->save();
         return redirect(route('products.list'))->with('success','Category' . $product->title . '!');
     }

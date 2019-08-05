@@ -21,18 +21,10 @@ class ViewController extends Controller
                 'is_publish' => 1
             ]
         )->get();
+        $product = Product::inRandomOrder()->take(5)->get();
         return view('home', [
-            'article' => $article
+            'article' => $article, 'product' => $product
         ]);
-    }
-
-    public function blog() {
-        $article = Article::where(
-            [
-                'is_publish' => 1
-            ]
-        )->paginate(2);
-        return view('blog.blog', ['article' => $article]);
     }
 
 
@@ -46,48 +38,12 @@ class ViewController extends Controller
     }
 
 
-    public function category($slug) {
-        $category = Category::where('slug',$slug)->first();
-        $products = Product::where('category_id',$category->id)->paginate(10);
-        return view('products.category-detail', ['category' => $category, 'products' => $products,  'categories' => Category::where('is_publish', 1)->get()]);
-
-    }
-
-
-    public function categories() {
-        $categories = Category::all();
-        return view('products.categories', ['categories' => $categories]);
-    }
-
-    public function product($id) {
-        $product = Product::find($id);
-//        \DB::enableQueryLog();
-//        dd($product->category()->get(),
-//            \DB::getQueryLog());
-        return view('products.product', ['product' => $product]);
-    }
-
-
     public function faq() {
         return view('info.faq');
     }
 
-
-    public function blogDetails($slug) {
-        $article = Article::where('slug', $slug)->first();
-        return view('blog.blog-details', [
-            'article' => $article
-        ]);
-    }
-
-
     public function checkout() {
         return view('order.checkout');
-    }
-
-
-    public function shoppingCart() {
-        return view('order.shopping-cart');
     }
 
 
@@ -99,12 +55,6 @@ class ViewController extends Controller
     public function contact() {
         return view('info.contact');
     }
-
-
-    public function detail() {
-        return view('products.detail');
-    }
-
 
     public function productComparison() {
         return view('order.product-comparison');

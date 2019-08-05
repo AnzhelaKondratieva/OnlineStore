@@ -30,4 +30,10 @@ class AppServiceProvider extends ServiceProvider
         $categories = Category::all();
         View::share('categories', $categories);
     }
+
+    public function cartview() {
+        View::composer('shopping-cart', function ($view) {
+            $view->with('cart', $cart = new Cart());
+        });
+    }
 }

@@ -4,22 +4,7 @@
 Route::get('/home', 'ViewController@home') -> name('home');
 
 
-Route::get('/blog', 'ViewController@blog') -> name('blog');
-
-
-Route::get('/blog-details/{slug}', 'ViewController@blogDetails') -> name('blog-details');
-
-
 Route::get('/404', 'ViewController@error') -> name('error');
-
-
-Route::get('/categories', 'ViewController@categories') -> name('categories');
-
-
-Route::get('/category-detail/{slug}', 'ViewController@category') -> name('category-detail');
-
-
-Route::get('/product/{id}', 'ViewController@product') -> name('product');
 
 
 Route::get('/faq', 'ViewController@faq') -> name('faq');
@@ -28,15 +13,10 @@ Route::get('/faq', 'ViewController@faq') -> name('faq');
 Route::post('/checkout', 'ViewController@checkout') -> name('checkout');
 
 
-
-
 Route::get('my-wishlist', 'ViewController@myWishlist') -> name('my-wishlist');
 
 
 Route::get('/contact', 'ViewController@contact') -> name('contact');
-
-
-Route::get('/detail', 'ViewController@detail') -> name('detail');
 
 
 Route::get('/product-comparison', 'ViewController@productComparison') -> name('product-comparison');
@@ -53,7 +33,30 @@ Route::auth();
 
 
 
+//БЛОГ
+
+Route::get('/blog', 'BlogController@blog') -> name('blog');
+
+
+Route::get('/blog-details/{slug}', 'BlogController@blogDetails') -> name('blog-details');
+
+
+
+//КАТЕГОРИИ И ПРОДУКТЫ
+
+Route::get('/categories', 'CategoriesController@categories') -> name('categories');
+
+
+Route::get('/category-detail/{slug}', 'CategoriesController@category') -> name('category-detail');
+
+
+Route::get('/product/{id}', 'CategoriesController@product') -> name('product');
+
+
+
+//АДМИНКА
 Route::get('/adminpanel', 'AdminController@adminpanel') -> name('adminpanel');
+
 // АДМИНКА ДЛЯ РЕДАКТИРОВАНИЯ ПОЛЬЗОВАТЕЛЕЙ
 
 Route::get('/adminpanel/accounts/list', 'AdminController@accountsList') -> name('accounts.list');
@@ -67,6 +70,7 @@ Route::get('/adminpanel/myaccount/delete/{id}', 'AdminController@myAccountDelete
 Route::get('/adminpanel/myaccount/create', 'AdminController@myAccountCreate') -> name('myaccount.create');
 
 
+
 // АДМИНКА ДЛЯ БЛОГА
 
 Route::get('/adminpanel/blog/list', 'AdminController@blogList') -> name('blog.list');
@@ -78,6 +82,7 @@ Route::get('/adminpanel/blog/edit/{id?}', 'AdminController@blogEdit') -> name('b
 Route::post('/adminpanel/blog/save/{id?}', 'AdminController@blogSave') -> name('blog.save');
 
 Route::get('/adminpanel/blog/delete/{id}', 'AdminController@blogDelete') -> name('blog.delete');
+
 
 
 // АДМИНКА ДЛЯ КАТЕГОРИЙ

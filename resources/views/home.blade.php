@@ -10,12 +10,12 @@
                 <div class="sidebar-widget hot-deals wow fadeInUp outer-bottom-xs">
                     <h3 class="section-title">hot deals</h3>
                     <div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-ss">
-
+                    @foreach($product as $product_item)
                         <div class="item">
                             <div class="products">
                                 <div class="hot-deal-wrapper">
                                     <div class="image">
-                                        <img src="/assets/images/hot-deals/p25.jpg" alt="">
+                                        <img src="{{$product_item->image_path}}" alt="">
                                     </div>
                                     <div class="sale-offer-tag"><span>49%<br>off</span></div>
                                     <div class="timing-wrapper">
@@ -50,12 +50,12 @@
                                 </div><!-- /.hot-deal-wrapper -->
 
                                 <div class="product-info text-left m-t-20">
-                                    <h3 class="name"><a href="/detail">Floral Print Buttoned</a></h3>
+                                    <h3 class="name"><a href="{{route('product', ['id' => $product_item->id])}}">{{$product_item->name}}</a></h3>
                                     <div class="rating rateit-small"></div>
 
                                     <div class="product-price">
 								<span class="price">
-									$600.00
+									{{$product_item->price}}
 								</span>
 
                                         <span class="price-before-discount">$800.00</span>
@@ -66,169 +66,23 @@
 
                                 <div class="cart clearfix animate-effect">
                                     <div class="action">
-
-                                        <div class="add-cart-button btn-group">
-                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </button>
-                                            <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-
-                                        </div>
-
+                                            <a href="{{route('product', ['id' => $product_item->id])}}" class="btn btn-primary cart-btn" type="submit">View</a>
                                     </div><!-- /.action -->
                                 </div><!-- /.cart -->
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="products">
-                                <div class="hot-deal-wrapper">
-                                    <div class="image">
-                                        <img src="assets/images/hot-deals/p5.jpg" alt="">
-                                    </div>
-                                    <div class="sale-offer-tag"><span>35%<br>off</span></div>
-                                    <div class="timing-wrapper">
-                                        <div class="box-wrapper">
-                                            <div class="date box">
-                                                <span class="key">120</span>
-                                                <span class="value">Days</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="box-wrapper">
-                                            <div class="hour box">
-                                                <span class="key">20</span>
-                                                <span class="value">HRS</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="box-wrapper">
-                                            <div class="minutes box">
-                                                <span class="key">36</span>
-                                                <span class="value">MINS</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="box-wrapper hidden-md">
-                                            <div class="seconds box">
-                                                <span class="key">60</span>
-                                                <span class="value">SEC</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- /.hot-deal-wrapper -->
-
-                                <div class="product-info text-left m-t-20">
-                                    <h3 class="name"><a href="/detail">Floral Print Buttoned</a></h3>
-                                    <div class="rating rateit-small"></div>
-
-                                    <div class="product-price">
-								<span class="price">
-									$600.00
-								</span>
-
-                                        <span class="price-before-discount">$800.00</span>
-
-                                    </div><!-- /.product-price -->
-
-                                </div><!-- /.product-info -->
-
-                                <div class="cart clearfix animate-effect">
-                                    <div class="action">
-
-                                        <div class="add-cart-button btn-group">
-                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </button>
-                                            <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-
-                                        </div>
-
-                                    </div><!-- /.action -->
-                                </div><!-- /.cart -->
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="products">
-                                <div class="hot-deal-wrapper">
-                                    <div class="image">
-                                        <img src="assets/images/hot-deals/p10.jpg" alt="">
-                                    </div>
-                                    <div class="sale-offer-tag"><span>35%<br>off</span></div>
-                                    <div class="timing-wrapper">
-                                        <div class="box-wrapper">
-                                            <div class="date box">
-                                                <span class="key">120</span>
-                                                <span class="value">Days</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="box-wrapper">
-                                            <div class="hour box">
-                                                <span class="key">20</span>
-                                                <span class="value">HRS</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="box-wrapper">
-                                            <div class="minutes box">
-                                                <span class="key">36</span>
-                                                <span class="value">MINS</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="box-wrapper hidden-md">
-                                            <div class="seconds box">
-                                                <span class="key">60</span>
-                                                <span class="value">SEC</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- /.hot-deal-wrapper -->
-
-                                <div class="product-info text-left m-t-20">
-                                    <h3 class="name"><a href="/detail">Floral Print Buttoned</a></h3>
-                                    <div class="rating rateit-small"></div>
-
-                                    <div class="product-price">
-								<span class="price">
-									$600.00
-								</span>
-
-                                        <span class="price-before-discount">$800.00</span>
-
-                                    </div><!-- /.product-price -->
-
-                                </div><!-- /.product-info -->
-
-                                <div class="cart clearfix animate-effect">
-                                    <div class="action">
-
-                                        <div class="add-cart-button btn-group">
-                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </button>
-                                            <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-
-                                        </div>
-
-                                    </div><!-- /.action -->
-                                </div><!-- /.cart -->
-                            </div>
-                        </div>
-
-
+                        @endforeach
                     </div><!-- /.sidebar-widget -->
                 </div>
                 <!-- ============================================== HOT DEALS: END ============================================== -->
-
-
-                <!-- ============================================== SPECIAL OFFER ============================================== -->
+                     <!-- ============================================== SPECIAL OFFER ============================================== -->
 
                 <div class="sidebar-widget outer-bottom-small wow fadeInUp">
                     <h3 class="section-title">Special Offer</h3>
                     <div class="sidebar-widget-body outer-top-xs">
                         <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
                             <div class="item">
+                                @foreach($product as $product_item)
                                 <div class="products special-product">
                                     <div class="product">
                                         <div class="product-micro">
@@ -236,8 +90,8 @@
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
                                                         <div class="image">
-                                                            <a href="#">
-                                                                <img src="assets/images/products/p30.jpg" alt="">
+                                                            <a href="{{route('product', ['id' => $product_item->id])}}">
+                                                                <img src="{{$product_item->image_path}}" alt="" width="20px">
                                                             </a>
                                                         </div><!-- /.image -->
 
@@ -246,72 +100,11 @@
                                                 </div><!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Shirt</a></h3>
+                                                        <h3 class="name"><a href="{{route('product', ['id' => $product_item->id])}}">{{$product_item->name}}</a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price">
 				<span class="price">
-					$450.99				</span>
-
-                                                        </div><!-- /.product-price -->
-
-                                                    </div>
-                                                </div><!-- /.col -->
-                                            </div><!-- /.product-micro-row -->
-                                        </div><!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image">
-                                                            <a href="#">
-                                                                <img src="assets/images/products/p29.jpg" alt="">
-                                                            </a>
-                                                        </div><!-- /.image -->
-
-
-                                                    </div><!-- /.product-image -->
-                                                </div><!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Shirt</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price">
-				<span class="price">
-					$450.99				</span>
-
-                                                        </div><!-- /.product-price -->
-
-                                                    </div>
-                                                </div><!-- /.col -->
-                                            </div><!-- /.product-micro-row -->
-                                        </div><!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image">
-                                                            <a href="#">
-                                                                <img src="assets/images/products/p28.jpg" alt="">
-
-                                                            </a>
-                                                        </div><!-- /.image -->
-
-
-                                                    </div><!-- /.product-image -->
-                                                </div><!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Shirt</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price">
-				<span class="price">
-					$450.99				</span>
+					{{$product_item->price}}			</span>
 
                                                         </div><!-- /.product-price -->
 
@@ -322,190 +115,7 @@
 
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="products special-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image">
-                                                            <a href="#">
-                                                                <img src="assets/images/products/p27.jpg" alt="">
-                                                            </a>
-                                                        </div><!-- /.image -->
-
-
-                                                    </div><!-- /.product-image -->
-                                                </div><!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Shirt</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price">
-				<span class="price">
-					$450.99				</span>
-
-                                                        </div><!-- /.product-price -->
-
-                                                    </div>
-                                                </div><!-- /.col -->
-                                            </div><!-- /.product-micro-row -->
-                                        </div><!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image">
-                                                            <a href="#">
-                                                                <img src="assets/images/products/p26.jpg" alt="">
-                                                            </a>
-                                                        </div><!-- /.image -->
-
-                                                    </div><!-- /.product-image -->
-                                                </div><!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Shirt</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price">
-				<span class="price">
-					$450.99				</span>
-
-                                                        </div><!-- /.product-price -->
-
-                                                    </div>
-                                                </div><!-- /.col -->
-                                            </div><!-- /.product-micro-row -->
-                                        </div><!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image">
-                                                            <a href="#">
-                                                                <img src="assets/images/products/p25.jpg" alt="">
-                                                            </a>
-                                                        </div><!-- /.image -->
-
-
-                                                    </div><!-- /.product-image -->
-                                                </div><!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Shirt</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price">
-				<span class="price">
-					$450.99				</span>
-
-                                                        </div><!-- /.product-price -->
-
-                                                    </div>
-                                                </div><!-- /.col -->
-                                            </div><!-- /.product-micro-row -->
-                                        </div><!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="products special-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image">
-                                                            <a href="#">
-                                                                <img src="assets/images/products/p24.jpg" alt="">
-                                                            </a>
-                                                        </div><!-- /.image -->
-
-
-                                                    </div><!-- /.product-image -->
-                                                </div><!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Shirt</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price">
-				<span class="price">
-					$450.99				</span>
-
-                                                        </div><!-- /.product-price -->
-
-                                                    </div>
-                                                </div><!-- /.col -->
-                                            </div><!-- /.product-micro-row -->
-                                        </div><!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image">
-                                                            <a href="#">
-                                                                <img src="assets/images/products/p23.jpg" alt="">
-                                                            </a>
-                                                        </div><!-- /.image -->
-
-
-                                                    </div><!-- /.product-image -->
-                                                </div><!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Shirt</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price">
-				<span class="price">
-					$450.99				</span>
-
-                                                        </div><!-- /.product-price -->
-                                                    </div>
-                                                </div><!-- /.col -->
-                                            </div><!-- /.product-micro-row -->
-                                        </div><!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image">
-                                                            <a href="#">
-                                                                <img src="assets/images/products/p22.jpg" alt="">
-                                                            </a>
-                                                        </div><!-- /.image -->
-
-
-                                                    </div><!-- /.product-image -->
-                                                </div><!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Floral Print Shirt</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price">
-				<span class="price">
-					$450.99				</span>
-
-                                                        </div><!-- /.product-price -->
-
-                                                    </div>
-                                                </div><!-- /.col -->
-                                            </div><!-- /.product-micro-row -->
-                                        </div><!-- /.product-micro -->
-
+                                @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -513,26 +123,7 @@
                     </div><!-- /.sidebar-widget-body -->
                 </div><!-- /.sidebar-widget -->
                 <!-- ============================================== SPECIAL OFFER : END ============================================== -->
-                <!-- ============================================== PRODUCT TAGS ============================================== -->
-                <div class="sidebar-widget product-tag wow fadeInUp">
-                    <h3 class="section-title">Product tags</h3>
-                    <div class="sidebar-widget-body outer-top-xs">
-                        <div class="tag-list">
-{{--                            <a class="item" title="Phone" href="{{route('category-detail/{slug}')}}">Apple</a>--}}
-{{--                            <a class="item active" title="Vest" href="{{route('category-detail')}}">Suits</a>--}}
-{{--                            <a class="item" title="Smartphone" href="{{route('category-detail')}}">Shoes</a>--}}
-{{--                            <a class="item" title="Furniture" href="{{route('category-detail')}}">Dell</a>--}}
-{{--                            <a class="item" title="T-shirt" href="{{route('category-detail')}}">Winter wear</a>--}}
-{{--                            <a class="item" title="Sweatpants" href="{{route('category-detail')}}">Headphones</a>--}}
-{{--                            <a class="item" title="Sneaker" href="{{route('category-detail')}}">Underwear</a>--}}
-{{--                            <a class="item" title="Toys" href="{{route('category-detail')}}">Toys & Games</a>--}}
-{{--                            <a class="item" title="Rose" href="{{route('category-detail')}}">Bodybuilding</a>--}}
-                        </div><!-- /.tag-list -->
-                    </div><!-- /.sidebar-widget-body -->
-                </div><!-- /.sidebar-widget -->
-                <!-- ============================================== PRODUCT TAGS : END ============================================== -->
                 <!-- ============================================== SPECIAL DEALS ============================================== -->
-
                 <div class="sidebar-widget outer-bottom-small wow fadeInUp">
                     <h3 class="section-title">Special Deals</h3>
                     <div class="sidebar-widget-body outer-top-xs">
@@ -549,8 +140,6 @@
                                                                 <img src="assets/images/products/p28.jpg" alt="">
                                                             </a>
                                                         </div><!-- /.image -->
-
-
                                                     </div><!-- /.product-image -->
                                                 </div><!-- /.col -->
                                                 <div class="col col-xs-7">
@@ -560,14 +149,11 @@
                                                         <div class="product-price">
 				<span class="price">
 					$450.99				</span>
-
                                                         </div><!-- /.product-price -->
-
                                                     </div>
                                                 </div><!-- /.col -->
                                             </div><!-- /.product-micro-row -->
                                         </div><!-- /.product-micro -->
-
                                     </div>
                                     <div class="product">
                                         <div class="product-micro">
@@ -579,8 +165,6 @@
                                                                 <img src="assets/images/products/p15.jpg" alt="">
                                                             </a>
                                                         </div><!-- /.image -->
-
-
                                                     </div><!-- /.product-image -->
                                                 </div><!-- /.col -->
                                                 <div class="col col-xs-7">

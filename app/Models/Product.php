@@ -21,7 +21,8 @@ class Product extends Authenticatable
         return $this->belongsTo('App\Models\Category', 'category_id');
     }
 
-    public function getUrl() {
+    public function getUrl()
+    {
         return $this->category()->first()->slug;
     }
 }
