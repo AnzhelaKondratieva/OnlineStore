@@ -14,16 +14,18 @@ class AdminController extends Controller
     public function adminpanel() {
         return view('adminpanel');
     }
+
+
     // АДМИНКА ДЛЯ РЕДАКТИРОВАНИЯ ПОЛЬЗОВАТЕЛЕЙ
     public function accountsList() {
         $users = User::paginate(20);
-        return view('auth.list', ['users' => $users]);
+        return view('admin.accountsList', ['users' => $users]);
     }
 
 
-    public function myAccount($id) {
+    public function myAccountEdit($id) {
         $user = User::find($id);
-        return view('auth.myaccount', [ 'user' => $user]);
+        return view('admin.myAccountEdit', [ 'user' => $user]);
     }
 
 
@@ -51,7 +53,7 @@ class AdminController extends Controller
 
         $user->fill($request->only('name', 'email', 'password'));
         $user->save();
-        return redirect(route('accounts.list'))->with('success','User' . $user->name . '!');
+        return redirect(route('admin.accountsList'))->with('success','User' . $user->name . '!');
     }
 
 
@@ -63,7 +65,7 @@ class AdminController extends Controller
 
 
     public function myAccountCreate() {
-        return view('auth.myaccount');
+        return view('admin.myAccountEdit');
     }
 
 
@@ -72,13 +74,13 @@ class AdminController extends Controller
 
     public function blogList() {
         $articles = Article::paginate(5);
-        return view('blog.list', ['articles' => $articles]);
+        return view('admin.blogList', ['articles' => $articles]);
     }
 
 
     public function blogEdit($id) {
         $article = Article::find($id);
-        return view('blog.edit', [ 'article' => $article]);
+        return view('admin.blogEdit', [ 'article' => $article]);
     }
 
     public function blogSave($id=null, Request $request) {
@@ -112,11 +114,11 @@ class AdminController extends Controller
 
         $article->fill($request->only('title', 'description', 'slug', 'is_publish'));
         $article->save();
-        return redirect(route('blog.list'))->with('success','Article' . $article->title . '!');
+        return redirect(route('admin.blogList'))->with('success','Article' . $article->title . '!');
     }
 
     public function blogCreate() {
-        return view('blog.edit');
+        return view('admin.blogEdit');
     }
 
 
@@ -132,13 +134,13 @@ class AdminController extends Controller
 
     public function сategoriesList() {
         $categories = Category::paginate(10);
-        return view('products.category_list', ['categories' => $categories]);
+        return view('admin.categoryList', ['categories' => $categories]);
     }
 
 
     public function сategoriesEdit($id) {
         $category = Category::find($id);
-        return view('products.category_edit', [ 'category' => $category]);
+        return view('admin.categoryEdit', [ 'category' => $category]);
     }
 
     public function categoriesSave($id=null, Request $request) {
@@ -158,12 +160,12 @@ class AdminController extends Controller
         }
         $category->fill($request->only('name', 'description', 'parent_id', 'is_publish', 'slug'));
         $category->save();
-        return redirect(route('categories.list'))->with('success','Category' . $category->title . '!');
+        return redirect(route('admin.categoryList'))->with('success','Category' . $category->title . '!');
     }
 
 
     public function categoriesCreate() {
-        return view('products.category_edit');
+        return view('admin.categoryEdit');
     }
 
 
@@ -178,13 +180,13 @@ class AdminController extends Controller
 
     public function productsList() {
         $products = Product::paginate(10);
-        return view('products.products_list', ['products' => $products]);
+        return view('admin.productList', ['products' => $products]);
     }
 
 
     public function productsEdit($id) {
         $product = Product::find($id);
-        return view('products.products_edit', [ 'product' => $product]);
+        return view('admin.productEdit', [ 'product' => $product]);
     }
 
     public function productsSave($id=null, Request $request) {
@@ -221,11 +223,11 @@ class AdminController extends Controller
             $article->image_path = $filePath;
         }
         $product->save();
-        return redirect(route('products.list'))->with('success','Category' . $product->title . '!');
+        return redirect(route('admin.productList'))->with('success','Category' . $product->title . '!');
     }
 
     public function productsCreate() {
-        return view('products.products_edit');
+        return view('admin.productEdit');
     }
 
 
@@ -241,13 +243,13 @@ class AdminController extends Controller
 
     public function ordersList() {
         $orders = Order::paginate(10);
-        return view('auth.orders_list', ['orders' => $orders]);
+        return view('admin.ordersList', ['orders' => $orders]);
     }
 
 
     public function ordersEdit($id) {
         $order = Order::find($id);
-        return view('auth.orders_edit', [ 'order' => $order]);
+        return view('admin.ordersEdit', [ 'order' => $order]);
     }
 
     public function ordersSave($id=null, Request $request) {
@@ -268,11 +270,11 @@ class AdminController extends Controller
         }
         $order->fill($request->only('user_id', 'phone'));
         $order->save();
-        return redirect(route('orders.list'))->with('success','Category' . $order->id . '!');
+        return redirect(route('admin.ordersList'))->with('success','Category' . $order->id . '!');
     }
 
     public function ordersCreate() {
-        return view('auth.orders_edit');
+        return view('admin.ordersEdit');
     }
 
 

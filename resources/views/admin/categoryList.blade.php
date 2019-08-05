@@ -9,7 +9,7 @@
                         <strong>{{ $message }}</strong>
                     </div>
                 @endif
-                <a href="{{route('categories.create')}}">Add new category</a>
+                <a href="{{route('admin.categoryCreate')}}">Add new category</a>
                 <table width="100%" border="5px solid black" cellpadding="10%">
                     <tr>
                         <td>Id</td>
@@ -33,8 +33,8 @@
                             <td>{{$category->slug}}</td>
                             <td>{{$category->created_at}}</td>
                             <td>{{$category->updated_at}}</td>
-                            <td><a href="{{route('categories.edit', ['id' => $category->id])}}">Edit</a></td>
-                            <td><a href="{{route('categories.delete',['id' => $category->id])}}">Delete</a></td>
+                            <td><a href="{{route('admin.categoryEdit', ['id' => $category->id])}}">Edit</a></td>
+                            <td><a href="{{route('admin.categoryDelete',['id' => $category->id])}}">Delete</a></td>
                         </tr>
                     @endforeach
                 </table>

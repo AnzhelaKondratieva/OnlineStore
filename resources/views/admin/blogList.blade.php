@@ -9,7 +9,7 @@
                         <strong>{{ $message }}</strong>
                     </div>
                 @endif
-                <a href="{{route('blog.create')}}">Add new article</a>
+                <a href="{{route('admin.blogCreate')}}">Add new article</a>
                 <table width="100%" border="5px solid black" cellpadding="10%">
                     <tr>
                         <td>Id</td>
@@ -33,8 +33,8 @@
                             <td>{{$article->is_publish}}</td>
                             <td>{{$article->created_at}}</td>
                             <td>{{$article->updated_at}}</td>
-                            <td><a href="{{route('blog.edit', ['id' => $article->id])}}">Edit</a></td>
-                            <td><a href="{{route('blog.delete',['id' => $article->id])}}">Delete</a></td>
+                            <td><a href="{{route('admin.blogEdit', ['id' => $article->id])}}">Edit</a></td>
+                            <td><a href="{{route('admin.blogDelete',['id' => $article->id])}}">Delete</a></td>
                         </tr>
                     @endforeach
                 </table>

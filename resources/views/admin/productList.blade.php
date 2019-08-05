@@ -9,7 +9,7 @@
                         <strong>{{ $message }}</strong>
                     </div>
                 @endif
-                <a href="{{route('products.create')}}">Add new product</a>
+                <a href="{{route('admin.productCreate')}}">Add new product</a>
                 <table width="100%" border="5px solid black" cellpadding="5%">
                     <tr>
                         <td>Id</td>
@@ -39,8 +39,8 @@
                             <td>{{$product->is_publish}}</td>
                             <td>{{$product->created_at}}</td>
                             <td>{{$product->updated_at}}</td>
-                            <td><a href="{{route('products.edit',['id' => $product->id])}}">Edit</a></td>
-                            <td><a href="{{route('products.delete',['id' => $product->id])}}">Delete</a></td>
+                            <td><a href="{{route('admin.productEdit',['id' => $product->id])}}">Edit</a></td>
+                            <td><a href="{{route('admin.productDelete',['id' => $product->id])}}">Delete</a></td>
                         </tr>
                     @endforeach
                 </table>

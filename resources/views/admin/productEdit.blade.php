@@ -10,9 +10,9 @@
                     <div class="card-body">
                         <form method="POST"
                               @if(isset($product))
-                              action="{{route('products.save', ['id' => $product->id])}}"
+                              action="{{route('admin.productSave', ['id' => $product->id])}}"
                             @else
-                                action="{{route('products.save')}}"
+                                action="{{route('admin.productSave')}}"
                             @endif enctype = "multipart/form-data"
                                 >
                             @csrf

@@ -9,7 +9,7 @@
                         <strong>{{ $message }}</strong>
                     </div>
                 @endif
-                <a href="{{route('myaccount.create')}}">Add new user</a>
+                <a href="{{route('admin.myAccountCreate')}}">Add new user</a>
                 <table width="100%" border="5px solid black" cellpadding="10%">
                         <tr>
                             <td>Id</td>
@@ -29,8 +29,8 @@
                                     <td>{{$user->role}}</td>
                                     <td>{{$user->created_at}}</td>
                                     <td>{{$user->updated_at}}</td>
-                                    <td><a href="{{route('myaccount',['id' => $user->id])}}">Edit</a></td>
-                                    <td><a href="{{route('myaccount.delete',['id' => $user->id])}}">Delete</a></td>
+                                    <td><a href="{{route('admin.myAccountEdit',['id' => $user->id])}}">Edit</a></td>
+                                    <td><a href="{{route('admin.myAccountDelete',['id' => $user->id])}}">Delete</a></td>
                                 </tr>
                             @endforeach
                 </table>
