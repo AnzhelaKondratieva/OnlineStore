@@ -14,7 +14,7 @@ class Order extends Model
     protected $table = 'orders';
 
 
-    public function order() {
+    public function user() {
         return $this->belongsTo('App\Models\User');
     }
 }

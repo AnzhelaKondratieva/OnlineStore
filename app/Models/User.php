@@ -44,7 +44,7 @@ class User extends Authenticatable
     protected $table = 'users';
 
 
-    public function user() {
+    public function order() {
         return $this->hasMany('App\Models\Order');
     }
 
