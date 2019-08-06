@@ -24,4 +24,17 @@ class BlogController extends Controller
             'article' => $article, 'comments' => $comments
         ]);
     }
+
+    public function addComment($id=null, Request $request) {
+        $comment = new Comment;
+        $comment->name = $request->name;
+        $comment->email = $request->email;
+        $comment->text = $request->text;
+        $comment->fill($request->only('name', 'email', 'text'));
+
+        $comment->save();
+
+        return redirect(route('blog.addComment'));
+    }
+
 }

@@ -50,44 +50,20 @@
 		<div class="col-md-12">
 			<h4>Leave A Comment</h4>
 		</div>
-		<div class="col-md-4">
-			<form class="register-form" role="form">
-				<div class="form-group">
-			    <label class="info-title" for="exampleInputName">Your Name <span>*</span></label>
-			    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputName" placeholder="">
-			  </div>
-			</form>
-		</div>
-		<div class="col-md-4">
-			<form class="register-form" role="form">
-				<div class="form-group">
-			    <label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
-			    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" placeholder="">
-			  </div>
-			</form>
-		</div>
-		<div class="col-md-4">
-			<form class="register-form" role="form">
-				<div class="form-group">
-			    <label class="info-title" for="exampleInputTitle">Title <span>*</span></label>
-			    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputTitle" placeholder="">
-			  </div>
-			</form>
-		</div>
 		<div class="col-md-12">
-			<form class="register-form" role="form">
-				<div class="form-group">
-			    <label class="info-title" for="exampleInputComments">Your Comments <span>*</span></label>
-			    <textarea class="form-control unicase-form-control" id="exampleInputComments" ></textarea>
-			  </div>
+			<form class="register-form" role="form" method="POST" action="{{route('blog.addComment', ['slug' => $article->slug])}}" enctype = "multipart/form-data">
+				@csrf
+							<input name="article_id" type="hidden" value="{{$comment['article_id']}}">
+							<label class="info-title" for="exampleInputName">Your Name <span>*</span></label>
+							<input type="text" name="name" class="form-control unicase-form-control text-input" id="exampleInputName" placeholder="" required autocomplete="off">
+							<label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
+							<input type="email" name="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" placeholder="" required autocomplete="off">
+							<label class="info-title" for="exampleInputComments">Your Comments <span>*</span></label>
+							<textarea class="form-control unicase-form-control" name="text" id="exampleInputComments" required autocomplete="off"></textarea>
+							<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Create Comment</button>
 			</form>
-		</div>
-		<div class="col-md-12 outer-bottom-small m-t-20">
-			<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Submit Comment</button>
 		</div>
 	</div>
-</div>
-				</div>
 					</div>
 				</div>
 			</div>
