@@ -9,7 +9,7 @@ use \App\Models\User;
 class Comment extends Model
 {
     protected $fillable = [
-        'id', 'name', 'email', 'text', 'parent_id', 'created_at', 'updated_at', 'article_id'
+        'id', 'name', 'email', 'text', 'parent_id', 'created_at', 'updated_at', 'article_id', 'user_id'
     ];
 
 

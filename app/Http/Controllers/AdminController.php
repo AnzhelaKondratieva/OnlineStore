@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function adminpanel() {
-        return view('adminpanel');
+        return view('admin.adminpanel');
     }
 
 

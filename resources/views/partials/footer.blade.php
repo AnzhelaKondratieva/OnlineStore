@@ -58,7 +58,7 @@
 						<div class="module-body">
 							<ul class='list-unstyled'>
 								@if(\Auth::user())
-									<li><a href="{{route('myaccount', ['id' => \Auth::user()->id])}}"><i class="icon fa fa-user"></i>My Account</a></li>
+									<li><a href="{{route('admin.myAccountEdit', ['id' => \Auth::user()->id])}}"><i class="icon fa fa-user"></i>My Account</a></li>
 								@endif
 								<li><a href="{{route('track-orders')}}" title="About us">Order History</a></li>
 								<li><a href="{{route('faq')}}" title="faq">FAQ</a></li>

@@ -38,7 +38,7 @@ Route::auth();
 Route::get('/blog', 'BlogController@blog') -> name('blog');
 
 
-Route::post('/blog-details/{slug}', 'BlogController@blogDetails') -> name('blog-details');
+Route::get('/blog-details/{slug}', 'BlogController@blogDetails') -> name('blog-details');
 
 
 Route::post('/blog-details/{slug}/comments', 'BlogController@addComment') -> name('blog.addComment');

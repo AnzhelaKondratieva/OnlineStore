@@ -53,7 +53,8 @@
 		<div class="col-md-12">
 			<form class="register-form" role="form" method="POST" action="{{route('blog.addComment', ['slug' => $article->slug])}}" enctype = "multipart/form-data">
 				@csrf
-							<input name="article_id" type="hidden" value="{{$comment['article_id']}}">
+							<input type="hidden" name="article_id" value="{{$article->id}}">
+							<input type="hidden" name="user_id" value="{{$comment->user_id}}">
 							<label class="info-title" for="exampleInputName">Your Name <span>*</span></label>
 							<input type="text" name="name" class="form-control unicase-form-control text-input" id="exampleInputName" placeholder="" required autocomplete="off">
 							<label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>

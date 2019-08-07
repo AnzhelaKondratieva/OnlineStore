@@ -9,7 +9,7 @@
                 <div class="cnt-account">
                     <ul class="list-unstyled">
                         @if(\Auth::user())
-                        <li><a href="{{route('myaccount', ['id' => \Auth::user()->id])}}"><i class="icon fa fa-user"></i>My Account</a></li>
+                        <li><a href="{{route('admin.myAccountEdit', ['id' => \Auth::user()->id])}}"><i class="icon fa fa-user"></i>My Account</a></li>
                         @endif
                         <li><a href="{{route('my-wishlist')}}"><i class="icon fa fa-heart"></i>Wishlist</a></li>
                         <li><a href="{{route('shopping-cart')}}"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
