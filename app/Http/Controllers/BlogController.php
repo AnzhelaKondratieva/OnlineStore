@@ -21,13 +21,14 @@ class BlogController extends Controller
 
     public function blogDetails($slug) {
         $article = Article::where('slug', $slug)->first();
-        $comments = Comment::where('article_id',$article->id)->paginate(3);
+        $comments = Comment::where('article_id',$article->id)->paginate(100);
         return view('blog.blog-details', [
             'article' => $article, 'comments' => $comments
         ]);
     }
 
-    public function addComment($id=null, Request $request) {
+    public function addComment($slug, $id=null, Request $request) {
+        $article = Article::find($slug);
         $comment = new Comment;
         $comment->name = $request->name;
         $comment->email = $request->email;
@@ -36,8 +37,7 @@ class BlogController extends Controller
         $comment->user_id = Auth::id();
         $comment->fill($request->only('name', 'email', 'text', 'article_id', 'user_id'));
         $comment->save();
-        dd($comment);
-        return redirect(route('blog.addComment'));
+        return redirect()->back()->with('success','Comment added successfully!');
     }
 
 }
