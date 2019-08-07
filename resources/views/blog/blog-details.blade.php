@@ -33,14 +33,14 @@
 					<div class="comments outer-bottom-xs outer-top-xs">
 						<div class="row">
 							<div class="col-md-12">
-								<h4>Comments</h4>
+								<h4 class="title-comments">Comments</h4>
 							</div>
 							@foreach($comments as $comment)
 								<div class="col-md-12">
-									<span>{{$comment->name}}</span>
+									<span class="author">{{$comment->name}}</span>
 									<span>{{$comment->email}}</span>
-									<span>{{$comment->text}}</span>
-									<span>{{$comment->created_at}}</span>
+									<span class="media-text text-justify">{{$comment->text}}</span>
+									<span class="date">{{$comment->created_at}}</span>
 								</div>
 							@endforeach
 						</div>
