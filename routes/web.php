@@ -10,7 +10,7 @@ Route::get('/404', 'ViewController@error') -> name('error');
 Route::get('/faq', 'ViewController@faq') -> name('faq');
 
 
-Route::post('/checkout', 'ViewController@checkout') -> name('checkout');
+Route::get('/checkout', 'ViewController@checkout') -> name('checkout');
 
 
 Route::get('my-wishlist', 'ViewController@myWishlist') -> name('my-wishlist');

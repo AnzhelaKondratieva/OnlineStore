@@ -25,5 +25,9 @@ class Product extends Authenticatable
     {
         return $this->category()->first()->slug;
     }
+
+    public function wishList() {
+        return $this->hasMany('App\Models\WishList');
+    }
 }
 

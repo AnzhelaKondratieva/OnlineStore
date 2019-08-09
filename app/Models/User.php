@@ -48,6 +48,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Order');
     }
 
+    public function wishList() {
+        return $this->hasMany('App\Models\WishList');
+    }
+
     public function isAdmin() {
         $this->role == self::ROLE_ADMIN;
     }
