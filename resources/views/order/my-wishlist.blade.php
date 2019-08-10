@@ -24,54 +24,34 @@
 				</tr>
 			</thead>
 			<tbody>
+			@foreach($wishlist as $wishlists)
 				<tr>
-					<td class="col-md-2"><img src="assets/images/products/p1.jpg" alt="imga"></td>
+					<td class="col-md-2"><img src="{{$wishlists->product->image_path}}" alt="img"></td>
 					<td class="col-md-7">
-						<div class="product-name"><a href="#">Floral Print Buttoned</a></div>
+						<div class="product-name"><a href="#">{{$wishlists->product->name}}</a></div>
 						<div class="rating">
 							<i class="fa fa-star rate"></i>
 							<i class="fa fa-star rate"></i>
 							<i class="fa fa-star rate"></i>
 							<i class="fa fa-star rate"></i>
 							<i class="fa fa-star non-rate"></i>
-							<span class="review">( 06 Reviews )</span>
 						</div>
 						<div class="price">
-							$400.00
-							<span>$900.00</span>
+							{{$wishlists->product->price}}
 						</div>
 					</td>
 					<td class="col-md-2">
 						<a href="#" class="btn-upper btn btn-primary">Add to cart</a>
 					</td>
 					<td class="col-md-1 close-btn">
-						<a href="#" class=""><i class="fa fa-times"></i></a>
+						<form method="POST" action="{{route('my-wishlist.destroy')}}">
+							@csrf
+							<input name="id" type="hidden" value="{{$wishlists->id}}">
+							<button type="submit" title="cancel" class="icon"><i class="fa fa-times"></i></button>
+						</form>
 					</td>
 				</tr>
-				<tr>
-					<td class="col-md-2"><img src="assets/images/products/p2.jpg" alt="phoro"></td>
-					<td class="col-md-7">
-						<div class="product-name"><a href="#">Floral Print Buttoned</a></div>
-						<div class="rating">
-							<i class="fa fa-star rate"></i>
-							<i class="fa fa-star rate"></i>
-							<i class="fa fa-star rate"></i>
-							<i class="fa fa-star rate"></i>
-							<i class="fa fa-star non-rate"></i>
-							<span class="review">( 06 Reviews )</span>
-						</div>
-						<div class="price">
-							$450.00
-							<span>$900.00</span>
-						</div>
-					</td>
-					<td class="col-md-2">
-						<a href="#" class="btn-upper btn btn-default">Add to cart</a>
-					</td>
-					<td class="col-md-1 close-btn">
-						<a href="#" class=""><i class="fa fa-times"></i></a>
-					</td>
-				</tr>
+				@endforeach
 			</tbody>
 		</table>
 	</div>

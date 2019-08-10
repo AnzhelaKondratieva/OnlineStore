@@ -288,17 +288,20 @@
 
                                                 <div class="col-sm-7">
                                                         <button class="btn btn-primary" type="submit"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</button>
-
                                                 </div>
                                             </form>
                                         </div><!-- /.row -->
+                                        <div class="row">
+                                            <div class="col-md-9 col-md-offset-3">
+                                                <form method="POST" action="{{route('my-wishlist.add')}}">
+                                                    @csrf
+                                                        <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                                                        <input type="hidden" name="id" value="{{$product->id}}">
+                                                        <button class="btn btn-primary" type="submit"><i class="fa inner-right-vs"></i> ADD TO WISHLIST</button>
+                                                </form>
+                                            </div>
+                                        </div><!-- /.row -->
                                     </div><!-- /.quantity-container -->
-
-
-
-
-
-
                                 </div><!-- /.product-info -->
                             </div><!-- /.col-sm-7 -->
                         </div><!-- /.row -->

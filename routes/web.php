@@ -13,9 +13,6 @@ Route::get('/faq', 'ViewController@faq') -> name('faq');
 Route::get('/checkout', 'ViewController@checkout') -> name('checkout');
 
 
-Route::get('my-wishlist', 'ViewController@myWishlist') -> name('my-wishlist');
-
-
 Route::get('/contact', 'ViewController@contact') -> name('contact');
 
 
@@ -29,7 +26,6 @@ Route::get('/track-orders', 'ViewController@trackOrders') -> name('track-orders'
 
 
 Route::auth();
-
 
 
 
@@ -140,4 +136,17 @@ Route::post('/shopping-cart/remove', 'CartController@remove')->name('shopping-ca
 Route::post('/shopping-cart/change', 'CartController@change')->name('shopping-cart.change');
 
 Route::post('/shopping-cart/buy', 'CartController@buy')->name('shopping-cart.buy');
+
+
+
+//WISHLIST
+
+Route::get('my-wishlist', 'WishListController@myWishlist') -> name('my-wishlist');
+
+Route::post('/my-wishlist/add', 'WishListController@add') -> name('my-wishlist.add');
+
+Route::post('/my-wishlist/destroy', 'WishListController@destroy')->name('my-wishlist.destroy');
+
+
+
 
