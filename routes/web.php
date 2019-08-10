@@ -28,6 +28,9 @@ Route::get('/track-orders', 'ViewController@trackOrders') -> name('track-orders'
 Route::auth();
 
 
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
 
 //БЛОГ
 

@@ -14,8 +14,14 @@
                         <li><a href="{{route('my-wishlist')}}"><i class="icon fa fa-heart"></i>Wishlist</a></li>
                         <li><a href="{{route('shopping-cart')}}"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
                         <li><a href="{{route('checkout')}}"><i class="icon fa fa-check"></i>Checkout</a></li>
-                        <li><a href="{{route('login')}}"><i class="icon fa fa-lock"></i>Login</a></li>
-                        <li><a href="{{route('register')}}"><i class="icon fa fa-lock"></i>Register</a></li>
+                            @if(!\Auth::user())
+                                <li><a href="{{route('login')}}"><i class="icon fa fa-lock"></i>Login</a></li>
+                            @else
+                                <li><a href="{{route('logout')}}"><i class="icon fa fa-lock"></i>Logout</a></li>
+                            @endif
+                            @if(!\Auth::user())
+                                <li><a href="{{route('register')}}"><i class="icon fa fa-lock"></i>Register</a></li>
+                            @endif
                     </ul>
                 </div><!-- /.cnt-account -->
 
