@@ -41,4 +41,5 @@ class WishListController extends Controller
             ->with('success',
                 'Item successfully deleted');
     }
+
 }

@@ -20,6 +20,11 @@ class CartController extends Controller
     public function add(Request $request) {
         $id = $request->id;
         $count = $request->count;
+
+        if($count == null) {
+            $count = 1;
+        }
+
         $product = Product::find($id);
         $this->cart = new Cart();
         $this->cart->add($product, $count);
@@ -34,7 +39,6 @@ class CartController extends Controller
         }
         $products = Product::whereIn('id',$ids)
             ->get()->keyBy('id');
-
         return view('order.shopping-cart',[
             'cart'=> $this->cart,
             'products' => $products

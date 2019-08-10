@@ -41,7 +41,14 @@
 						</div>
 					</td>
 					<td class="col-md-2">
-						<a href="#" class="btn-upper btn btn-primary">Add to cart</a>
+						<form method="POST" action="{{route('shopping-cart.add')}}">
+							@csrf
+
+										<input type="hidden" name="id" value="{{$wishlists->product->id}}">
+							<div class="col-sm-7">
+								<button class="btn btn-primary" type="submit"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</button>
+							</div>
+						</form>
 					</td>
 					<td class="col-md-1 close-btn">
 						<form method="POST" action="{{route('my-wishlist.destroy')}}">
