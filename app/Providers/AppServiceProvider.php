@@ -32,8 +32,7 @@ class AppServiceProvider extends ServiceProvider
     }
 
     public function cartview() {
-        View::composer('shopping-cart', function ($view) {
-            $view->with('cart', $cart = new Cart());
-        });
+
+
     }
 }

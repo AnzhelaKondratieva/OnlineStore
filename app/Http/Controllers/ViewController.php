@@ -52,10 +52,6 @@ class ViewController extends Controller
     }
 
 
-    public function contact() {
-        return view('info.contact');
-    }
-
     public function productComparison() {
         return view('order.product-comparison');
     }
