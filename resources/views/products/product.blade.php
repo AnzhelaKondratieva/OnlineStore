@@ -78,15 +78,7 @@
 
                                         <div class="cart clearfix animate-effect">
                                             <div class="action">
-
-                                                <div class="add-cart-button btn-group">
-                                                    <button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-                                                        <i class="fa fa-shopping-cart"></i>
-                                                    </button>
-                                                    <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-
-                                                </div>
-
+                                                    <a href="{{route('product', ['id' => $product_item->id])}}" class="btn btn-primary cart-btn" type="submit">View</a>
                                             </div><!-- /.action -->
                                         </div><!-- /.cart -->
                                     </div>
