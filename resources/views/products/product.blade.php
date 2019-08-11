@@ -22,12 +22,12 @@
                         <div class="sidebar-widget hot-deals wow fadeInUp outer-top-vs">
                             <h3 class="section-title">hot deals</h3>
                             <div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-xs">
-
+                                @foreach($productHot as $product_item)
                                 <div class="item">
                                     <div class="products">
                                         <div class="hot-deal-wrapper">
                                             <div class="image">
-                                                <img src="{{$product->image_path}}" alt="">
+                                                <img src="{{$product_item->image_path}}" alt="">
                                             </div>
                                             <div class="sale-offer-tag"><span>35%<br>off</span></div>
                                             <div class="timing-wrapper">
@@ -62,15 +62,15 @@
                                         </div><!-- /.hot-deal-wrapper -->
 
                                         <div class="product-info text-left m-t-20">
-                                            <h3 class="name"><a href="#">{{$product->name}}</a></h3>
+                                            <h3 class="name"><a href="#">{{$product_item->name}}</a></h3>
                                             <div class="rating rateit-small"></div>
 
                                             <div class="product-price">
 								<span class="price">
-									{{$product->price}}
+									{{$product_item->price}}
 								</span>
 
-                                                <span class="price-before-discount">{{$product->price}}</span>
+                                                <span class="price-before-discount">{{$product_item->price}}</span>
 
                                             </div><!-- /.product-price -->
 
@@ -91,6 +91,7 @@
                                         </div><!-- /.cart -->
                                     </div>
                                 </div>
+                                    @endforeach
                             </div><!-- /.sidebar-widget -->
                         </div>
                         <!-- ============================================== HOT DEALS: END ============================================== -->					<!-- ==============================================
@@ -247,21 +248,6 @@
                                                     <span class="price-strike">$900.00</span>
                                                 </div>
                                             </div>
-
-                                            <div class="col-sm-6">
-                                                <div class="favorite-button m-t-10">
-                                                    <a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Wishlist" href="{{route('my-wishlist')}}">
-                                                        <i class="fa fa-heart"></i>
-                                                    </a>
-                                                    <a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Add to Compare" href="{{route('product-comparison')}}">
-                                                        <i class="fa fa-signal"></i>
-                                                    </a>
-                                                    <a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="E-mail" href="#">
-                                                        <i class="fa fa-envelope"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
                                         </div><!-- /.row -->
                                     </div><!-- /.price-container -->
 

@@ -24,11 +24,11 @@ class WishListController extends Controller
 
     public function add(Request $request)
     {
-        $wishlist = new WishList;
-        $wishlist->user_id = $request->user_id;
-        $wishlist->product_id = $request->id;
-        $wishlist->save();
-        return redirect(route('my-wishlist'));
+            $wishlist = new WishList;
+            $wishlist->user_id = $request->user_id;
+            $wishlist->product_id = $request->id;
+            $wishlist->save();
+            return redirect(route('my-wishlist'));
     }
 
     public function destroy(Request $request)

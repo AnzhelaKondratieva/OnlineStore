@@ -28,7 +28,7 @@
 				<tr>
 					<td class="col-md-2"><img src="{{$wishlists->product->image_path}}" alt="img"></td>
 					<td class="col-md-7">
-						<div class="product-name"><a href="#">{{$wishlists->product->name}}</a></div>
+						<div class="product-name"><a href="{{route('product', ['id' => $wishlists->product->id])}}">{{$wishlists->product->name}}</a></div>
 						<div class="rating">
 							<i class="fa fa-star rate"></i>
 							<i class="fa fa-star rate"></i>
@@ -43,7 +43,6 @@
 					<td class="col-md-2">
 						<form method="POST" action="{{route('shopping-cart.add')}}">
 							@csrf
-
 										<input type="hidden" name="id" value="{{$wishlists->product->id}}">
 							<div class="col-sm-7">
 								<button class="btn btn-primary" type="submit"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</button>

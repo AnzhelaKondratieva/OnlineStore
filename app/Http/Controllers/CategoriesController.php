@@ -23,9 +23,10 @@ class CategoriesController extends Controller
 
     public function product($id) {
         $product = Product::find($id);
+        $productHot = Product::inRandomOrder()->take(1)->get();
 //        \DB::enableQueryLog();
 //        dd($product->category()->get(),
 //            \DB::getQueryLog());
-        return view('products.product', ['product' => $product]);
+        return view('products.product', ['product' => $product, 'productHot' => $productHot]);
     }
 }

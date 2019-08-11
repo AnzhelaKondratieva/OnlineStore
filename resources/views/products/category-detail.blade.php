@@ -345,9 +345,14 @@
 													<div class="action">
 														<ul class="list-unstyled">
 															<li class="lnk wishlist">
-																<a class="add-to-cart" href="{{route('my-wishlist')}}" title="Wishlist">
-																	<i class="icon fa fa-heart"></i>
-																</a>
+																<form method="POST" action="{{route('my-wishlist.add')}}">
+																	@csrf
+																	<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+																	<input type="hidden" name="id" value="{{$product_item->id}}">
+																		<button type="submit" class="add-to-cart" title="Wishlist">
+																			<i class="icon fa fa-heart"></i>
+																		</button>
+																</form>
 															</li>
 
 															<li class="lnk">
