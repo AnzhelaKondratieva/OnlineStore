@@ -11,6 +11,7 @@ class ContactUsController extends Controller
     }
 
     public function contactSend() {
+        $body = '';
         $res =  \Mail::raw($body, function($message)
         {
             $message->from('anzhela.testmail@gmail.com', 'anzhela.testmail@gmail.com');

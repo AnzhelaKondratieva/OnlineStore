@@ -13,12 +13,6 @@ Route::get('/faq', 'ViewController@faq') -> name('faq');
 Route::get('/checkout', 'ViewController@checkout') -> name('checkout');
 
 
-Route::get('/contact', 'ContactUsController@contact') -> name('contact');
-
-
-Route::post('/contact/send', 'ContactUsController@contactSend') -> name('contact.send');
-
-
 Route::get('/product-comparison', 'ViewController@productComparison') -> name('product-comparison');
 
 
@@ -32,6 +26,16 @@ Route::auth();
 
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
+
+
+//КОНТАКТНАЯ ФОРМА ДЛЯ ОТПРАВКИ СООБЩЕНИЙ
+
+Route::get('/contact', 'ContactUsController@contact') -> name('contact');
+
+
+Route::post('/contact/send', 'ContactUsController@contactSend') -> name('contact.send');
 
 
 
