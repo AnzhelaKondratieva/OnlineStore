@@ -63,76 +63,71 @@ Route::get('/product/{id}', 'CategoriesController@product') -> name('product');
 
 
 //АДМИНКА
-Route::get('/adminpanel', 'AdminController@adminpanel') -> name('adminpanel')->middleware('admin');
 
 
-// АДМИНКА ДЛЯ РЕДАКТИРОВАНИЯ ПОЛЬЗОВАТЕЛЕЙ
+Route::group(['prefix' => '/adminpanel',  'middleware' => 'admin'], function()
+{
+    // АДМИНКА ДЛЯ РЕДАКТИРОВАНИЯ ПОЛЬЗОВАТЕЛЕЙ
+    Route::get('', 'AdminController@adminpanel') -> name('adminpanel');
 
-Route::get('/adminpanel/accounts/list', 'AdminController@accountsList') -> name('admin.accountsList');
+    Route::get('/accounts/list', 'AdminController@accountsList') -> name('admin.accountsList');
 
-Route::get('/adminpanel/myaccount/{id?}', 'AdminController@myAccountEdit') -> name('admin.myAccountEdit');
+    Route::get('/myaccount/{id?}', 'AdminController@myAccountEdit') -> name('admin.myAccountEdit');
 
-Route::post('/adminpanel/myaccount/save/{id?}', 'AdminController@myAccountSave') -> name('admin.myAccountSave');
+    Route::post('/myaccount/save/{id?}', 'AdminController@myAccountSave') -> name('admin.myAccountSave');
 
-Route::get('/adminpanel/myaccount/delete/{id}', 'AdminController@myAccountDelete') -> name('admin.myAccountDelete');
+    Route::get('/myaccount/delete/{id}', 'AdminController@myAccountDelete') -> name('admin.myAccountDelete');
 
-Route::get('/adminpanel/myaccount/create', 'AdminController@myAccountCreate') -> name('admin.myAccountCreate');
+    Route::get('/myaccount/create', 'AdminController@myAccountCreate') -> name('admin.myAccountCreate');
 
+    // АДМИНКА ДЛЯ БЛОГА
 
+    Route::get('/blog/list', 'AdminController@blogList') -> name('admin.blogList');
 
-// АДМИНКА ДЛЯ БЛОГА
+    Route::get('/blog/create', 'AdminController@blogCreate') -> name('admin.blogCreate');
 
-Route::get('/adminpanel/blog/list', 'AdminController@blogList') -> name('admin.blogList');
+    Route::get('/blog/edit/{id?}', 'AdminController@blogEdit') -> name('admin.blogEdit');
 
-Route::get('/adminpanel/blog/create', 'AdminController@blogCreate') -> name('admin.blogCreate');
+    Route::post('/blog/save/{id?}', 'AdminController@blogSave') -> name('admin.blogSave');
 
-Route::get('/adminpanel/blog/edit/{id?}', 'AdminController@blogEdit') -> name('admin.blogEdit');
+    Route::get('/blog/delete/{id}', 'AdminController@blogDelete') -> name('admin.blogDelete');
 
-Route::post('/adminpanel/blog/save/{id?}', 'AdminController@blogSave') -> name('admin.blogSave');
+    // АДМИНКА ДЛЯ КАТЕГОРИЙ
 
-Route::get('/adminpanel/blog/delete/{id}', 'AdminController@blogDelete') -> name('admin.blogDelete');
+    Route::get('/categories/list', 'AdminController@сategoriesList') -> name('admin.categoryList');
 
+    Route::get('/categories/edit/{id?}', 'AdminController@сategoriesEdit') -> name('admin.categoryEdit');
 
+    Route::post('/categories/save/{id?}', 'AdminController@categoriesSave') -> name('admin.categorySave');
 
-// АДМИНКА ДЛЯ КАТЕГОРИЙ
+    Route::get('/categories/create', 'AdminController@categoriesCreate') -> name('admin.categoryCreate');
 
-Route::get('/adminpanel/categories/list', 'AdminController@сategoriesList') -> name('admin.categoryList');
+    Route::get('/categories/delete/{id}', 'AdminController@categoriesDelete') -> name('admin.categoryDelete');
 
-Route::get('/adminpanel/categories/edit/{id?}', 'AdminController@сategoriesEdit') -> name('admin.categoryEdit');
+    //АДМИНКА ДЛЯ ПРОДУКТОВ
 
-Route::post('/adminpanel/categories/save/{id?}', 'AdminController@categoriesSave') -> name('admin.categorySave');
+    Route::get('/products/list', 'AdminController@productsList') -> name('admin.productList');
 
-Route::get('/adminpanel/categories/create', 'AdminController@categoriesCreate') -> name('admin.categoryCreate');
+    Route::get('/products/edit/{id?}', 'AdminController@productsEdit') -> name('admin.productEdit');
 
-Route::get('/adminpanel/categories/delete/{id}', 'AdminController@categoriesDelete') -> name('admin.categoryDelete');
+    Route::post('/products/save/{id?}', 'AdminController@productsSave') -> name('admin.productSave');
 
+    Route::get('/products/create', 'AdminController@productsCreate') -> name('admin.productCreate');
 
+    Route::get('/products/delete/{id}', 'AdminController@productsDelete') -> name('admin.productDelete');
 
-//АДМИНКА ДЛЯ ПРОДУКТОВ
+    //АДМИНКА ДЛЯ ЗАКАЗОВ
 
-Route::get('/adminpanel/products/list', 'AdminController@productsList') -> name('admin.productList');
+    Route::get('/orders/list', 'AdminController@ordersList') -> name('admin.ordersList');
 
-Route::get('/adminpanel/products/edit/{id?}', 'AdminController@productsEdit') -> name('admin.productEdit');
+    Route::get('/orders/edit/{id?}', 'AdminController@ordersEdit') -> name('admin.ordersEdit');
 
-Route::post('/adminpanel/products/save/{id?}', 'AdminController@productsSave') -> name('admin.productSave');
+    Route::post('/orders/save/{id?}', 'AdminController@ordersSave') -> name('admin.ordersSave');
 
-Route::get('/adminpanel/products/create', 'AdminController@productsCreate') -> name('admin.productCreate');
+    Route::get('/orders/create', 'AdminController@ordersCreate') -> name('admin.ordersCreate');
 
-Route::get('/adminpanel/products/delete/{id}', 'AdminController@productsDelete') -> name('admin.productDelete');
-
-
-
-//АДМИНКА ДЛЯ ЗАКАЗОВ
-
-Route::get('/adminpanel/orders/list', 'AdminController@ordersList') -> name('admin.ordersList');
-
-Route::get('/adminpanel/orders/edit/{id?}', 'AdminController@ordersEdit') -> name('admin.ordersEdit');
-
-Route::post('/adminpanel/orders/save/{id?}', 'AdminController@ordersSave') -> name('admin.ordersSave');
-
-Route::get('/adminpanel/orders/create', 'AdminController@ordersCreate') -> name('admin.ordersCreate');
-
-Route::get('/adminpanel/orders/delete/{id}', 'AdminController@ordersDelete') -> name('admin.ordersDelete');
+    Route::get('/orders/delete/{id}', 'AdminController@ordersDelete') -> name('admin.ordersDelete');
+});
 
 
 
