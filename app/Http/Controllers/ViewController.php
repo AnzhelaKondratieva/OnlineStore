@@ -47,11 +47,6 @@ class ViewController extends Controller
     }
 
 
-    public function myWishlist() {
-        return view('order.my-wishlist');
-    }
-
-
     public function productComparison() {
         return view('order.product-comparison');
     }

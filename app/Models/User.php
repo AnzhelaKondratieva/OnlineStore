@@ -52,6 +52,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\WishList');
     }
 
+    public function contactUs() {
+        return $this->hasMany('App\Models\ContactUs');
+    }
+
     public function isAdmin() {
         return $this->role === self::ROLE_ADMIN;
     }
