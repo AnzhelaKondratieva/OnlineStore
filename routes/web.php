@@ -29,7 +29,6 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 
-
 //КОНТАКТНАЯ ФОРМА ДЛЯ ОТПРАВКИ СООБЩЕНИЙ
 
 Route::get('/contact', 'ContactUsController@contact') -> name('contact');
@@ -64,7 +63,8 @@ Route::get('/product/{id}', 'CategoriesController@product') -> name('product');
 
 
 //АДМИНКА
-Route::get('/adminpanel', 'AdminController@adminpanel') -> name('adminpanel');
+Route::get('/adminpanel', 'AdminController@adminpanel') -> name('adminpanel')->middleware('admin');
+
 
 // АДМИНКА ДЛЯ РЕДАКТИРОВАНИЯ ПОЛЬЗОВАТЕЛЕЙ
 
