@@ -13,6 +13,11 @@ class ContactUsController extends Controller
     }
 
     public function contactSend(Request $request) {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required'
+        ]);
         $contactUs = new ContactUs;
         $contactUs->name = $request->name;
         $contactUs->email = $request->email;
