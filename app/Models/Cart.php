@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use \App\Models\Product;
 
 class Cart {
+
     public $products;
     public $count;
     public $sum;
