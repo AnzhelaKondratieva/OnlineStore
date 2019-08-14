@@ -14,9 +14,6 @@ class ContactUsController extends Controller
     }
 
     public function contactSend(Request $request) {
-        if($user_id === null) {
-
-        }
         $contactUs = new ContactUs;
         $contactUs->name = $request->name;
         $contactUs->email = $request->email;
