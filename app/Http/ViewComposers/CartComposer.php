@@ -5,10 +5,10 @@ namespace App\Http\ViewComposers;
 use App\Models\Cart;
 use Illuminate\View\View;
 
-//class CartComposer
-//{
+class CartComposer
+{
 //    public function compose(View $view)
 //    {
-//        return $view->with('cart', Cart::get());
+//        return $view->with('cart', Cart::all());
 //    }
-//}
+}

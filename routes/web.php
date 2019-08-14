@@ -153,5 +153,7 @@ Route::post('/my-wishlist/add', 'WishListController@add') -> name('my-wishlist.a
 Route::post('/my-wishlist/destroy', 'WishListController@destroy')->name('my-wishlist.destroy');
 
 
-
+Route::fallback(function() {
+    return view('404');
+});
 
