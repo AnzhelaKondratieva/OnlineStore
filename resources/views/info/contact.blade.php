@@ -27,13 +27,12 @@
 						<form method="POST" action="{{route('contact.send')}}">
 							@csrf
 										<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-										<input type="hidden" name="id" value="{{$contactUs->id}}">
 										<label class="info-title" for="exampleInputName">Your Name <span>*</span></label>
-										<input type="text" name="name" class="form-control unicase-form-control text-input" id="exampleInputName" placeholder="">
+										<input type="text" name="name" class="form-control unicase-form-control text-input" id="exampleInputName">
 										<label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
-										<input type="email" name="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" placeholder="">
+										<input type="email" name="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1">
 										<label class="info-title" for="exampleInputComments">Your Comments <span>*</span></label>
-										<textarea class="form-control unicase-form-control" name="text" id="exampleInputComments"></textarea>
+										<textarea class="form-control unicase-form-control" name="message" id="exampleInputComments"></textarea>
 										<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Send Message</button>
 						</form>
 					</div>

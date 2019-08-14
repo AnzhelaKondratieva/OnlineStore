@@ -9,24 +9,26 @@ use Illuminate\Support\Facades\Auth;
 class ContactUsController extends Controller
 {
     public function contact() {
-        return view('info.contact');
+        $contactUs = ContactUs::all();
+        return view('info.contact', ['contactUs' => $contactUs]);
     }
 
     public function contactSend(Request $request) {
-        $this->validate($request, [
+        if($user_id === null) {
+
+        }
+        $contactUs = new ContactUs;
+        $contactUs->name = $request->name;
+        $contactUs->email = $request->email;
+        $contactUs->message = $request->message;
+        $contactUs->user_id = $request->user_id;
+
+        $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'message' => 'required'
         ]);
-        $contactUs = new ContactUs;
-        $contactUs->name = $request->name;
-        $contactUs->email = $request->email;
-        $contactUs->message = $request->text;
-        $contactUs->id = $request->id;
-        $contactUs->user_id = $request->user_id;
-
         $contactUs->save();
-
         $body = 'You successfully send your message. Wait for our reply!';
         $res =  \Mail::raw($body, function($message)
         {
