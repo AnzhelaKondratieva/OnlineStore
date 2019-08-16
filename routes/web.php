@@ -4,9 +4,6 @@
 Route::get('/home', 'ViewController@home') -> name('home');
 
 
-Route::get('/404', 'ViewController@error') -> name('error');
-
-
 Route::get('/faq', 'ViewController@faq') -> name('faq');
 
 
