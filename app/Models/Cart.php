@@ -71,10 +71,13 @@ class Cart {
             $this->count += $product['count'];
         }
         session(['cart' => $this->products]);
+//        dump(session()->all());
     }
 
     public function __destruct() {
+        $above = session('cart');
         session(['cart'=> $this->products]);
         session(['cart' , $this->products]);
+//        dd($above,session('cart'));
     }
 }

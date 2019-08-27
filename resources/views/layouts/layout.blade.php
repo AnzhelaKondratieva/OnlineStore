@@ -58,6 +58,8 @@
                 <script src="{{asset("assets/js/bootstrap-select.min.js")}}"></script>
                 <script src="{{asset("assets/js/wow.min.js")}}"></script>
                 <script src="{{asset("assets/js/scripts.js")}}"></script>
-
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
 </body>
 </html>

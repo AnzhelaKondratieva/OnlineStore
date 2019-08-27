@@ -7,8 +7,10 @@ use Illuminate\View\View;
 
 class CartComposer
 {
-//    public function compose(View $view)
-//    {
-//        return $view->with('cart', Cart::all());
-//    }
+    public function compose(View $view)
+    {
+//        dump(session()->all());
+        $cart = new Cart();
+        return $view->with('cartproducts', $cart->products);
+    }
 }

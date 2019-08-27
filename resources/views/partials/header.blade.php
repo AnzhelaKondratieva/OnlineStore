@@ -96,57 +96,58 @@
                 </div><!-- /.top-search-holder -->
 
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
-                    <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
-{{--                    <div class="dropdown dropdown-cart">--}}
-{{--                        @foreach($cart->products as $product)--}}
-{{--                        <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">--}}
-{{--                            <div class="items-cart-inner">--}}
-{{--                                <div class="basket">--}}
-{{--                                    <i class="glyphicon glyphicon-shopping-cart"></i>--}}
-{{--                                </div>--}}
-{{--                                <div class="basket-item-count"><span class="count">{{$product->count}}</span></div>--}}
-{{--                                <div class="total-price-basket">--}}
-{{--                                    <span class="lbl">cart -</span>--}}
-{{--                                    <span class="total-price">--}}
-{{--						<span class="sign">$</span><span class="value"></span>--}}
-{{--					</span>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </a>--}}
-{{--                        <ul class="dropdown-menu">--}}
+{{--                    {{dd($cartproducts)}}--}}
+                    <!-- ==================== ========================================= SHOPPING CART DROPDOWN ============================================================= -->
+                    <div class="dropdown dropdown-cart">
+                        @foreach($cartproducts as $product)
+                        <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+                            <div class="items-cart-inner">
+                                <div class="basket">
+                                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                                </div>
+                                <div class="basket-item-count"><span class="count">{{$product['count']}}</span></div>
+                                <div class="total-price-basket">
+                                    <span class="lbl">cart -</span>
+                                    <span class="total-price">
+						<span class="sign">$</span><span class="value"></span>
+					</span>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
 
-{{--                            <li>--}}
-{{--                                <div class="cart-item product-summary">--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-xs-4">--}}
-{{--                                            <div class="image">--}}
-{{--                                                <a href="/detail"><img src="assets/images/cart.jpg" alt=""></a>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-xs-7">--}}
+                            <li>
+                                <div class="cart-item product-summary">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="image">
+                                                <a href="/detail"><img src="assets/images/cart.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-7">
 
 {{--                                            <h3 class="name"><a href="index.php?page-detail">{{$product->name}}</a></h3>--}}
 {{--                                            <div class="price">{{$product->price}}</div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-xs-1 action">--}}
-{{--                                            <a href="{{route('shopping-cart')}}"><i class="fa fa-trash"></i></a>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div><!-- /.cart-item -->--}}
-{{--                                <div class="clearfix"></div>--}}
-{{--                                <hr>--}}
-{{--                                <div class="clearfix cart-total">--}}
-{{--                                    <div class="pull-right">--}}
+                                        </div>
+                                        <div class="col-xs-1 action">
+                                            <a href="{{route('shopping-cart')}}"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                    </div>
+                                </div><!-- /.cart-item -->
+                                <div class="clearfix"></div>
+                                <hr>
+                                <div class="clearfix cart-total">
+                                    <div class="pull-right">
 
 {{--                                        <span class="text">Sub Total :</span><span class='price'>{{$product->sum}}</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="clearfix"></div>--}}
+                                    </div>
+                                    <div class="clearfix"></div>
 
-{{--                                    <a href="{{route('checkout')}}" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>--}}
-{{--                                </div><!-- /.cart-total-->--}}
-{{--                            </li>--}}
-{{--                        </ul><!-- /.dropdown-menu-->--}}
-{{--                        @endforeach--}}
+                                    <a href="{{route('checkout')}}" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>
+                                </div><!-- /.cart-total-->
+                            </li>
+                        </ul><!-- /.dropdown-menu-->
+                        @endforeach
 {{--                    </div><!-- /.dropdown-cart -->--}}
 
                     <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->

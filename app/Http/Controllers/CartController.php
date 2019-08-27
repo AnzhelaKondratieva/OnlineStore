@@ -32,6 +32,7 @@ class CartController extends Controller
 
     }
     public function shoppingCart(Request $request) {
+//        dd(session()->all());
         $this->cart = new Cart();
         $ids=[];
         foreach($this->cart->products as $product) {
