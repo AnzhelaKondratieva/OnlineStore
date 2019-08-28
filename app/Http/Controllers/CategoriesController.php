@@ -29,4 +29,8 @@ class CategoriesController extends Controller
 //            \DB::getQueryLog());
         return view('products.product', ['product' => $product, 'productHot' => $productHot]);
     }
+
+    public function product_search(Request $request) {
+        dd($reauest->q);
+    }
 }

@@ -257,7 +257,7 @@
 			<div class='col-md-9'>
 <div class="clearfix filters-container m-t-10">
 	<div class="row">
-		<div class="col col-sm-6 col-md-2">
+		<div class="col col-sm-3 col-md-2">
 			<div class="filter-tabs">
 				<ul id="filter-tabs" class="nav nav-tabs nav-tab-box nav-tab-fa-icon">
 					<li class="active">
@@ -267,6 +267,12 @@
 				</ul>
 			</div><!-- /.filter-tabs -->
 		</div><!-- /.col -->
+		<div class="col col-sm-3 col-md-2">
+			<form method="POST" action="{{route('product.search')}}" class="filter">
+				<p>What are you looking for?</p>
+				<input type="text" name="name" placeholder="name" id="search_name">
+			</form>
+		</div>
 		<div class="col col-sm-12 col-md-6">
 			<div class="col col-sm-3 col-md-6 no-padding">
 				<div class="lbl-cnt">
@@ -282,6 +288,7 @@
 								<li role="presentation"><a href="#">Price:Lowest first</a></li>
 								<li role="presentation"><a href="#">Price:HIghest first</a></li>
 								<li role="presentation"><a href="#">Product Name:A to Z</a></li>
+								<li role="presentation"><a href="#">Product Name:Z to A</a></li>
 							</ul>
 						</div>
 					</div><!-- /.fld -->
@@ -380,4 +387,27 @@
 		</div>
 	</div>
 </div>
+	<script type="text/javascript">
+		window.onload = function() {
+			$.ajaxSetup({
+				headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+				}
+			});
+			$('#search_name').keyup(function() {
+				var val = this.value;
+				$.ajax({
+					url: "/product/search",
+					method: 'POST',
+					data: { q: val, }
+				})
+						.done(function( data ) {
+								console.log(data);
+						})
+						.fail(function( jqXHR, textStatus ) {
+								alert( "Request failed: " + textStatus );
+							});
+			});
+		};
+	</script>
 @endsection

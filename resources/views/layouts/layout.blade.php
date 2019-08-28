@@ -33,6 +33,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800'
           rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 <body class="cnt-home">
 @include('partials.flash-message')
@@ -58,7 +59,7 @@
                 <script src="{{asset("assets/js/bootstrap-select.min.js")}}"></script>
                 <script src="{{asset("assets/js/wow.min.js")}}"></script>
                 <script src="{{asset("assets/js/scripts.js")}}"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        <script src="{{asset('https://code.jquery.com/jquery-3.4.1.min.js')}}"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
 </body>

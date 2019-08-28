@@ -58,6 +58,9 @@ Route::get('/category-detail/{slug}', 'CategoriesController@category') -> name('
 Route::get('/product/{id}', 'CategoriesController@product') -> name('product');
 
 
+Route::post('/product/search', 'CategoriesController@product_search') -> name('product.search');
+
+
 
 //АДМИНКА
 
