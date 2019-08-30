@@ -31,6 +31,12 @@ class CategoriesController extends Controller
     }
 
     public function product_search(Request $request) {
-        dd($reauest->q);
+        $name = $request->name;
+        $products = Product::query();
+        if($name) {
+            $products = $products->where('name', 'like', $name. '%');
+        }
+        $array = $products->get()->toArray();
+        return response()->json($array);
     }
 }

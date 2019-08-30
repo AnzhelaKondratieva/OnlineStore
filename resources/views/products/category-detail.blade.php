@@ -258,6 +258,7 @@
 <div class="clearfix filters-container m-t-10">
 	<div class="row">
 		<div class="col col-sm-3 col-md-2">
+			<!-- FILTERS FOR PRODUCTS-->
 			<div class="filter-tabs">
 				<ul id="filter-tabs" class="nav nav-tabs nav-tab-box nav-tab-fa-icon">
 					<li class="active">
@@ -403,6 +404,13 @@
 				})
 						.done(function( data ) {
 								console.log(data);
+								$('.product').remove();
+								var html='';
+								$.each(data, function ( index, value ) {
+								console.log( value.name );
+								html = '<div>value.name</div>'
+							});
+								$('.product').append(html);
 						})
 						.fail(function( jqXHR, textStatus ) {
 								alert( "Request failed: " + textStatus );
