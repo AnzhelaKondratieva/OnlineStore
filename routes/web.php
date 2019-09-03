@@ -55,10 +55,11 @@ Route::get('/categories', 'CategoriesController@categories') -> name('categories
 Route::get('/category-detail/{slug}', 'CategoriesController@category') -> name('category-detail');
 
 
+Route::post('/product/search', 'CategoriesController@product_search') -> name('product.search');
+
+
 Route::get('/product/{id}', 'CategoriesController@product') -> name('product');
 
-
-Route::post('/product/search', 'CategoriesController@product_search') -> name('product.search');
 
 
 

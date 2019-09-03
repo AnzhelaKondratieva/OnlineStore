@@ -270,6 +270,7 @@
 		</div><!-- /.col -->
 		<div class="col col-sm-3 col-md-2">
 			<form method="POST" action="{{route('product.search')}}" class="filter">
+				@csrf
 				<p>What are you looking for?</p>
 				<input type="text" name="name" placeholder="name" id="search_name">
 			</form>
@@ -388,6 +389,7 @@
 		</div>
 	</div>
 </div>
+
 	<script type="text/javascript">
 		window.onload = function() {
 			$.ajaxSetup({
@@ -400,7 +402,7 @@
 				$.ajax({
 					url: "/product/search",
 					method: 'POST',
-					data: { q: val, }
+					data: { name : val, category_id: {{$category->id}} }
 				})
 						.done(function( data ) {
 								console.log(data);
@@ -408,9 +410,9 @@
 								var html='';
 								$.each(data, function ( index, value ) {
 								console.log( value.name );
-								html = '<div>value.name</div>'
+								html += '<div>'+value.name+'</div>'
 							});
-								$('.product').append(html);
+								$('.products').append(html);
 						})
 						.fail(function( jqXHR, textStatus ) {
 								alert( "Request failed: " + textStatus );

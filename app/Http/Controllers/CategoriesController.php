@@ -32,11 +32,14 @@ class CategoriesController extends Controller
 
     public function product_search(Request $request) {
         $name = $request->name;
+        $cat_id = $request->category_id;;
         $products = Product::query();
         if($name) {
-            $products = $products->where('name', 'like', $name. '%');
+            $products_chosen = $products
+                ->where('name', 'like', $name. '%')
+                ->where('category_id',$cat_id);
         }
-        $array = $products->get()->toArray();
+        $array = $products_chosen->get()->toArray();
         return response()->json($array);
     }
 }
